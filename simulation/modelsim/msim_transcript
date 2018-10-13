@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity PC
-# -- Compiling architecture structure of PC
+# -- Compiling entity MultiCycle
+# -- Compiling architecture structure of MultiCycle
 # 
-vsim work.pc(structure)
-# vsim work.pc(structure) 
+vsim work.multicycle
+# vsim work.multicycle 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,7 +31,7 @@ vsim work.pc(structure)
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.pc(structure)
+# Loading work.multicycle(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -41,13 +41,20 @@ vsim work.pc(structure)
 # Loading cycloneii.cycloneii_ena_reg(behave)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 add wave -position insertpoint  \
-sim:/pc/PCw \
-sim:/pc/addr \
-sim:/pc/addr_out
-force -freeze sim:/pc/PCw 0 0
-force -freeze sim:/pc/addr 00000001 0
+sim:/multicycle/clock \
+sim:/multicycle/input \
+sim:/multicycle/output
+force -freeze sim:/multicycle/clock 0 0
+force -freeze sim:/multicycle/input 00000001 0
 run
 run
-force -freeze sim:/pc/PCw 1 0
+run
+run
+force -freeze sim:/multicycle/clock 1 0
+run
+run
+run
+run
+run
 run
 run

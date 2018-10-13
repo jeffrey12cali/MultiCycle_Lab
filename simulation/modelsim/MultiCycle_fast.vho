@@ -13,10 +13,10 @@
 -- applicable agreement for further details.
 
 -- VENDOR "Altera"
--- PROGRAM "Quartus II 64-Bit"
+-- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "10/13/2018 20:04:04"
+-- DATE "10/13/2018 10:11:27"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -31,35 +31,35 @@ LIBRARY IEEE;
 USE CYCLONEII.CYCLONEII_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY 	PC IS
+ENTITY 	MultiCycle IS
     PORT (
-	PCw : IN std_logic;
-	addr : IN std_logic_vector(7 DOWNTO 0);
-	addr_out : OUT std_logic_vector(7 DOWNTO 0)
+	clock : IN std_logic;
+	input : IN std_logic_vector(7 DOWNTO 0);
+	output : OUT std_logic_vector(7 DOWNTO 0)
 	);
-END PC;
+END MultiCycle;
 
 -- Design Ports Information
--- addr_out[0]	=>  Location: PIN_B16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[1]	=>  Location: PIN_AB13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[2]	=>  Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[3]	=>  Location: PIN_T3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[4]	=>  Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[5]	=>  Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[6]	=>  Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr_out[7]	=>  Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- addr[0]	=>  Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- PCw	=>  Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[1]	=>  Location: PIN_AA12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[2]	=>  Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[3]	=>  Location: PIN_T6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[4]	=>  Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[5]	=>  Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[6]	=>  Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- addr[7]	=>  Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- output[0]	=>  Location: PIN_B16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[1]	=>  Location: PIN_AB13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[2]	=>  Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[3]	=>  Location: PIN_T3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[4]	=>  Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[5]	=>  Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[6]	=>  Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- output[7]	=>  Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+-- input[0]	=>  Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- clock	=>  Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[1]	=>  Location: PIN_AA12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[2]	=>  Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[3]	=>  Location: PIN_T6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[4]	=>  Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[5]	=>  Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[6]	=>  Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- input[7]	=>  Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
-ARCHITECTURE structure OF PC IS
+ARCHITECTURE structure OF MultiCycle IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -69,35 +69,28 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_PCw : std_logic;
-SIGNAL ww_addr : std_logic_vector(7 DOWNTO 0);
-SIGNAL ww_addr_out : std_logic_vector(7 DOWNTO 0);
-SIGNAL \PCw~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \PCw~combout\ : std_logic;
-SIGNAL \PCw~clkctrl_outclk\ : std_logic;
-SIGNAL \addr_out[0]$latch~combout\ : std_logic;
-SIGNAL \addr_out[1]$latch~combout\ : std_logic;
-SIGNAL \addr_out[2]$latch~combout\ : std_logic;
-SIGNAL \addr_out[3]$latch~combout\ : std_logic;
-SIGNAL \addr_out[4]$latch~combout\ : std_logic;
-SIGNAL \addr_out[5]$latch~combout\ : std_logic;
-SIGNAL \addr_out[6]$latch~combout\ : std_logic;
-SIGNAL \addr_out[7]$latch~combout\ : std_logic;
-SIGNAL \addr~combout\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL ww_clock : std_logic;
+SIGNAL ww_input : std_logic_vector(7 DOWNTO 0);
+SIGNAL ww_output : std_logic_vector(7 DOWNTO 0);
+SIGNAL \clock~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \clock~combout\ : std_logic;
+SIGNAL \clock~clkctrl_outclk\ : std_logic;
+SIGNAL \unit|addr_out\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \input~combout\ : std_logic_vector(7 DOWNTO 0);
 
 BEGIN
 
-ww_PCw <= PCw;
-ww_addr <= addr;
-addr_out <= ww_addr_out;
+ww_clock <= clock;
+ww_input <= input;
+output <= ww_output;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\PCw~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \PCw~combout\);
+\clock~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \clock~combout\);
 
 -- Location: PIN_F14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[0]~I\ : cycloneii_io
+\input[0]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -119,11 +112,11 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(0),
-	combout => \addr~combout\(0));
+	padio => ww_input(0),
+	combout => \input~combout\(0));
 
 -- Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\PCw~I\ : cycloneii_io
+\clock~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -145,26 +138,26 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_PCw,
-	combout => \PCw~combout\);
+	padio => ww_clock,
+	combout => \clock~combout\);
 
 -- Location: CLKCTRL_G3
-\PCw~clkctrl\ : cycloneii_clkctrl
+\clock~clkctrl\ : cycloneii_clkctrl
 -- pragma translate_off
 GENERIC MAP (
 	clock_type => "global clock",
 	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	inclk => \PCw~clkctrl_INCLK_bus\,
+	inclk => \clock~clkctrl_INCLK_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \PCw~clkctrl_outclk\);
+	outclk => \clock~clkctrl_outclk\);
 
 -- Location: LCCOMB_X34_Y26_N0
-\addr_out[0]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[0]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[0]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(0))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[0]$latch~combout\)))
+-- \unit|addr_out\(0) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(0))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -172,13 +165,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr~combout\(0),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[0]$latch~combout\,
-	combout => \addr_out[0]$latch~combout\);
+	datab => \input~combout\(0),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(0),
+	combout => \unit|addr_out\(0));
 
 -- Location: PIN_AA12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[1]~I\ : cycloneii_io
+\input[1]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -200,13 +193,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(1),
-	combout => \addr~combout\(1));
+	padio => ww_input(1),
+	combout => \input~combout\(1));
 
 -- Location: LCCOMB_X29_Y1_N0
-\addr_out[1]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[1]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[1]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & ((\addr~combout\(1)))) # (!GLOBAL(\PCw~clkctrl_outclk\) & (\addr_out[1]$latch~combout\))
+-- \unit|addr_out\(1) = (GLOBAL(\clock~clkctrl_outclk\) & ((\input~combout\(1)))) # (!GLOBAL(\clock~clkctrl_outclk\) & (\unit|addr_out\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -214,13 +207,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr_out[1]$latch~combout\,
-	datac => \addr~combout\(1),
-	datad => \PCw~clkctrl_outclk\,
-	combout => \addr_out[1]$latch~combout\);
+	datab => \unit|addr_out\(1),
+	datac => \input~combout\(1),
+	datad => \clock~clkctrl_outclk\,
+	combout => \unit|addr_out\(1));
 
 -- Location: PIN_B3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[2]~I\ : cycloneii_io
+\input[2]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -242,13 +235,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(2),
-	combout => \addr~combout\(2));
+	padio => ww_input(2),
+	combout => \input~combout\(2));
 
 -- Location: LCCOMB_X1_Y26_N0
-\addr_out[2]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[2]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[2]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(2))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[2]$latch~combout\)))
+-- \unit|addr_out\(2) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(2))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -256,13 +249,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr~combout\(2),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[2]$latch~combout\,
-	combout => \addr_out[2]$latch~combout\);
+	datab => \input~combout\(2),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(2),
+	combout => \unit|addr_out\(2));
 
 -- Location: PIN_T6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[3]~I\ : cycloneii_io
+\input[3]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -284,13 +277,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(3),
-	combout => \addr~combout\(3));
+	padio => ww_input(3),
+	combout => \input~combout\(3));
 
 -- Location: LCCOMB_X1_Y5_N0
-\addr_out[3]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[3]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[3]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(3))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[3]$latch~combout\)))
+-- \unit|addr_out\(3) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(3))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -298,13 +291,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \addr~combout\(3),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[3]$latch~combout\,
-	combout => \addr_out[3]$latch~combout\);
+	dataa => \input~combout\(3),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(3),
+	combout => \unit|addr_out\(3));
 
 -- Location: PIN_A3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[4]~I\ : cycloneii_io
+\input[4]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -326,13 +319,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(4),
-	combout => \addr~combout\(4));
+	padio => ww_input(4),
+	combout => \input~combout\(4));
 
 -- Location: LCCOMB_X2_Y26_N0
-\addr_out[4]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[4]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[4]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(4))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[4]$latch~combout\)))
+-- \unit|addr_out\(4) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(4))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -340,13 +333,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr~combout\(4),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[4]$latch~combout\,
-	combout => \addr_out[4]$latch~combout\);
+	datab => \input~combout\(4),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(4),
+	combout => \unit|addr_out\(4));
 
 -- Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[5]~I\ : cycloneii_io
+\input[5]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -368,13 +361,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(5),
-	combout => \addr~combout\(5));
+	padio => ww_input(5),
+	combout => \input~combout\(5));
 
 -- Location: LCCOMB_X38_Y26_N0
-\addr_out[5]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[5]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[5]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(5))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[5]$latch~combout\)))
+-- \unit|addr_out\(5) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(5))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -382,13 +375,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \addr~combout\(5),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[5]$latch~combout\,
-	combout => \addr_out[5]$latch~combout\);
+	dataa => \input~combout\(5),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(5),
+	combout => \unit|addr_out\(5));
 
 -- Location: PIN_A18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[6]~I\ : cycloneii_io
+\input[6]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -410,13 +403,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(6),
-	combout => \addr~combout\(6));
+	padio => ww_input(6),
+	combout => \input~combout\(6));
 
 -- Location: LCCOMB_X46_Y26_N0
-\addr_out[6]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[6]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[6]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(6))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[6]$latch~combout\)))
+-- \unit|addr_out\(6) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(6))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -424,13 +417,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr~combout\(6),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[6]$latch~combout\,
-	combout => \addr_out[6]$latch~combout\);
+	datab => \input~combout\(6),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(6),
+	combout => \unit|addr_out\(6));
 
 -- Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\addr[7]~I\ : cycloneii_io
+\input[7]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -452,13 +445,13 @@ PORT MAP (
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => GND,
-	padio => ww_addr(7),
-	combout => \addr~combout\(7));
+	padio => ww_input(7),
+	combout => \input~combout\(7));
 
 -- Location: LCCOMB_X42_Y26_N0
-\addr_out[7]$latch\ : cycloneii_lcell_comb
+\unit|addr_out[7]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \addr_out[7]$latch~combout\ = (GLOBAL(\PCw~clkctrl_outclk\) & (\addr~combout\(7))) # (!GLOBAL(\PCw~clkctrl_outclk\) & ((\addr_out[7]$latch~combout\)))
+-- \unit|addr_out\(7) = (GLOBAL(\clock~clkctrl_outclk\) & (\input~combout\(7))) # (!GLOBAL(\clock~clkctrl_outclk\) & ((\unit|addr_out\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -466,13 +459,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \addr~combout\(7),
-	datac => \PCw~clkctrl_outclk\,
-	datad => \addr_out[7]$latch~combout\,
-	combout => \addr_out[7]$latch~combout\);
+	datab => \input~combout\(7),
+	datac => \clock~clkctrl_outclk\,
+	datad => \unit|addr_out\(7),
+	combout => \unit|addr_out\(7));
 
 -- Location: PIN_B16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[0]~I\ : cycloneii_io
+\output[0]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -490,15 +483,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[0]$latch~combout\,
+	datain => \unit|addr_out\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(0));
+	padio => ww_output(0));
 
 -- Location: PIN_AB13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[1]~I\ : cycloneii_io
+\output[1]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -516,15 +509,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[1]$latch~combout\,
+	datain => \unit|addr_out\(1),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(1));
+	padio => ww_output(1));
 
 -- Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[2]~I\ : cycloneii_io
+\output[2]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -542,15 +535,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[2]$latch~combout\,
+	datain => \unit|addr_out\(2),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(2));
+	padio => ww_output(2));
 
 -- Location: PIN_T3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[3]~I\ : cycloneii_io
+\output[3]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -568,15 +561,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[3]$latch~combout\,
+	datain => \unit|addr_out\(3),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(3));
+	padio => ww_output(3));
 
 -- Location: PIN_B4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[4]~I\ : cycloneii_io
+\output[4]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -594,15 +587,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[4]$latch~combout\,
+	datain => \unit|addr_out\(4),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(4));
+	padio => ww_output(4));
 
 -- Location: PIN_B17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[5]~I\ : cycloneii_io
+\output[5]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -620,15 +613,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[5]$latch~combout\,
+	datain => \unit|addr_out\(5),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(5));
+	padio => ww_output(5));
 
 -- Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[6]~I\ : cycloneii_io
+\output[6]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -646,15 +639,15 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[6]$latch~combout\,
+	datain => \unit|addr_out\(6),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(6));
+	padio => ww_output(6));
 
 -- Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-\addr_out[7]~I\ : cycloneii_io
+\output[7]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
 	input_async_reset => "none",
@@ -672,12 +665,12 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \addr_out[7]$latch~combout\,
+	datain => \unit|addr_out\(7),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
 	oe => VCC,
-	padio => ww_addr_out(7));
+	padio => ww_output(7));
 END structure;
 
 

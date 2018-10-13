@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-entity dataPath1 is
+entity alu is
 port(
 	
 	a: in std_logic_vector (7 downto 0);
@@ -11,9 +11,9 @@ port(
 	
 );
 
-end dataPath1;
+end alu;
 
-architecture case_arch of dataPath1 is
+architecture case_arch of alu is
 signal temp: std_logic_vector (7 downto 0);
 begin 
  process (a,op)

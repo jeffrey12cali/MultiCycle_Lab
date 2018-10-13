@@ -1,24 +1,32 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 
 entity MultiCycle is
+	port(
+		testA: in std_logic_vector(7 downto 0);
+		testSel: std_logic;
+		testOp: in std_logic_vector(1 downto 0);
+		testRes: out std_logic_vector(7 downto 0)
+	);
 end MultiCycle;
 
 architecture behaviour of MultiCycle is
-	component PC
+	component alu
 		port(
-			PCw: in std_logic;
-			addr: in std_logic_vector (7 downto 0);
-			addr_out: out std_logic_vector (7 downto 0)
+			a: in std_logic_vector (7 downto 0);
+			op: in std_logic_vector (1 downto 0);
+			aluOut: out std_logic_vector (7 downto 0);
+			zero: out std_logic
 		);
 	end component;
 	
-	for reg: pc use entity work.PC (behavior);
-	
-	signal clock: std_logic;
-	signal input, output: std_logic_vector (7 downto 0);
+	component mux
 	
 	begin
-		reg: PC port map(clock, input, output);
+		unit: PC
+		port map(
+			PCw => clock,
+			addr => input,
+			addr_out => output
+		);
 	end;

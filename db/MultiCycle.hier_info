@@ -1,7 +1,24 @@
 |MultiCycle
+clock => PC:unit.PCw
+input[0] => PC:unit.addr[0]
+input[1] => PC:unit.addr[1]
+input[2] => PC:unit.addr[2]
+input[3] => PC:unit.addr[3]
+input[4] => PC:unit.addr[4]
+input[5] => PC:unit.addr[5]
+input[6] => PC:unit.addr[6]
+input[7] => PC:unit.addr[7]
+output[0] <= PC:unit.addr_out[0]
+output[1] <= PC:unit.addr_out[1]
+output[2] <= PC:unit.addr_out[2]
+output[3] <= PC:unit.addr_out[3]
+output[4] <= PC:unit.addr_out[4]
+output[5] <= PC:unit.addr_out[5]
+output[6] <= PC:unit.addr_out[6]
+output[7] <= PC:unit.addr_out[7]
 
 
-|MultiCycle|PC:reg
+|MultiCycle|PC:unit
 PCw => addr_out[0]$latch.LATCH_ENABLE
 PCw => addr_out[1]$latch.LATCH_ENABLE
 PCw => addr_out[2]$latch.LATCH_ENABLE

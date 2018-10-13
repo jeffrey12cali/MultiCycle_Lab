@@ -1,6 +1,6 @@
 Analysis & Synthesis report for MultiCycle
-Sat Oct 13 22:04:33 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sat Oct 13 10:10:54 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,9 +10,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "PC:reg"
-  6. Elapsed Time Per Partition
-  7. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -38,20 +42,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Oct 13 22:04:33 2018               ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 13 10:10:54 2018           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 8                                               ;
+;     Total combinational functions  ; 8                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 17                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -151,13 +155,88 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PC:reg"                                                                                 ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; addr_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/OneDrive/Dropbox/Cuarto Semestre/Arquitectura de comptuador/MultiCycle_Lab/PC.vhd         ;         ;
+; MultiCycle.vhd                   ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/OneDrive/Dropbox/Cuarto Semestre/Arquitectura de comptuador/MultiCycle_Lab/MultiCycle.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 8     ;
+;                                             ;       ;
+; Total combinational functions               ; 8     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 8     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 17    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 8     ;
+; Total fan-out                               ; 32    ;
+; Average fan-out                             ; 1.28  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |MultiCycle                ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |MultiCycle         ; work         ;
+;    |PC:unit|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|PC:unit ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; PC:unit|addr_out[0]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[1]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[2]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[3]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[4]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[5]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[6]                                ; clock               ; yes                    ;
+; PC:unit|addr_out[7]                                ; clock               ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-------------------------------+
@@ -173,11 +252,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Oct 13 22:04:31 2018
+    Info: Processing started: Sat Oct 13 10:10:50 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: dataPath1-case_arch
+    Info (12023): Found entity 1: dataPath1
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12022): Found design unit 1: IR-behavior
     Info (12023): Found entity 1: IR
@@ -194,10 +276,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file multicy
     Info (12022): Found design unit 1: MultiCycle-behaviour
     Info (12023): Found entity 1: MultiCycle
 Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at MultiCycle.vhd(19): used implicit default value for signal "clock" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MultiCycle.vhd(20): used implicit default value for signal "input" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(20): object "output" assigned a value but never read
-Info (12129): Elaborating entity "PC" using architecture "A:behavior" for hierarchy "PC:reg"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:unit"
 Warning (10631): VHDL Process Statement warning at PC.vhd(14): inferring latch(es) for signal or variable "addr_out", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "addr_out[0]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[1]" at PC.vhd(14)
@@ -207,11 +286,16 @@ Info (10041): Inferred latch for "addr_out[4]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[5]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[6]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[7]" at PC.vhd(14)
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
-    Error: Peak virtual memory: 4648 megabytes
-    Error: Processing ended: Sat Oct 13 22:04:33 2018
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 417 megabytes
+    Info: Processing ended: Sat Oct 13 10:10:54 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

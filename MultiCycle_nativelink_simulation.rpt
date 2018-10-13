@@ -4,7 +4,7 @@ Info: Start Nativelink Simulation process
 
 Sim Mode              :  Gate
 Family                :  cycloneii
-Quartus root          :  c:/altera/13.0sp1/quartus/bin64/
+Quartus root          :  c:/altera/13.0sp1/quartus/bin/
 Quartus sim root      :  c:/altera/13.0sp1/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  vhdl
@@ -18,6 +18,7 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/altera/13.0sp1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File MultiCycle_run_msim_gate_vhdl.do already exists - backing up current file as MultiCycle_run_msim_gate_vhdl.do.bak1
 Probing transcript
 ModelSim-Altera Info: # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 ModelSim-Altera Info: # do MultiCycle_run_msim_gate_vhdl.do 
@@ -40,11 +41,11 @@ ModelSim-Altera Info: # -- Loading package VITAL_Timing
 ModelSim-Altera Info: # -- Loading package VITAL_Primitives
 ModelSim-Altera Info: # -- Loading package cycloneii_atom_pack
 ModelSim-Altera Info: # -- Loading package cycloneii_components
-ModelSim-Altera Info: # -- Compiling entity PC
-ModelSim-Altera Info: # -- Compiling architecture structure of PC
+ModelSim-Altera Info: # -- Compiling entity MultiCycle
+ModelSim-Altera Info: # -- Compiling architecture structure of MultiCycle
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: vsim work.pc(structure)
-ModelSim-Altera Info: # vsim work.pc(structure) 
+ModelSim-Altera Info: vsim work.multicycle
+ModelSim-Altera Info: # vsim work.multicycle 
 ModelSim-Altera Info: # Loading std.standard
 ModelSim-Altera Info: # Loading std.textio(body)
 ModelSim-Altera Info: # Loading ieee.std_logic_1164(body)
@@ -52,7 +53,7 @@ ModelSim-Altera Info: # Loading ieee.vital_timing(body)
 ModelSim-Altera Info: # Loading ieee.vital_primitives(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_atom_pack(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_components
-ModelSim-Altera Info: # Loading work.pc(structure)
+ModelSim-Altera Info: # Loading work.multicycle(structure)
 ModelSim-Altera Info: # Loading ieee.std_logic_arith(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_io(structure)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_mux21(altvital)
@@ -62,14 +63,21 @@ ModelSim-Altera Info: # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_ena_reg(behave)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 ModelSim-Altera Info: add wave -position insertpoint  \
-ModelSim-Altera Info: sim:/pc/PCw \
-ModelSim-Altera Info: sim:/pc/addr \
-ModelSim-Altera Info: sim:/pc/addr_out
-ModelSim-Altera Info: force -freeze sim:/pc/PCw 0 0
-ModelSim-Altera Info: force -freeze sim:/pc/addr 00000001 0
+ModelSim-Altera Info: sim:/multicycle/clock \
+ModelSim-Altera Info: sim:/multicycle/input \
+ModelSim-Altera Info: sim:/multicycle/output
+ModelSim-Altera Info: force -freeze sim:/multicycle/clock 0 0
+ModelSim-Altera Info: force -freeze sim:/multicycle/input 00000001 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/pc/PCw 1 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/clock 1 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 Info: NativeLink simulation flow was successful
