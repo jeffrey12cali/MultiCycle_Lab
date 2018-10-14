@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MultiCycle
-Sat Sep 29 17:43:28 2018
+Sat Oct 13 20:02:34 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,7 +16,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Minimum Pulse Width: 'IRw'
+ 11. Slow Model Minimum Pulse Width: 'PCw'
  12. Setup Times
  13. Hold Times
  14. Clock to Output Times
@@ -26,7 +26,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  18. Fast Model Recovery Summary
  19. Fast Model Removal Summary
  20. Fast Model Minimum Pulse Width Summary
- 21. Fast Model Minimum Pulse Width: 'IRw'
+ 21. Fast Model Minimum Pulse Width: 'PCw'
  22. Setup Times
  23. Hold Times
  24. Clock to Output Times
@@ -92,7 +92,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; IRw        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IRw } ;
+; PCw        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PCw } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
@@ -131,352 +131,123 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; IRw   ; -1.631 ; -1.631                ;
+; PCw   ; -1.631 ; -1.631                ;
 +-------+--------+-----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'IRw'                                                                 ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
-; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; IRw   ; Rise       ; IRw                  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw|combout          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw|combout          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw~clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw~clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw~clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw~clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[0]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[0]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[0]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[0]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[10]          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[10]          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[10]|datac    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[10]|datac    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[1]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[1]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[1]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[1]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[2]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[2]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[2]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[2]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[3]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[3]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[3]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[3]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[4]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[4]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[4]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[4]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[5]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[5]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[5]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[5]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[6]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[6]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[6]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[6]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[7]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[7]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[7]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[7]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[8]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[8]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[8]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[8]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[9]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[9]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[9]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[9]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[2]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[2]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[5]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[5]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[5]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[5]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[2]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[2]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r2_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r2_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r2_out[0]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r2_out[0]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r2_out[1]            ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'PCw'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; PCw   ; Rise       ; PCw                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[0]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[0]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[0]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[0]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[1]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[1]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[1]$latch|datad ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[1]$latch|datad ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[2]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[2]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[2]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[2]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[3]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[3]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[3]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[3]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[4]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[4]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[4]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[4]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[5]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[5]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[5]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[5]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[6]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[6]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[6]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[6]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[7]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[7]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[7]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[7]$latch|datac ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
 
 
-+------------------------------------------------------------------------+
-; Setup Times                                                            ;
-+------------+------------+-------+-------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+------------+------------+-------+-------+------------+-----------------+
-; instr[*]   ; IRw        ; 4.597 ; 4.597 ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; 4.048 ; 4.048 ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; 4.441 ; 4.441 ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; 4.066 ; 4.066 ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; 4.564 ; 4.564 ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; 4.101 ; 4.101 ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; 4.577 ; 4.577 ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; 4.053 ; 4.053 ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; 4.433 ; 4.433 ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; 4.465 ; 4.465 ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; 0.879 ; 0.879 ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; 4.081 ; 4.081 ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; 4.548 ; 4.548 ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; 4.401 ; 4.401 ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; 4.576 ; 4.576 ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; 4.102 ; 4.102 ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; 4.403 ; 4.403 ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; 4.046 ; 4.046 ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; 4.597 ; 4.597 ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; 4.559 ; 4.559 ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; 4.492 ; 4.492 ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; 4.068 ; 4.068 ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; 4.351 ; 4.351 ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; 4.047 ; 4.047 ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; 4.587 ; 4.587 ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; 4.555 ; 4.555 ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; 4.549 ; 4.549 ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; 4.399 ; 4.399 ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; 4.017 ; 4.017 ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; 4.562 ; 4.562 ; Fall       ; IRw             ;
-+------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; addr[*]   ; PCw        ; 4.580 ; 4.580 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; 4.399 ; 4.399 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; 4.580 ; 4.580 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; 4.441 ; 4.441 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; 4.074 ; 4.074 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; 4.451 ; 4.451 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; 4.496 ; 4.496 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; 4.441 ; 4.441 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; 4.398 ; 4.398 ; Fall       ; PCw             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; addr[*]   ; PCw        ; -3.283 ; -3.283 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; -3.608 ; -3.608 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; -3.584 ; -3.584 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; -3.650 ; -3.650 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; -3.283 ; -3.283 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; -3.660 ; -3.660 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; -3.705 ; -3.705 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; -3.650 ; -3.650 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; -3.607 ; -3.607 ; Fall       ; PCw             ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 +--------------------------------------------------------------------------+
-; Hold Times                                                               ;
-+------------+------------+--------+--------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+------------+------------+--------+--------+------------+-----------------+
-; instr[*]   ; IRw        ; -0.088 ; -0.088 ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; -3.622 ; -3.622 ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; -3.257 ; -3.257 ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; -3.650 ; -3.650 ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; -3.275 ; -3.275 ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; -3.568 ; -3.568 ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; -3.310 ; -3.310 ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; -3.581 ; -3.581 ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; -3.257 ; -3.257 ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; -3.642 ; -3.642 ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; -3.674 ; -3.674 ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; -0.088 ; -0.088 ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; -3.290 ; -3.290 ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; -3.552 ; -3.552 ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; -3.610 ; -3.610 ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; -3.627 ; -3.627 ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; -3.580 ; -3.580 ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; -3.311 ; -3.311 ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; -3.612 ; -3.612 ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; -3.622 ; -3.622 ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; -3.250 ; -3.250 ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; -3.601 ; -3.601 ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; -3.563 ; -3.563 ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; -3.496 ; -3.496 ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; -3.272 ; -3.272 ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; -3.560 ; -3.560 ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; -3.251 ; -3.251 ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; -3.591 ; -3.591 ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; -3.559 ; -3.559 ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; -3.553 ; -3.553 ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; -3.608 ; -3.608 ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; -3.226 ; -3.226 ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; -3.566 ; -3.566 ; Fall       ; IRw             ;
-+------------+------------+--------+--------+------------+-----------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 6.676 ; 6.676 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 6.636 ; 6.636 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 6.513 ; 6.513 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 6.676 ; 6.676 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 6.319 ; 6.319 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 6.673 ; 6.673 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 6.644 ; 6.644 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 6.671 ; 6.671 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 6.658 ; 6.658 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Clock to Output Times                                                 ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 6.945 ; 6.945 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 6.680 ; 6.680 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 6.516 ; 6.516 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 6.312 ; 6.312 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 6.674 ; 6.674 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 6.611 ; 6.611 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 6.320 ; 6.320 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 6.945 ; 6.945 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 6.796 ; 6.796 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 6.486 ; 6.486 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 6.302 ; 6.302 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 6.694 ; 6.694 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 6.796 ; 6.796 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 6.640 ; 6.640 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 6.321 ; 6.321 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 6.654 ; 6.654 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 6.659 ; 6.659 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 6.329 ; 6.329 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 6.398 ; 6.398 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 6.578 ; 6.578 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 6.308 ; 6.308 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 6.650 ; 6.650 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 6.650 ; 6.650 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 6.485 ; 6.485 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 6.353 ; 6.353 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 6.497 ; 6.497 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 6.598 ; 6.598 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 6.438 ; 6.438 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 6.598 ; 6.598 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 6.328 ; 6.328 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 6.649 ; 6.649 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 6.301 ; 6.301 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 6.644 ; 6.644 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 6.649 ; 6.649 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 6.494 ; 6.494 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 6.924 ; 6.924 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 6.529 ; 6.529 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 6.924 ; 6.924 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-----------------------------------------------------------------------+
-; Minimum Clock to Output Times                                         ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 6.680 ; 6.680 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 6.516 ; 6.516 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 6.312 ; 6.312 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 6.674 ; 6.674 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 6.611 ; 6.611 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 6.320 ; 6.320 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 6.945 ; 6.945 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 6.486 ; 6.486 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 6.302 ; 6.302 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 6.694 ; 6.694 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 6.796 ; 6.796 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 6.640 ; 6.640 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 6.321 ; 6.321 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 6.654 ; 6.654 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 6.659 ; 6.659 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 6.329 ; 6.329 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 6.398 ; 6.398 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 6.578 ; 6.578 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 6.308 ; 6.308 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 6.353 ; 6.353 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 6.650 ; 6.650 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 6.485 ; 6.485 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 6.353 ; 6.353 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 6.497 ; 6.497 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 6.328 ; 6.328 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 6.438 ; 6.438 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 6.598 ; 6.598 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 6.328 ; 6.328 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 6.301 ; 6.301 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 6.301 ; 6.301 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 6.644 ; 6.644 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 6.649 ; 6.649 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 6.494 ; 6.494 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 6.529 ; 6.529 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 6.924 ; 6.924 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-+-----------+------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 6.319 ; 6.319 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 6.636 ; 6.636 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 6.513 ; 6.513 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 6.676 ; 6.676 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 6.319 ; 6.319 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 6.673 ; 6.673 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 6.644 ; 6.644 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 6.671 ; 6.671 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 6.658 ; 6.658 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 ----------------------------
@@ -508,352 +279,123 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; IRw   ; -1.380 ; -1.380                ;
+; PCw   ; -1.380 ; -1.380                ;
 +-------+--------+-----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'IRw'                                                                 ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; IRw   ; Rise       ; IRw                  ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw|combout          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw|combout          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw~clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw~clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; IRw~clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; IRw~clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[0]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[0]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[0]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[0]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[10]          ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[10]          ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[10]|datac    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[10]|datac    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[1]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[1]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[1]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[1]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[2]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[2]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[2]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[2]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[3]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[3]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[3]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[3]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[4]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[4]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[4]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[4]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[5]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[5]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[5]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[5]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[6]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[6]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[6]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[6]|datad     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[7]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[7]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[7]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[7]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[8]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[8]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[8]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[8]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; imm_out[9]           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; imm_out[9]           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; imm_out[9]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; imm_out[9]|datac     ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[2]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[2]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; op_out[5]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; op_out[5]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; op_out[5]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; op_out[5]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[0]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[1]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[1]|datad      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[2]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[2]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[2]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[3]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[3]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r1_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r1_out[4]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r1_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r1_out[4]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r2_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Fall       ; r2_out[0]            ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Rise       ; r2_out[0]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; IRw   ; Rise       ; r2_out[0]|datac      ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; IRw   ; Fall       ; r2_out[1]            ;
-+--------+--------------+----------------+------------------+-------+------------+----------------------+
-
-
-+--------------------------------------------------------------------------+
-; Setup Times                                                              ;
-+------------+------------+--------+--------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+------------+------------+--------+--------+------------+-----------------+
-; instr[*]   ; IRw        ; 2.062  ; 2.062  ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; 1.978  ; 1.978  ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; 1.886  ; 1.886  ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; 2.000  ; 2.000  ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; 1.903  ; 1.903  ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; 2.027  ; 2.027  ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; 1.892  ; 1.892  ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; 2.036  ; 2.036  ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; 1.869  ; 1.869  ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; 1.997  ; 1.997  ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; 1.998  ; 1.998  ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; -0.138 ; -0.138 ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; 1.873  ; 1.873  ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; 2.011  ; 2.011  ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; 1.964  ; 1.964  ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; 1.983  ; 1.983  ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; 2.040  ; 2.040  ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; 1.892  ; 1.892  ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; 1.965  ; 1.965  ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; 1.978  ; 1.978  ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; 1.864  ; 1.864  ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; 2.062  ; 2.062  ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; 2.023  ; 2.023  ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; 2.043  ; 2.043  ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; 1.886  ; 1.886  ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; 1.969  ; 1.969  ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; 1.864  ; 1.864  ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; 2.049  ; 2.049  ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; 2.023  ; 2.023  ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; 2.010  ; 2.010  ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; 1.962  ; 1.962  ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; 1.856  ; 1.856  ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; 2.026  ; 2.026  ; Fall       ; IRw             ;
-+------------+------------+--------+--------+------------+-----------------+
-
-
-+--------------------------------------------------------------------------+
-; Hold Times                                                               ;
-+------------+------------+--------+--------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+------------+------------+--------+--------+------------+-----------------+
-; instr[*]   ; IRw        ; 0.406  ; 0.406  ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; -1.707 ; -1.707 ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; -1.618 ; -1.618 ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; -1.732 ; -1.732 ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; -1.635 ; -1.635 ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; -1.689 ; -1.689 ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; -1.624 ; -1.624 ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; -1.698 ; -1.698 ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; -1.598 ; -1.598 ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; -1.729 ; -1.729 ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; -1.730 ; -1.730 ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; 0.406  ; 0.406  ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; -1.605 ; -1.605 ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; -1.673 ; -1.673 ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; -1.696 ; -1.696 ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; -1.715 ; -1.715 ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; -1.702 ; -1.702 ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; -1.624 ; -1.624 ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; -1.697 ; -1.697 ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; -1.707 ; -1.707 ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; -1.593 ; -1.593 ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; -1.724 ; -1.724 ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; -1.685 ; -1.685 ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; -1.705 ; -1.705 ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; -1.615 ; -1.615 ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; -1.701 ; -1.701 ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; -1.593 ; -1.593 ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; -1.711 ; -1.711 ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; -1.685 ; -1.685 ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; -1.672 ; -1.672 ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; -1.694 ; -1.694 ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; -1.588 ; -1.588 ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; -1.688 ; -1.688 ; Fall       ; IRw             ;
-+------------+------------+--------+--------+------------+-----------------+
++----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'PCw'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; PCw   ; Rise       ; PCw                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; PCw~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; PCw~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[0]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[0]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[0]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[0]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[1]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[1]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[1]$latch|datad ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[1]$latch|datad ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[2]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[2]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[2]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[2]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[3]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[3]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[3]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[3]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[4]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[4]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[4]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[4]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[5]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[5]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[5]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[5]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[6]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[6]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[6]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[6]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Fall       ; addr_out[7]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Fall       ; addr_out[7]$latch       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; PCw   ; Rise       ; addr_out[7]$latch|datac ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; PCw   ; Rise       ; addr_out[7]$latch|datac ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------+
 
 
 +-----------------------------------------------------------------------+
-; Clock to Output Times                                                 ;
+; Setup Times                                                           ;
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 3.646 ; 3.646 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 3.553 ; 3.553 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 3.489 ; 3.489 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 3.346 ; 3.346 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 3.493 ; 3.493 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 3.348 ; 3.348 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 3.646 ; 3.646 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 3.587 ; 3.587 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 3.459 ; 3.459 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 3.513 ; 3.513 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 3.587 ; 3.587 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 3.524 ; 3.524 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 3.532 ; 3.532 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 3.376 ; 3.376 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 3.455 ; 3.455 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 3.341 ; 3.341 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 3.540 ; 3.540 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 3.500 ; 3.500 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 3.540 ; 3.540 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 3.460 ; 3.460 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 3.519 ; 3.519 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 3.386 ; 3.386 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 3.416 ; 3.416 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 3.475 ; 3.475 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 3.522 ; 3.522 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 3.522 ; 3.522 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 3.481 ; 3.481 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 3.624 ; 3.624 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 3.498 ; 3.498 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 3.624 ; 3.624 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
+; addr[*]   ; PCw        ; 2.042 ; 2.042 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; 1.963 ; 1.963 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; 2.042 ; 2.042 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; 2.007 ; 2.007 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; 1.866 ; 1.866 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; 2.010 ; 2.010 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; 2.011 ; 2.011 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; 2.000 ; 2.000 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; 1.961 ; 1.961 ; Fall       ; PCw             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Minimum Clock to Output Times                                         ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 3.553 ; 3.553 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 3.489 ; 3.489 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 3.346 ; 3.346 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 3.493 ; 3.493 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 3.348 ; 3.348 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 3.646 ; 3.646 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 3.459 ; 3.459 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 3.513 ; 3.513 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 3.587 ; 3.587 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 3.524 ; 3.524 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 3.532 ; 3.532 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 3.376 ; 3.376 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 3.455 ; 3.455 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 3.341 ; 3.341 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 3.386 ; 3.386 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 3.500 ; 3.500 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 3.540 ; 3.540 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 3.460 ; 3.460 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 3.519 ; 3.519 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 3.386 ; 3.386 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 3.416 ; 3.416 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 3.475 ; 3.475 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 3.522 ; 3.522 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 3.481 ; 3.481 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 3.498 ; 3.498 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 3.624 ; 3.624 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-+-----------+------------+-------+-------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; addr[*]   ; PCw        ; -1.598 ; -1.598 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; -1.695 ; -1.695 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; -1.704 ; -1.704 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; -1.739 ; -1.739 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; -1.598 ; -1.598 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; -1.742 ; -1.742 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; -1.743 ; -1.743 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; -1.732 ; -1.732 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; -1.693 ; -1.693 ; Fall       ; PCw             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 3.546 ; 3.546 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 3.510 ; 3.510 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 3.487 ; 3.487 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 3.497 ; 3.497 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 3.352 ; 3.352 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 3.546 ; 3.546 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 3.517 ; 3.517 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 3.545 ; 3.545 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 3.533 ; 3.533 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 3.352 ; 3.352 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 3.510 ; 3.510 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 3.487 ; 3.487 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 3.497 ; 3.497 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 3.352 ; 3.352 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 3.546 ; 3.546 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 3.517 ; 3.517 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 3.545 ; 3.545 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 3.533 ; 3.533 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 +----------------------------------------------------------------------------+
@@ -862,246 +404,78 @@ No paths to report.
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
 ; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
-;  IRw             ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
+;  PCw             ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
 ; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -1.631              ;
-;  IRw             ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
+;  PCw             ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+------------------------------------------------------------------------+
-; Setup Times                                                            ;
-+------------+------------+-------+-------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+------------+------------+-------+-------+------------+-----------------+
-; instr[*]   ; IRw        ; 4.597 ; 4.597 ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; 4.048 ; 4.048 ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; 4.441 ; 4.441 ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; 4.066 ; 4.066 ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; 4.564 ; 4.564 ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; 4.101 ; 4.101 ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; 4.577 ; 4.577 ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; 4.053 ; 4.053 ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; 4.433 ; 4.433 ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; 4.465 ; 4.465 ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; 0.879 ; 0.879 ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; 4.081 ; 4.081 ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; 4.548 ; 4.548 ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; 4.401 ; 4.401 ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; 4.576 ; 4.576 ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; 4.102 ; 4.102 ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; 4.403 ; 4.403 ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; 4.418 ; 4.418 ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; 4.046 ; 4.046 ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; 4.597 ; 4.597 ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; 4.559 ; 4.559 ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; 4.492 ; 4.492 ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; 4.068 ; 4.068 ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; 4.351 ; 4.351 ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; 4.047 ; 4.047 ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; 4.587 ; 4.587 ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; 4.555 ; 4.555 ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; 4.549 ; 4.549 ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; 4.399 ; 4.399 ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; 4.017 ; 4.017 ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; 4.562 ; 4.562 ; Fall       ; IRw             ;
-+------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; addr[*]   ; PCw        ; 4.580 ; 4.580 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; 4.399 ; 4.399 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; 4.580 ; 4.580 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; 4.441 ; 4.441 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; 4.074 ; 4.074 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; 4.451 ; 4.451 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; 4.496 ; 4.496 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; 4.441 ; 4.441 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; 4.398 ; 4.398 ; Fall       ; PCw             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; addr[*]   ; PCw        ; -1.598 ; -1.598 ; Fall       ; PCw             ;
+;  addr[0]  ; PCw        ; -1.695 ; -1.695 ; Fall       ; PCw             ;
+;  addr[1]  ; PCw        ; -1.704 ; -1.704 ; Fall       ; PCw             ;
+;  addr[2]  ; PCw        ; -1.739 ; -1.739 ; Fall       ; PCw             ;
+;  addr[3]  ; PCw        ; -1.598 ; -1.598 ; Fall       ; PCw             ;
+;  addr[4]  ; PCw        ; -1.742 ; -1.742 ; Fall       ; PCw             ;
+;  addr[5]  ; PCw        ; -1.743 ; -1.743 ; Fall       ; PCw             ;
+;  addr[6]  ; PCw        ; -1.732 ; -1.732 ; Fall       ; PCw             ;
+;  addr[7]  ; PCw        ; -1.693 ; -1.693 ; Fall       ; PCw             ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 +--------------------------------------------------------------------------+
-; Hold Times                                                               ;
-+------------+------------+--------+--------+------------+-----------------+
-; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+------------+------------+--------+--------+------------+-----------------+
-; instr[*]   ; IRw        ; 0.406  ; 0.406  ; Fall       ; IRw             ;
-;  instr[0]  ; IRw        ; -1.707 ; -1.707 ; Fall       ; IRw             ;
-;  instr[1]  ; IRw        ; -1.618 ; -1.618 ; Fall       ; IRw             ;
-;  instr[2]  ; IRw        ; -1.732 ; -1.732 ; Fall       ; IRw             ;
-;  instr[3]  ; IRw        ; -1.635 ; -1.635 ; Fall       ; IRw             ;
-;  instr[4]  ; IRw        ; -1.689 ; -1.689 ; Fall       ; IRw             ;
-;  instr[5]  ; IRw        ; -1.624 ; -1.624 ; Fall       ; IRw             ;
-;  instr[6]  ; IRw        ; -1.698 ; -1.698 ; Fall       ; IRw             ;
-;  instr[7]  ; IRw        ; -1.598 ; -1.598 ; Fall       ; IRw             ;
-;  instr[8]  ; IRw        ; -1.729 ; -1.729 ; Fall       ; IRw             ;
-;  instr[9]  ; IRw        ; -1.730 ; -1.730 ; Fall       ; IRw             ;
-;  instr[10] ; IRw        ; 0.406  ; 0.406  ; Fall       ; IRw             ;
-;  instr[11] ; IRw        ; -1.605 ; -1.605 ; Fall       ; IRw             ;
-;  instr[12] ; IRw        ; -1.673 ; -1.673 ; Fall       ; IRw             ;
-;  instr[13] ; IRw        ; -1.696 ; -1.696 ; Fall       ; IRw             ;
-;  instr[14] ; IRw        ; -1.715 ; -1.715 ; Fall       ; IRw             ;
-;  instr[15] ; IRw        ; -1.702 ; -1.702 ; Fall       ; IRw             ;
-;  instr[16] ; IRw        ; -1.624 ; -1.624 ; Fall       ; IRw             ;
-;  instr[17] ; IRw        ; -1.697 ; -1.697 ; Fall       ; IRw             ;
-;  instr[18] ; IRw        ; -1.707 ; -1.707 ; Fall       ; IRw             ;
-;  instr[19] ; IRw        ; -1.593 ; -1.593 ; Fall       ; IRw             ;
-;  instr[20] ; IRw        ; -1.724 ; -1.724 ; Fall       ; IRw             ;
-;  instr[21] ; IRw        ; -1.685 ; -1.685 ; Fall       ; IRw             ;
-;  instr[22] ; IRw        ; -1.705 ; -1.705 ; Fall       ; IRw             ;
-;  instr[23] ; IRw        ; -1.615 ; -1.615 ; Fall       ; IRw             ;
-;  instr[24] ; IRw        ; -1.701 ; -1.701 ; Fall       ; IRw             ;
-;  instr[25] ; IRw        ; -1.593 ; -1.593 ; Fall       ; IRw             ;
-;  instr[26] ; IRw        ; -1.711 ; -1.711 ; Fall       ; IRw             ;
-;  instr[27] ; IRw        ; -1.685 ; -1.685 ; Fall       ; IRw             ;
-;  instr[28] ; IRw        ; -1.672 ; -1.672 ; Fall       ; IRw             ;
-;  instr[29] ; IRw        ; -1.694 ; -1.694 ; Fall       ; IRw             ;
-;  instr[30] ; IRw        ; -1.588 ; -1.588 ; Fall       ; IRw             ;
-;  instr[31] ; IRw        ; -1.688 ; -1.688 ; Fall       ; IRw             ;
-+------------+------------+--------+--------+------------+-----------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 6.676 ; 6.676 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 6.636 ; 6.636 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 6.513 ; 6.513 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 6.676 ; 6.676 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 6.319 ; 6.319 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 6.673 ; 6.673 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 6.644 ; 6.644 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 6.671 ; 6.671 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 6.658 ; 6.658 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Clock to Output Times                                                 ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 6.945 ; 6.945 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 6.680 ; 6.680 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 6.516 ; 6.516 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 6.312 ; 6.312 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 6.674 ; 6.674 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 6.611 ; 6.611 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 6.320 ; 6.320 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 6.945 ; 6.945 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 6.796 ; 6.796 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 6.322 ; 6.322 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 6.681 ; 6.681 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 6.294 ; 6.294 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 6.486 ; 6.486 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 6.302 ; 6.302 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 6.498 ; 6.498 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 6.694 ; 6.694 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 6.682 ; 6.682 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 6.660 ; 6.660 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 6.796 ; 6.796 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 6.499 ; 6.499 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 6.640 ; 6.640 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 6.675 ; 6.675 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 6.321 ; 6.321 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 6.654 ; 6.654 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 6.659 ; 6.659 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 6.329 ; 6.329 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 6.398 ; 6.398 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 6.578 ; 6.578 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 6.308 ; 6.308 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 6.650 ; 6.650 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 6.650 ; 6.650 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 6.485 ; 6.485 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 6.353 ; 6.353 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 6.497 ; 6.497 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 6.598 ; 6.598 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 6.521 ; 6.521 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 6.438 ; 6.438 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 6.337 ; 6.337 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 6.598 ; 6.598 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 6.328 ; 6.328 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 6.649 ; 6.649 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 6.301 ; 6.301 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 6.644 ; 6.644 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 6.649 ; 6.649 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 6.494 ; 6.494 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 6.526 ; 6.526 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 6.924 ; 6.924 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 6.561 ; 6.561 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 6.529 ; 6.529 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 6.924 ; 6.924 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 6.645 ; 6.645 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 6.522 ; 6.522 ; Fall       ; IRw             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-----------------------------------------------------------------------+
-; Minimum Clock to Output Times                                         ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; imm[*]    ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  imm[0]   ; IRw        ; 3.553 ; 3.553 ; Fall       ; IRw             ;
-;  imm[1]   ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  imm[2]   ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  imm[3]   ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  imm[4]   ; IRw        ; 3.489 ; 3.489 ; Fall       ; IRw             ;
-;  imm[5]   ; IRw        ; 3.346 ; 3.346 ; Fall       ; IRw             ;
-;  imm[6]   ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  imm[7]   ; IRw        ; 3.493 ; 3.493 ; Fall       ; IRw             ;
-;  imm[8]   ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  imm[9]   ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  imm[10]  ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  imm[11]  ; IRw        ; 3.348 ; 3.348 ; Fall       ; IRw             ;
-;  imm[12]  ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  imm[13]  ; IRw        ; 3.646 ; 3.646 ; Fall       ; IRw             ;
-;  imm[14]  ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  imm[15]  ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-; jump[*]   ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  jump[0]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[1]  ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[2]  ; IRw        ; 3.555 ; 3.555 ; Fall       ; IRw             ;
-;  jump[3]  ; IRw        ; 3.329 ; 3.329 ; Fall       ; IRw             ;
-;  jump[4]  ; IRw        ; 3.459 ; 3.459 ; Fall       ; IRw             ;
-;  jump[5]  ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  jump[6]  ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-;  jump[7]  ; IRw        ; 3.513 ; 3.513 ; Fall       ; IRw             ;
-;  jump[8]  ; IRw        ; 3.552 ; 3.552 ; Fall       ; IRw             ;
-;  jump[9]  ; IRw        ; 3.533 ; 3.533 ; Fall       ; IRw             ;
-;  jump[10] ; IRw        ; 3.587 ; 3.587 ; Fall       ; IRw             ;
-;  jump[11] ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  jump[12] ; IRw        ; 3.468 ; 3.468 ; Fall       ; IRw             ;
-;  jump[13] ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  jump[14] ; IRw        ; 3.544 ; 3.544 ; Fall       ; IRw             ;
-;  jump[15] ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-;  jump[16] ; IRw        ; 3.356 ; 3.356 ; Fall       ; IRw             ;
-;  jump[17] ; IRw        ; 3.524 ; 3.524 ; Fall       ; IRw             ;
-;  jump[18] ; IRw        ; 3.532 ; 3.532 ; Fall       ; IRw             ;
-;  jump[19] ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-;  jump[20] ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-;  jump[21] ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  jump[22] ; IRw        ; 3.376 ; 3.376 ; Fall       ; IRw             ;
-;  jump[23] ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  jump[24] ; IRw        ; 3.455 ; 3.455 ; Fall       ; IRw             ;
-;  jump[25] ; IRw        ; 3.341 ; 3.341 ; Fall       ; IRw             ;
-; op[*]     ; IRw        ; 3.386 ; 3.386 ; Fall       ; IRw             ;
-;  op[0]    ; IRw        ; 3.500 ; 3.500 ; Fall       ; IRw             ;
-;  op[1]    ; IRw        ; 3.540 ; 3.540 ; Fall       ; IRw             ;
-;  op[2]    ; IRw        ; 3.460 ; 3.460 ; Fall       ; IRw             ;
-;  op[3]    ; IRw        ; 3.519 ; 3.519 ; Fall       ; IRw             ;
-;  op[4]    ; IRw        ; 3.386 ; 3.386 ; Fall       ; IRw             ;
-;  op[5]    ; IRw        ; 3.471 ; 3.471 ; Fall       ; IRw             ;
-; r1[*]     ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-;  r1[0]    ; IRw        ; 3.495 ; 3.495 ; Fall       ; IRw             ;
-;  r1[1]    ; IRw        ; 3.416 ; 3.416 ; Fall       ; IRw             ;
-;  r1[2]    ; IRw        ; 3.369 ; 3.369 ; Fall       ; IRw             ;
-;  r1[3]    ; IRw        ; 3.475 ; 3.475 ; Fall       ; IRw             ;
-;  r1[4]    ; IRw        ; 3.361 ; 3.361 ; Fall       ; IRw             ;
-; r2[*]     ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  r2[0]    ; IRw        ; 3.336 ; 3.336 ; Fall       ; IRw             ;
-;  r2[1]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r2[2]    ; IRw        ; 3.522 ; 3.522 ; Fall       ; IRw             ;
-;  r2[3]    ; IRw        ; 3.481 ; 3.481 ; Fall       ; IRw             ;
-;  r2[4]    ; IRw        ; 3.447 ; 3.447 ; Fall       ; IRw             ;
-; r3[*]     ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  r3[0]    ; IRw        ; 3.442 ; 3.442 ; Fall       ; IRw             ;
-;  r3[1]    ; IRw        ; 3.498 ; 3.498 ; Fall       ; IRw             ;
-;  r3[2]    ; IRw        ; 3.624 ; 3.624 ; Fall       ; IRw             ;
-;  r3[3]    ; IRw        ; 3.514 ; 3.514 ; Fall       ; IRw             ;
-;  r3[4]    ; IRw        ; 3.491 ; 3.491 ; Fall       ; IRw             ;
-+-----------+------------+-------+-------+------------+-----------------+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; addr_out[*]  ; PCw        ; 3.352 ; 3.352 ; Fall       ; PCw             ;
+;  addr_out[0] ; PCw        ; 3.510 ; 3.510 ; Fall       ; PCw             ;
+;  addr_out[1] ; PCw        ; 3.487 ; 3.487 ; Fall       ; PCw             ;
+;  addr_out[2] ; PCw        ; 3.497 ; 3.497 ; Fall       ; PCw             ;
+;  addr_out[3] ; PCw        ; 3.352 ; 3.352 ; Fall       ; PCw             ;
+;  addr_out[4] ; PCw        ; 3.546 ; 3.546 ; Fall       ; PCw             ;
+;  addr_out[5] ; PCw        ; 3.517 ; 3.517 ; Fall       ; PCw             ;
+;  addr_out[6] ; PCw        ; 3.545 ; 3.545 ; Fall       ; PCw             ;
+;  addr_out[7] ; PCw        ; 3.533 ; 3.533 ; Fall       ; PCw             ;
++--------------+------------+-------+-------+------------+-----------------+
 
 
 -------------------
@@ -1129,10 +503,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 32    ; 32   ;
-; Unconstrained Input Port Paths  ; 32    ; 32   ;
-; Unconstrained Output Ports      ; 63    ; 63   ;
-; Unconstrained Output Port Paths ; 63    ; 63   ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
 
 
@@ -1142,17 +516,17 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Sep 29 17:43:25 2018
+    Info: Processing started: Sat Oct 13 20:02:32 2018
 Info: Command: quartus_sta MultiCycle -c MultiCycle
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 32 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 8 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'MultiCycle.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name IRw IRw
+    Info (332105): create_clock -period 1.000 -name PCw PCw
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
@@ -1164,7 +538,7 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.631
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.631        -1.631 IRw 
+    Info (332119):    -1.631        -1.631 PCw 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Info (332140): No Setup paths to report
@@ -1175,14 +549,14 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380        -1.380 IRw 
+    Info (332119):    -1.380        -1.380 PCw 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Sat Sep 29 17:43:28 2018
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4567 megabytes
+    Info: Processing ended: Sat Oct 13 20:02:34 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

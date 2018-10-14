@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Sat Sep 29 17:43:16 2018
+Sat Oct 13 22:04:33 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,13 +10,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Port Connectivity Checks: "PC:reg"
+  6. Elapsed Time Per Partition
+  7. Analysis & Synthesis Messages
 
 
 
@@ -42,20 +38,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 29 17:43:15 2018           ;
+; Analysis & Synthesis Status        ; Failed - Sat Oct 13 22:04:33 2018               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
-; Top-level Entity Name              ; IR                                              ;
+; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 32                                              ;
-;     Total combinational functions  ; 32                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 96                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -65,7 +61,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; IR                 ; MultiCycle         ;
+; Top-level entity name                                                      ; MultiCycle         ; MultiCycle         ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,141 +151,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; IR.vhd                           ; yes             ; User VHDL File  ; D:/OneDrive/Dropbox/Cuarto Semestre/Arquitectura de comptuador/Laboratorio2/IR.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 32    ;
-;                                             ;       ;
-; Total combinational functions               ; 32    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 32    ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 32    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 96    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; IRw   ;
-; Maximum fan-out                             ; 32    ;
-; Total fan-out                               ; 159   ;
-; Average fan-out                             ; 1.24  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |IR                        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |IR                 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; op_out[0]                                           ; IRw                 ; yes                    ;
-; op_out[1]                                           ; IRw                 ; yes                    ;
-; op_out[2]                                           ; IRw                 ; yes                    ;
-; op_out[3]                                           ; IRw                 ; yes                    ;
-; op_out[4]                                           ; IRw                 ; yes                    ;
-; op_out[5]                                           ; IRw                 ; yes                    ;
-; r1_out[0]                                           ; IRw                 ; yes                    ;
-; r1_out[1]                                           ; IRw                 ; yes                    ;
-; r1_out[2]                                           ; IRw                 ; yes                    ;
-; r1_out[3]                                           ; IRw                 ; yes                    ;
-; r1_out[4]                                           ; IRw                 ; yes                    ;
-; r2_out[0]                                           ; IRw                 ; yes                    ;
-; r2_out[1]                                           ; IRw                 ; yes                    ;
-; r2_out[2]                                           ; IRw                 ; yes                    ;
-; r2_out[3]                                           ; IRw                 ; yes                    ;
-; r2_out[4]                                           ; IRw                 ; yes                    ;
-; r3_out[0]                                           ; IRw                 ; yes                    ;
-; r3_out[1]                                           ; IRw                 ; yes                    ;
-; r3_out[2]                                           ; IRw                 ; yes                    ;
-; r3_out[3]                                           ; IRw                 ; yes                    ;
-; r3_out[4]                                           ; IRw                 ; yes                    ;
-; imm_out[0]                                          ; IRw                 ; yes                    ;
-; imm_out[1]                                          ; IRw                 ; yes                    ;
-; imm_out[2]                                          ; IRw                 ; yes                    ;
-; imm_out[3]                                          ; IRw                 ; yes                    ;
-; imm_out[4]                                          ; IRw                 ; yes                    ;
-; imm_out[5]                                          ; IRw                 ; yes                    ;
-; imm_out[6]                                          ; IRw                 ; yes                    ;
-; imm_out[7]                                          ; IRw                 ; yes                    ;
-; imm_out[8]                                          ; IRw                 ; yes                    ;
-; imm_out[9]                                          ; IRw                 ; yes                    ;
-; imm_out[10]                                         ; IRw                 ; yes                    ;
-; imm_out[11]                                         ; IRw                 ; yes                    ;
-; imm_out[12]                                         ; IRw                 ; yes                    ;
-; imm_out[13]                                         ; IRw                 ; yes                    ;
-; imm_out[14]                                         ; IRw                 ; yes                    ;
-; imm_out[15]                                         ; IRw                 ; yes                    ;
-; jump_out[0]                                         ; IRw                 ; yes                    ;
-; jump_out[1]                                         ; IRw                 ; yes                    ;
-; jump_out[2]                                         ; IRw                 ; yes                    ;
-; jump_out[3]                                         ; IRw                 ; yes                    ;
-; jump_out[4]                                         ; IRw                 ; yes                    ;
-; jump_out[5]                                         ; IRw                 ; yes                    ;
-; jump_out[6]                                         ; IRw                 ; yes                    ;
-; jump_out[7]                                         ; IRw                 ; yes                    ;
-; jump_out[8]                                         ; IRw                 ; yes                    ;
-; jump_out[9]                                         ; IRw                 ; yes                    ;
-; jump_out[10]                                        ; IRw                 ; yes                    ;
-; jump_out[11]                                        ; IRw                 ; yes                    ;
-; jump_out[12]                                        ; IRw                 ; yes                    ;
-; jump_out[13]                                        ; IRw                 ; yes                    ;
-; jump_out[14]                                        ; IRw                 ; yes                    ;
-; jump_out[15]                                        ; IRw                 ; yes                    ;
-; jump_out[16]                                        ; IRw                 ; yes                    ;
-; jump_out[17]                                        ; IRw                 ; yes                    ;
-; jump_out[18]                                        ; IRw                 ; yes                    ;
-; jump_out[19]                                        ; IRw                 ; yes                    ;
-; jump_out[20]                                        ; IRw                 ; yes                    ;
-; jump_out[21]                                        ; IRw                 ; yes                    ;
-; jump_out[22]                                        ; IRw                 ; yes                    ;
-; jump_out[23]                                        ; IRw                 ; yes                    ;
-; jump_out[24]                                        ; IRw                 ; yes                    ;
-; jump_out[25]                                        ; IRw                 ; yes                    ;
-; Number of user-specified and inferred latches = 63  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PC:reg"                                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; addr_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -307,7 +175,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Sep 29 17:43:14 2018
+    Info: Processing started: Sat Oct 13 22:04:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
@@ -322,122 +190,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file shiftle
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: PC-behavior
     Info (12023): Found entity 1: PC
-Info (12127): Elaborating entity "IR" for the top level hierarchy
-Warning (10445): VHDL Subtype or Type Declaration warning at IR.vhd(14): subtype or type has null range
-Warning (10445): VHDL Subtype or Type Declaration warning at IR.vhd(25): subtype or type has null range
-Warning (10296): VHDL warning at IR.vhd(34): ignored assignment of value to null range
-Warning (10296): VHDL warning at IR.vhd(44): ignored assignment of value to null range
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "op_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r1_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r2_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r3_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "imm_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "jump_out", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "jump_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[5]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[6]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[7]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[8]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[9]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[10]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[11]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[12]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[13]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[14]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[15]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[16]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[17]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[18]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[19]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[20]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[21]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[22]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[23]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[24]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[25]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[5]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[6]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[7]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[8]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[9]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[10]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[11]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[12]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[13]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[14]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[15]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[5]" at IR.vhd(36)
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "jump_out[21]" merged with LATCH primitive "r1_out[0]"
-    Info (13026): Duplicate LATCH primitive "jump_out[22]" merged with LATCH primitive "r1_out[1]"
-    Info (13026): Duplicate LATCH primitive "jump_out[23]" merged with LATCH primitive "r1_out[2]"
-    Info (13026): Duplicate LATCH primitive "jump_out[24]" merged with LATCH primitive "r1_out[3]"
-    Info (13026): Duplicate LATCH primitive "jump_out[25]" merged with LATCH primitive "r1_out[4]"
-    Info (13026): Duplicate LATCH primitive "jump_out[16]" merged with LATCH primitive "r2_out[0]"
-    Info (13026): Duplicate LATCH primitive "jump_out[17]" merged with LATCH primitive "r2_out[1]"
-    Info (13026): Duplicate LATCH primitive "jump_out[18]" merged with LATCH primitive "r2_out[2]"
-    Info (13026): Duplicate LATCH primitive "jump_out[19]" merged with LATCH primitive "r2_out[3]"
-    Info (13026): Duplicate LATCH primitive "jump_out[20]" merged with LATCH primitive "r2_out[4]"
-    Info (13026): Duplicate LATCH primitive "jump_out[11]" merged with LATCH primitive "r3_out[0]"
-    Info (13026): Duplicate LATCH primitive "imm_out[11]" merged with LATCH primitive "r3_out[0]"
-    Info (13026): Duplicate LATCH primitive "jump_out[12]" merged with LATCH primitive "r3_out[1]"
-    Info (13026): Duplicate LATCH primitive "imm_out[12]" merged with LATCH primitive "r3_out[1]"
-    Info (13026): Duplicate LATCH primitive "jump_out[13]" merged with LATCH primitive "r3_out[2]"
-    Info (13026): Duplicate LATCH primitive "imm_out[13]" merged with LATCH primitive "r3_out[2]"
-    Info (13026): Duplicate LATCH primitive "jump_out[14]" merged with LATCH primitive "r3_out[3]"
-    Info (13026): Duplicate LATCH primitive "imm_out[14]" merged with LATCH primitive "r3_out[3]"
-    Info (13026): Duplicate LATCH primitive "jump_out[15]" merged with LATCH primitive "r3_out[4]"
-    Info (13026): Duplicate LATCH primitive "imm_out[15]" merged with LATCH primitive "r3_out[4]"
-    Info (13026): Duplicate LATCH primitive "jump_out[0]" merged with LATCH primitive "imm_out[0]"
-    Info (13026): Duplicate LATCH primitive "jump_out[1]" merged with LATCH primitive "imm_out[1]"
-    Info (13026): Duplicate LATCH primitive "jump_out[2]" merged with LATCH primitive "imm_out[2]"
-    Info (13026): Duplicate LATCH primitive "jump_out[3]" merged with LATCH primitive "imm_out[3]"
-    Info (13026): Duplicate LATCH primitive "jump_out[4]" merged with LATCH primitive "imm_out[4]"
-    Info (13026): Duplicate LATCH primitive "jump_out[5]" merged with LATCH primitive "imm_out[5]"
-    Info (13026): Duplicate LATCH primitive "jump_out[6]" merged with LATCH primitive "imm_out[6]"
-    Info (13026): Duplicate LATCH primitive "jump_out[7]" merged with LATCH primitive "imm_out[7]"
-    Info (13026): Duplicate LATCH primitive "jump_out[8]" merged with LATCH primitive "imm_out[8]"
-    Info (13026): Duplicate LATCH primitive "jump_out[9]" merged with LATCH primitive "imm_out[9]"
-    Info (13026): Duplicate LATCH primitive "jump_out[10]" merged with LATCH primitive "imm_out[10]"
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 63 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4664 megabytes
-    Info: Processing ended: Sat Sep 29 17:43:16 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (12021): Found 2 design units, including 1 entities, in source file multicycle.vhd
+    Info (12022): Found design unit 1: MultiCycle-behaviour
+    Info (12023): Found entity 1: MultiCycle
+Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at MultiCycle.vhd(19): used implicit default value for signal "clock" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MultiCycle.vhd(20): used implicit default value for signal "input" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(20): object "output" assigned a value but never read
+Info (12129): Elaborating entity "PC" using architecture "A:behavior" for hierarchy "PC:reg"
+Warning (10631): VHDL Process Statement warning at PC.vhd(14): inferring latch(es) for signal or variable "addr_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "addr_out[0]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[1]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[2]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[3]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[4]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[5]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[6]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[7]" at PC.vhd(14)
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
+    Error: Peak virtual memory: 4648 megabytes
+    Error: Processing ended: Sat Oct 13 22:04:33 2018
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 
