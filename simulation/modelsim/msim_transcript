@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity MultiCycle
-# -- Compiling architecture structure of MultiCycle
+# -- Compiling entity IR
+# -- Compiling architecture structure of IR
 # 
-vsim work.multicycle
-# vsim work.multicycle 
+vsim work.ir
+# vsim work.ir 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,37 +31,42 @@ vsim work.multicycle
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.multicycle(structure)
+# Loading work.ir(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
 # Loading cycloneii.cycloneii_dffe(behave)
 # Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
-vsim work.multicycle
-# vsim work.multicycle 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading cycloneii.cycloneii_atom_pack(body)
-# Loading cycloneii.cycloneii_components
-# Loading work.multicycle(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading cycloneii.cycloneii_io(structure)
-# Loading cycloneii.cycloneii_mux21(altvital)
-# Loading cycloneii.cycloneii_dffe(behave)
-# Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/multicycle/testA \
-sim:/multicycle/testSel \
-sim:/multicycle/testOp \
-sim:/multicycle/testRes
-force -freeze sim:/multicycle/testA 00000001 0
-force -freeze sim:/multicycle/testSel 00 0
-force -freeze sim:/multicycle/testOp 00 0
+sim:/ir/instr \
+sim:/ir/IRw \
+sim:/ir/op \
+sim:/ir/r1 \
+sim:/ir/r2 \
+sim:/ir/r3 \
+sim:/ir/imm \
+sim:/ir/jump
+force -freeze sim:/ir/IRw 1 0
+force -freeze sim:/ir/instr 000000000000000000001000010000000 0
+# Value length (33) does not equal array index length (32).
+# 
+# ** Error: (vsim-4011) Invalid force value: 000000000000000000001000010000000 0.
+# 
 run
-force -freeze sim:/multicycle/testSel 11 0
+force -freeze sim:/ir/instr 00000000000000000000000000000000 0
+run
+run
+run
+force -freeze sim:/ir/instr 00000000000000000000000000000001 0
+force -freeze sim:/ir/IRw 0 0
+run
+run
+run
+force -freeze sim:/ir/instr 00000000000000000000000000000011 0
 run
