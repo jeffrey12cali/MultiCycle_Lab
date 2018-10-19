@@ -6,10 +6,10 @@ use ieee.numeric_std.all;
 entity memory is 
 	port(
 	
-	address: in std_logic_vector(7 downto 0);
-	write_data: in std_logic_vector(7 downto 0);
-	read_data: out std_logic_vector( 7 downto 0);
-	memWrite,memRead,clk: in  std_logic
+	address: in std_logic_vector(31 downto 0);
+	--write_data: in std_logic_vector(31 downto 0);
+	data_out: out std_logic_vector(31 downto 0)
+	--memWrite,memRead,clk: in  std_logic
 	
 	);
 	
@@ -18,19 +18,18 @@ entity memory is
 
 architecture compor of memory is
 
-type mem_array is array(0 to 7) of std_logic_vector(7 downto 0);
 
-signal data_mem: mem_array:=((others=>(others=>'0')));
 
-begin 
-read_data <= data_mem(to_integer(unsigned(address))) when MemRead = '1' else "00000000";
+constant mem_add: std_logic_vector(31 downto 0) := "00000001000010100000000000000000";
+constant mem_sub: std_logic_vector(31 downto 0) := "00000001000010100000000000000001";
+constant mem_and: std_logic_vector(31 downto 0) := "00000001000010100000000000000010";
+constant mem_or: std_logic_vector(31 downto 0) := "00000001000010100000000000111111";
 
-mem_process: process(address, write_data,clk)
+
 begin
-	if clk = '0' and clk'event then
-		if (MemWrite = '1') then
-			data_mem(to_integer(unsigned(address))) <= write_data;
-		end if;
-	end if;
-end process mem_process;
-end compor;
+	data_out <= mem_add when (address = "00000000000000000000000000000001") else
+					mem_sub when (address = "00000000000000000000000000000010") else
+					mem_and when (address = "00000000000000000000000000000011") else
+					mem_or;	
+
+end architecture compor;

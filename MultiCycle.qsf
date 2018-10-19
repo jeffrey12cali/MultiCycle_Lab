@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY IR
+set_global_assignment -name TOP_LEVEL_ENTITY MultiCycle
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:28:40  SEPTEMBER 29, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -52,6 +52,9 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE mux3.vhd
+set_global_assignment -name VHDL_FILE registerFile.vhd
+set_global_assignment -name VHDL_FILE memory.vhd
 set_global_assignment -name VHDL_FILE mux2.vhd
 set_global_assignment -name VHDL_FILE mux.vhd
 set_global_assignment -name VHDL_FILE alu.vhd

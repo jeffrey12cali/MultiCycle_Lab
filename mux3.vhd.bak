@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity mux3 is 
+port
+(
+	
+	instructionR150,
+	intructionR2016: in std_logic_vector(7 downto 0);
+	regDst: in std_logic_vector(0 downto 0);
+	salida: out std_logic_vector(7 downto 0)
+	
+);
+end mux3;
+
+architecture case_arch2 of mux3 is
+begin
+	process(instructionR150,instructionR2016,PC,regDst)
+	begin
+		case (regDst) is
+			when "0" =>
+				salida <= instructionR150;
+			when others =>
+				salida <= instructionR2016;
+		end case;
+	end process;
+end case_arch2;
+
+

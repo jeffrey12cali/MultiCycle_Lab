@@ -11,7 +11,7 @@ entity IR is
 		r3: out std_logic_vector (4 downto 0);
 		imm: out std_logic_vector (15 downto 0);
 		jump: out std_logic_vector (25 downto 0);
-		func: out std_logic_vector (0 downto 5)
+		func: out std_logic_vector (5 downto 0)
 	);
 end entity;
 
@@ -22,7 +22,7 @@ architecture behavior of IR is
 	signal r3_out: std_logic_vector (4 downto 0);
 	signal imm_out: std_logic_vector (15 downto 0);
 	signal jump_out: std_logic_vector (25 downto 0);
-	signal func_out: std_logic_vector (0 downto 5);
+	signal func_out: std_logic_vector (5 downto 0);
 	
 	begin
 		op <= op_out;
