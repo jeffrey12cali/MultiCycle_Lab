@@ -4,9 +4,9 @@ entity mux2 is
 port
 (
 	regA,
-	PC: in std_logic_vector(7 downto 0);
+	PC: in std_logic_vector(31 downto 0);
 	sel1: in std_logic_vector(0 downto 0);
-	salida: out std_logic_vector(7 downto 0)
+	salida: out std_logic_vector(31 downto 0)
 	
 );
 end mux2;

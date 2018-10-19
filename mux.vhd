@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 entity mux is 
 port
 (
-	a,b,c,d: in std_logic_vector(7 downto 0);
+	a,b,c,d: in std_logic_vector(31 downto 0);
 	sel: in std_logic_vector(1 downto 0);
-	salida: out std_logic_vector(7 downto 0)
+	salida: out std_logic_vector(31 downto 0)
 	
 );
 end mux;

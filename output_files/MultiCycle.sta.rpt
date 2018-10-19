@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MultiCycle
-Thu Oct 18 23:21:22 2018
+Fri Oct 19 12:58:12 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -126,40 +126,48 @@ No paths to report.
 +-------------+-------------+--------+--------+--------+--------+
 ; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +-------------+-------------+--------+--------+--------+--------+
-; testOp[0]   ; testRes[0]  ; 11.616 ;        ;        ; 11.616 ;
-; testOp[0]   ; testRes[1]  ; 13.274 ; 13.274 ; 13.274 ; 13.274 ;
-; testOp[0]   ; testRes[2]  ; 10.814 ;        ;        ; 10.814 ;
-; testOp[0]   ; testRes[3]  ;        ; 10.815 ; 10.815 ;        ;
-; testOp[0]   ; testRes[4]  ; 10.736 ;        ;        ; 10.736 ;
-; testOp[0]   ; testRes[5]  ; 13.028 ;        ;        ; 13.028 ;
-; testOp[0]   ; testRes[6]  ; 11.388 ; 11.388 ; 11.388 ; 11.388 ;
-; testOp[0]   ; testRes[7]  ; 10.979 ;        ;        ; 10.979 ;
-; testOp[1]   ; testRes[0]  ; 11.138 ; 11.138 ; 11.138 ; 11.138 ;
-; testOp[1]   ; testRes[1]  ; 12.826 ; 12.826 ; 12.826 ; 12.826 ;
-; testOp[1]   ; testRes[2]  ; 11.236 ; 11.236 ; 11.236 ; 11.236 ;
-; testOp[1]   ; testRes[3]  ;        ; 10.720 ; 10.720 ;        ;
-; testOp[1]   ; testRes[4]  ; 10.769 ; 10.769 ; 10.769 ; 10.769 ;
-; testOp[1]   ; testRes[5]  ; 12.985 ; 12.985 ; 12.985 ; 12.985 ;
-; testOp[1]   ; testRes[6]  ; 11.350 ; 11.350 ; 11.350 ; 11.350 ;
-; testOp[1]   ; testRes[7]  ;        ; 10.532 ; 10.532 ;        ;
-; testSel1    ; testRes[0]  ; 11.622 ; 11.622 ; 11.622 ; 11.622 ;
-; testSel1    ; testRes[1]  ; 13.282 ; 13.282 ; 13.282 ; 13.282 ;
-; testSel1    ; testRes[2]  ; 11.490 ; 11.490 ; 11.490 ; 11.490 ;
-; testSel2[0] ; testRes[0]  ; 12.353 ; 12.353 ; 12.353 ; 12.353 ;
-; testSel2[0] ; testRes[1]  ;        ; 14.043 ; 14.043 ;        ;
-; testSel2[0] ; testRes[2]  ; 11.821 ; 11.821 ; 11.821 ; 11.821 ;
-; testSel2[0] ; testRes[3]  ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
-; testSel2[0] ; testRes[4]  ; 11.793 ; 11.793 ; 11.793 ; 11.793 ;
-; testSel2[0] ; testRes[5]  ; 14.010 ;        ;        ; 14.010 ;
-; testSel2[0] ; testRes[6]  ; 12.360 ; 12.360 ; 12.360 ; 12.360 ;
-; testSel2[1] ; testRes[0]  ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
-; testSel2[1] ; testRes[1]  ; 13.800 ;        ;        ; 13.800 ;
-; testSel2[1] ; testRes[2]  ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
-; testSel2[1] ; testRes[3]  ; 11.071 ;        ;        ; 11.071 ;
-; testSel2[1] ; testRes[4]  ; 11.049 ; 11.049 ; 11.049 ; 11.049 ;
-; testSel2[1] ; testRes[5]  ; 13.296 ;        ;        ; 13.296 ;
-; testSel2[1] ; testRes[6]  ; 11.645 ;        ;        ; 11.645 ;
-; testSel2[1] ; testRes[7]  ; 11.047 ;        ;        ; 11.047 ;
+; testOp[0]   ; testRes[0]  ; 11.689 ;        ;        ; 11.689 ;
+; testOp[0]   ; testRes[1]  ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; testOp[0]   ; testRes[2]  ; 12.503 ;        ;        ; 12.503 ;
+; testOp[0]   ; testRes[3]  ;        ; 12.297 ; 12.297 ;        ;
+; testOp[0]   ; testRes[4]  ; 10.596 ; 10.596 ; 10.596 ; 10.596 ;
+; testOp[1]   ; testRes[0]  ; 11.530 ; 11.530 ; 11.530 ; 11.530 ;
+; testOp[1]   ; testRes[1]  ; 11.432 ; 11.432 ; 11.432 ; 11.432 ;
+; testOp[1]   ; testRes[2]  ; 12.195 ; 12.195 ; 12.195 ; 12.195 ;
+; testOp[1]   ; testRes[3]  ;        ; 11.518 ; 11.518 ;        ;
+; testOp[1]   ; testRes[4]  ; 10.287 ; 10.287 ; 10.287 ; 10.287 ;
+; testOp[2]   ; testRes[0]  ; 12.178 ; 13.275 ; 13.275 ; 12.178 ;
+; testOp[2]   ; testRes[1]  ; 11.906 ;        ;        ; 11.906 ;
+; testOp[2]   ; testRes[2]  ; 11.598 ;        ;        ; 11.598 ;
+; testOp[2]   ; testRes[3]  ;        ; 12.443 ; 12.443 ;        ;
+; testOp[2]   ; testRes[4]  ; 12.173 ;        ;        ; 12.173 ;
+; testOp[3]   ; testRes[0]  ; 11.130 ; 12.227 ; 12.227 ; 11.130 ;
+; testOp[3]   ; testRes[1]  ; 10.858 ;        ;        ; 10.858 ;
+; testOp[3]   ; testRes[2]  ; 10.480 ;        ;        ; 10.480 ;
+; testOp[3]   ; testRes[3]  ;        ; 11.395 ; 11.395 ;        ;
+; testOp[3]   ; testRes[4]  ; 11.125 ;        ;        ; 11.125 ;
+; testOp[4]   ; testRes[0]  ; 11.242 ; 12.339 ; 12.339 ; 11.242 ;
+; testOp[4]   ; testRes[1]  ; 10.970 ;        ;        ; 10.970 ;
+; testOp[4]   ; testRes[2]  ; 10.548 ;        ;        ; 10.548 ;
+; testOp[4]   ; testRes[3]  ;        ; 11.507 ; 11.507 ;        ;
+; testOp[4]   ; testRes[4]  ; 11.237 ;        ;        ; 11.237 ;
+; testOp[5]   ; testRes[0]  ; 11.121 ; 12.218 ; 12.218 ; 11.121 ;
+; testOp[5]   ; testRes[1]  ; 10.849 ;        ;        ; 10.849 ;
+; testOp[5]   ; testRes[2]  ; 11.415 ;        ;        ; 11.415 ;
+; testOp[5]   ; testRes[3]  ;        ; 11.386 ; 11.386 ;        ;
+; testOp[5]   ; testRes[4]  ; 11.116 ;        ;        ; 11.116 ;
+; testSel1    ; testRes[0]  ; 11.619 ; 11.268 ; 11.268 ; 11.619 ;
+; testSel1    ; testRes[1]  ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; testSel1    ; testRes[2]  ; 11.656 ; 11.656 ; 11.656 ; 11.656 ;
+; testSel2[0] ; testRes[0]  ; 11.175 ; 10.823 ; 10.823 ; 11.175 ;
+; testSel2[0] ; testRes[1]  ;        ; 11.154 ; 11.154 ;        ;
+; testSel2[0] ; testRes[2]  ; 12.266 ; 12.266 ; 12.266 ; 12.266 ;
+; testSel2[0] ; testRes[3]  ; 12.255 ;        ;        ; 12.255 ;
+; testSel2[1] ; testRes[0]  ; 11.976 ; 11.656 ; 11.656 ; 11.976 ;
+; testSel2[1] ; testRes[1]  ; 10.910 ;        ;        ; 10.910 ;
+; testSel2[1] ; testRes[2]  ; 12.615 ; 12.615 ; 12.615 ; 12.615 ;
+; testSel2[1] ; testRes[3]  ; 12.026 ;        ;        ; 12.026 ;
+; testSel2[1] ; testRes[4]  ;        ; 10.702 ; 10.702 ;        ;
 +-------------+-------------+--------+--------+--------+--------+
 
 
@@ -168,40 +176,48 @@ No paths to report.
 +-------------+-------------+--------+--------+--------+--------+
 ; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +-------------+-------------+--------+--------+--------+--------+
-; testOp[0]   ; testRes[0]  ; 11.616 ;        ;        ; 11.616 ;
-; testOp[0]   ; testRes[1]  ; 13.274 ; 13.274 ; 13.274 ; 13.274 ;
-; testOp[0]   ; testRes[2]  ; 10.814 ;        ;        ; 10.814 ;
-; testOp[0]   ; testRes[3]  ;        ; 10.815 ; 10.815 ;        ;
-; testOp[0]   ; testRes[4]  ; 10.736 ;        ;        ; 10.736 ;
-; testOp[0]   ; testRes[5]  ; 13.028 ;        ;        ; 13.028 ;
-; testOp[0]   ; testRes[6]  ; 11.388 ; 11.388 ; 11.388 ; 11.388 ;
-; testOp[0]   ; testRes[7]  ; 10.979 ;        ;        ; 10.979 ;
-; testOp[1]   ; testRes[0]  ; 11.138 ; 11.138 ; 11.138 ; 11.138 ;
-; testOp[1]   ; testRes[1]  ; 12.826 ; 12.826 ; 12.826 ; 12.826 ;
-; testOp[1]   ; testRes[2]  ; 10.813 ; 10.813 ; 10.813 ; 10.813 ;
-; testOp[1]   ; testRes[3]  ;        ; 10.720 ; 10.720 ;        ;
-; testOp[1]   ; testRes[4]  ; 10.769 ; 10.769 ; 10.769 ; 10.769 ;
-; testOp[1]   ; testRes[5]  ; 12.985 ; 12.985 ; 12.985 ; 12.985 ;
-; testOp[1]   ; testRes[6]  ; 11.350 ; 11.350 ; 11.350 ; 11.350 ;
-; testOp[1]   ; testRes[7]  ;        ; 10.532 ; 10.532 ;        ;
-; testSel1    ; testRes[0]  ; 11.622 ; 11.622 ; 11.622 ; 11.622 ;
-; testSel1    ; testRes[1]  ; 13.282 ; 13.282 ; 13.282 ; 13.282 ;
-; testSel1    ; testRes[2]  ; 11.490 ; 11.490 ; 11.490 ; 11.490 ;
-; testSel2[0] ; testRes[0]  ; 12.353 ; 12.353 ; 12.353 ; 12.353 ;
-; testSel2[0] ; testRes[1]  ;        ; 14.043 ; 14.043 ;        ;
-; testSel2[0] ; testRes[2]  ; 11.821 ; 11.821 ; 11.821 ; 11.821 ;
-; testSel2[0] ; testRes[3]  ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
-; testSel2[0] ; testRes[4]  ; 11.793 ; 11.793 ; 11.793 ; 11.793 ;
-; testSel2[0] ; testRes[5]  ; 14.010 ;        ;        ; 14.010 ;
-; testSel2[0] ; testRes[6]  ; 12.360 ; 12.360 ; 12.360 ; 12.360 ;
-; testSel2[1] ; testRes[0]  ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
-; testSel2[1] ; testRes[1]  ; 13.800 ;        ;        ; 13.800 ;
-; testSel2[1] ; testRes[2]  ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
-; testSel2[1] ; testRes[3]  ; 11.071 ;        ;        ; 11.071 ;
-; testSel2[1] ; testRes[4]  ; 11.049 ; 11.049 ; 11.049 ; 11.049 ;
-; testSel2[1] ; testRes[5]  ; 13.296 ;        ;        ; 13.296 ;
-; testSel2[1] ; testRes[6]  ; 11.645 ;        ;        ; 11.645 ;
-; testSel2[1] ; testRes[7]  ; 11.047 ;        ;        ; 11.047 ;
+; testOp[0]   ; testRes[0]  ; 11.689 ;        ;        ; 11.689 ;
+; testOp[0]   ; testRes[1]  ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; testOp[0]   ; testRes[2]  ; 12.329 ;        ;        ; 12.329 ;
+; testOp[0]   ; testRes[3]  ;        ; 12.297 ; 12.297 ;        ;
+; testOp[0]   ; testRes[4]  ; 10.596 ; 10.596 ; 10.596 ; 10.596 ;
+; testOp[1]   ; testRes[0]  ; 11.337 ; 11.530 ; 11.530 ; 11.337 ;
+; testOp[1]   ; testRes[1]  ; 11.432 ; 11.432 ; 11.432 ; 11.432 ;
+; testOp[1]   ; testRes[2]  ; 12.021 ; 12.021 ; 12.021 ; 12.021 ;
+; testOp[1]   ; testRes[3]  ;        ; 10.701 ; 10.701 ;        ;
+; testOp[1]   ; testRes[4]  ; 10.287 ; 10.287 ; 10.287 ; 10.287 ;
+; testOp[2]   ; testRes[0]  ; 12.178 ; 12.111 ; 12.111 ; 12.178 ;
+; testOp[2]   ; testRes[1]  ; 11.906 ;        ;        ; 11.906 ;
+; testOp[2]   ; testRes[2]  ; 11.598 ;        ;        ; 11.598 ;
+; testOp[2]   ; testRes[3]  ;        ; 12.097 ; 12.097 ;        ;
+; testOp[2]   ; testRes[4]  ; 12.173 ;        ;        ; 12.173 ;
+; testOp[3]   ; testRes[0]  ; 11.130 ; 12.227 ; 12.227 ; 11.130 ;
+; testOp[3]   ; testRes[1]  ; 10.858 ;        ;        ; 10.858 ;
+; testOp[3]   ; testRes[2]  ; 10.480 ;        ;        ; 10.480 ;
+; testOp[3]   ; testRes[3]  ;        ; 11.395 ; 11.395 ;        ;
+; testOp[3]   ; testRes[4]  ; 11.125 ;        ;        ; 11.125 ;
+; testOp[4]   ; testRes[0]  ; 11.242 ; 12.339 ; 12.339 ; 11.242 ;
+; testOp[4]   ; testRes[1]  ; 10.970 ;        ;        ; 10.970 ;
+; testOp[4]   ; testRes[2]  ; 10.548 ;        ;        ; 10.548 ;
+; testOp[4]   ; testRes[3]  ;        ; 11.507 ; 11.507 ;        ;
+; testOp[4]   ; testRes[4]  ; 11.237 ;        ;        ; 11.237 ;
+; testOp[5]   ; testRes[0]  ; 11.121 ; 12.218 ; 12.218 ; 11.121 ;
+; testOp[5]   ; testRes[1]  ; 10.849 ;        ;        ; 10.849 ;
+; testOp[5]   ; testRes[2]  ; 11.415 ;        ;        ; 11.415 ;
+; testOp[5]   ; testRes[3]  ;        ; 11.386 ; 11.386 ;        ;
+; testOp[5]   ; testRes[4]  ; 11.116 ;        ;        ; 11.116 ;
+; testSel1    ; testRes[0]  ; 11.268 ; 11.268 ; 11.268 ; 11.268 ;
+; testSel1    ; testRes[1]  ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; testSel1    ; testRes[2]  ; 11.656 ; 11.656 ; 11.656 ; 11.656 ;
+; testSel2[0] ; testRes[0]  ; 10.823 ; 10.823 ; 10.823 ; 10.823 ;
+; testSel2[0] ; testRes[1]  ;        ; 11.154 ; 11.154 ;        ;
+; testSel2[0] ; testRes[2]  ; 12.091 ; 12.091 ; 12.091 ; 12.091 ;
+; testSel2[0] ; testRes[3]  ; 12.255 ;        ;        ; 12.255 ;
+; testSel2[1] ; testRes[0]  ; 11.656 ; 11.656 ; 11.656 ; 11.656 ;
+; testSel2[1] ; testRes[1]  ; 10.910 ;        ;        ; 10.910 ;
+; testSel2[1] ; testRes[2]  ; 12.431 ; 12.431 ; 12.431 ; 12.431 ;
+; testSel2[1] ; testRes[3]  ; 12.026 ;        ;        ; 12.026 ;
+; testSel2[1] ; testRes[4]  ;        ; 10.702 ; 10.702 ;        ;
 +-------------+-------------+--------+--------+--------+--------+
 
 
@@ -240,40 +256,48 @@ No paths to report.
 +-------------+-------------+-------+-------+-------+-------+
 ; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +-------------+-------------+-------+-------+-------+-------+
-; testOp[0]   ; testRes[0]  ; 5.835 ;       ;       ; 5.835 ;
-; testOp[0]   ; testRes[1]  ; 6.476 ; 6.476 ; 6.476 ; 6.476 ;
-; testOp[0]   ; testRes[2]  ; 5.497 ;       ;       ; 5.497 ;
-; testOp[0]   ; testRes[3]  ;       ; 5.495 ; 5.495 ;       ;
-; testOp[0]   ; testRes[4]  ; 5.460 ;       ;       ; 5.460 ;
-; testOp[0]   ; testRes[5]  ; 6.392 ;       ;       ; 6.392 ;
-; testOp[0]   ; testRes[6]  ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
-; testOp[0]   ; testRes[7]  ; 5.547 ;       ;       ; 5.547 ;
-; testOp[1]   ; testRes[0]  ; 5.667 ; 5.667 ; 5.667 ; 5.667 ;
-; testOp[1]   ; testRes[1]  ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; testOp[1]   ; testRes[2]  ; 5.644 ; 5.644 ; 5.644 ; 5.644 ;
-; testOp[1]   ; testRes[3]  ;       ; 5.488 ; 5.488 ;       ;
-; testOp[1]   ; testRes[4]  ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
-; testOp[1]   ; testRes[5]  ; 6.379 ; 6.379 ; 6.379 ; 6.379 ;
-; testOp[1]   ; testRes[6]  ; 5.754 ; 5.754 ; 5.754 ; 5.754 ;
-; testOp[1]   ; testRes[7]  ;       ; 5.370 ; 5.370 ;       ;
-; testSel1    ; testRes[0]  ; 5.848 ; 5.848 ; 5.848 ; 5.848 ;
-; testSel1    ; testRes[1]  ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
-; testSel1    ; testRes[2]  ; 5.749 ; 5.749 ; 5.749 ; 5.749 ;
-; testSel2[0] ; testRes[0]  ; 6.090 ; 6.090 ; 6.090 ; 6.090 ;
-; testSel2[0] ; testRes[1]  ;       ; 6.734 ; 6.734 ;       ;
-; testSel2[0] ; testRes[2]  ; 5.851 ; 5.851 ; 5.851 ; 5.851 ;
-; testSel2[0] ; testRes[3]  ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
-; testSel2[0] ; testRes[4]  ; 5.823 ; 5.823 ; 5.823 ; 5.823 ;
-; testSel2[0] ; testRes[5]  ; 6.758 ;       ;       ; 6.758 ;
-; testSel2[0] ; testRes[6]  ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
-; testSel2[1] ; testRes[0]  ; 6.014 ; 6.014 ; 6.014 ; 6.014 ;
-; testSel2[1] ; testRes[1]  ; 6.658 ;       ;       ; 6.658 ;
-; testSel2[1] ; testRes[2]  ; 5.759 ; 5.759 ; 5.759 ; 5.759 ;
-; testSel2[1] ; testRes[3]  ; 5.589 ;       ;       ; 5.589 ;
-; testSel2[1] ; testRes[4]  ; 5.566 ; 5.566 ; 5.566 ; 5.566 ;
-; testSel2[1] ; testRes[5]  ; 6.498 ;       ;       ; 6.498 ;
-; testSel2[1] ; testRes[6]  ; 5.856 ;       ;       ; 5.856 ;
-; testSel2[1] ; testRes[7]  ; 5.565 ;       ;       ; 5.565 ;
+; testOp[0]   ; testRes[0]  ; 5.741 ;       ;       ; 5.741 ;
+; testOp[0]   ; testRes[1]  ; 5.560 ; 5.560 ; 5.560 ; 5.560 ;
+; testOp[0]   ; testRes[2]  ; 6.012 ;       ;       ; 6.012 ;
+; testOp[0]   ; testRes[3]  ;       ; 5.975 ; 5.975 ;       ;
+; testOp[0]   ; testRes[4]  ; 5.373 ; 5.373 ; 5.373 ; 5.373 ;
+; testOp[1]   ; testRes[0]  ; 5.698 ; 5.698 ; 5.698 ; 5.698 ;
+; testOp[1]   ; testRes[1]  ; 5.660 ; 5.660 ; 5.660 ; 5.660 ;
+; testOp[1]   ; testRes[2]  ; 5.919 ; 5.919 ; 5.919 ; 5.919 ;
+; testOp[1]   ; testRes[3]  ;       ; 5.717 ; 5.717 ;       ;
+; testOp[1]   ; testRes[4]  ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; testOp[2]   ; testRes[0]  ; 6.078 ; 6.457 ; 6.457 ; 6.078 ;
+; testOp[2]   ; testRes[1]  ; 5.973 ;       ;       ; 5.973 ;
+; testOp[2]   ; testRes[2]  ; 5.841 ;       ;       ; 5.841 ;
+; testOp[2]   ; testRes[3]  ;       ; 6.193 ; 6.193 ;       ;
+; testOp[2]   ; testRes[4]  ; 6.084 ;       ;       ; 6.084 ;
+; testOp[3]   ; testRes[0]  ; 5.556 ; 5.935 ; 5.935 ; 5.556 ;
+; testOp[3]   ; testRes[1]  ; 5.451 ;       ;       ; 5.451 ;
+; testOp[3]   ; testRes[2]  ; 5.323 ;       ;       ; 5.323 ;
+; testOp[3]   ; testRes[3]  ;       ; 5.671 ; 5.671 ;       ;
+; testOp[3]   ; testRes[4]  ; 5.562 ;       ;       ; 5.562 ;
+; testOp[4]   ; testRes[0]  ; 5.569 ; 5.948 ; 5.948 ; 5.569 ;
+; testOp[4]   ; testRes[1]  ; 5.464 ;       ;       ; 5.464 ;
+; testOp[4]   ; testRes[2]  ; 5.334 ;       ;       ; 5.334 ;
+; testOp[4]   ; testRes[3]  ;       ; 5.684 ; 5.684 ;       ;
+; testOp[4]   ; testRes[4]  ; 5.575 ;       ;       ; 5.575 ;
+; testOp[5]   ; testRes[0]  ; 5.561 ; 5.940 ; 5.940 ; 5.561 ;
+; testOp[5]   ; testRes[1]  ; 5.456 ;       ;       ; 5.456 ;
+; testOp[5]   ; testRes[2]  ; 5.611 ;       ;       ; 5.611 ;
+; testOp[5]   ; testRes[3]  ;       ; 5.676 ; 5.676 ;       ;
+; testOp[5]   ; testRes[4]  ; 5.567 ;       ;       ; 5.567 ;
+; testSel1    ; testRes[0]  ; 5.731 ; 5.612 ; 5.612 ; 5.731 ;
+; testSel1    ; testRes[1]  ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; testSel1    ; testRes[2]  ; 5.736 ; 5.736 ; 5.736 ; 5.736 ;
+; testSel2[0] ; testRes[0]  ; 5.568 ; 5.421 ; 5.421 ; 5.568 ;
+; testSel2[0] ; testRes[1]  ;       ; 5.526 ; 5.526 ;       ;
+; testSel2[0] ; testRes[2]  ; 5.910 ; 5.910 ; 5.910 ; 5.910 ;
+; testSel2[0] ; testRes[3]  ; 5.949 ;       ;       ; 5.949 ;
+; testSel2[1] ; testRes[0]  ; 5.878 ; 5.752 ; 5.752 ; 5.878 ;
+; testSel2[1] ; testRes[1]  ; 5.482 ;       ;       ; 5.482 ;
+; testSel2[1] ; testRes[2]  ; 6.074 ; 6.074 ; 6.074 ; 6.074 ;
+; testSel2[1] ; testRes[3]  ; 5.902 ;       ;       ; 5.902 ;
+; testSel2[1] ; testRes[4]  ;       ; 5.427 ; 5.427 ;       ;
 +-------------+-------------+-------+-------+-------+-------+
 
 
@@ -282,40 +306,48 @@ No paths to report.
 +-------------+-------------+-------+-------+-------+-------+
 ; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +-------------+-------------+-------+-------+-------+-------+
-; testOp[0]   ; testRes[0]  ; 5.835 ;       ;       ; 5.835 ;
-; testOp[0]   ; testRes[1]  ; 6.476 ; 6.476 ; 6.476 ; 6.476 ;
-; testOp[0]   ; testRes[2]  ; 5.497 ;       ;       ; 5.497 ;
-; testOp[0]   ; testRes[3]  ;       ; 5.495 ; 5.495 ;       ;
-; testOp[0]   ; testRes[4]  ; 5.460 ;       ;       ; 5.460 ;
-; testOp[0]   ; testRes[5]  ; 6.392 ;       ;       ; 6.392 ;
-; testOp[0]   ; testRes[6]  ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
-; testOp[0]   ; testRes[7]  ; 5.547 ;       ;       ; 5.547 ;
-; testOp[1]   ; testRes[0]  ; 5.667 ; 5.667 ; 5.667 ; 5.667 ;
-; testOp[1]   ; testRes[1]  ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; testOp[1]   ; testRes[2]  ; 5.489 ; 5.489 ; 5.489 ; 5.489 ;
-; testOp[1]   ; testRes[3]  ;       ; 5.488 ; 5.488 ;       ;
-; testOp[1]   ; testRes[4]  ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
-; testOp[1]   ; testRes[5]  ; 6.379 ; 6.379 ; 6.379 ; 6.379 ;
-; testOp[1]   ; testRes[6]  ; 5.754 ; 5.754 ; 5.754 ; 5.754 ;
-; testOp[1]   ; testRes[7]  ;       ; 5.370 ; 5.370 ;       ;
-; testSel1    ; testRes[0]  ; 5.848 ; 5.848 ; 5.848 ; 5.848 ;
-; testSel1    ; testRes[1]  ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
-; testSel1    ; testRes[2]  ; 5.749 ; 5.749 ; 5.749 ; 5.749 ;
-; testSel2[0] ; testRes[0]  ; 6.090 ; 6.090 ; 6.090 ; 6.090 ;
-; testSel2[0] ; testRes[1]  ;       ; 6.734 ; 6.734 ;       ;
-; testSel2[0] ; testRes[2]  ; 5.851 ; 5.851 ; 5.851 ; 5.851 ;
-; testSel2[0] ; testRes[3]  ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
-; testSel2[0] ; testRes[4]  ; 5.823 ; 5.823 ; 5.823 ; 5.823 ;
-; testSel2[0] ; testRes[5]  ; 6.758 ;       ;       ; 6.758 ;
-; testSel2[0] ; testRes[6]  ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
-; testSel2[1] ; testRes[0]  ; 6.014 ; 6.014 ; 6.014 ; 6.014 ;
-; testSel2[1] ; testRes[1]  ; 6.658 ;       ;       ; 6.658 ;
-; testSel2[1] ; testRes[2]  ; 5.759 ; 5.759 ; 5.759 ; 5.759 ;
-; testSel2[1] ; testRes[3]  ; 5.589 ;       ;       ; 5.589 ;
-; testSel2[1] ; testRes[4]  ; 5.566 ; 5.566 ; 5.566 ; 5.566 ;
-; testSel2[1] ; testRes[5]  ; 6.498 ;       ;       ; 6.498 ;
-; testSel2[1] ; testRes[6]  ; 5.856 ;       ;       ; 5.856 ;
-; testSel2[1] ; testRes[7]  ; 5.565 ;       ;       ; 5.565 ;
+; testOp[0]   ; testRes[0]  ; 5.741 ;       ;       ; 5.741 ;
+; testOp[0]   ; testRes[1]  ; 5.560 ; 5.560 ; 5.560 ; 5.560 ;
+; testOp[0]   ; testRes[2]  ; 5.961 ;       ;       ; 5.961 ;
+; testOp[0]   ; testRes[3]  ;       ; 5.975 ; 5.975 ;       ;
+; testOp[0]   ; testRes[4]  ; 5.373 ; 5.373 ; 5.373 ; 5.373 ;
+; testOp[1]   ; testRes[0]  ; 5.634 ; 5.698 ; 5.698 ; 5.634 ;
+; testOp[1]   ; testRes[1]  ; 5.660 ; 5.660 ; 5.660 ; 5.660 ;
+; testOp[1]   ; testRes[2]  ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; testOp[1]   ; testRes[3]  ;       ; 5.426 ; 5.426 ;       ;
+; testOp[1]   ; testRes[4]  ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; testOp[2]   ; testRes[0]  ; 6.078 ; 6.023 ; 6.023 ; 6.078 ;
+; testOp[2]   ; testRes[1]  ; 5.973 ;       ;       ; 5.973 ;
+; testOp[2]   ; testRes[2]  ; 5.841 ;       ;       ; 5.841 ;
+; testOp[2]   ; testRes[3]  ;       ; 6.039 ; 6.039 ;       ;
+; testOp[2]   ; testRes[4]  ; 6.084 ;       ;       ; 6.084 ;
+; testOp[3]   ; testRes[0]  ; 5.556 ; 5.935 ; 5.935 ; 5.556 ;
+; testOp[3]   ; testRes[1]  ; 5.451 ;       ;       ; 5.451 ;
+; testOp[3]   ; testRes[2]  ; 5.323 ;       ;       ; 5.323 ;
+; testOp[3]   ; testRes[3]  ;       ; 5.671 ; 5.671 ;       ;
+; testOp[3]   ; testRes[4]  ; 5.562 ;       ;       ; 5.562 ;
+; testOp[4]   ; testRes[0]  ; 5.569 ; 5.948 ; 5.948 ; 5.569 ;
+; testOp[4]   ; testRes[1]  ; 5.464 ;       ;       ; 5.464 ;
+; testOp[4]   ; testRes[2]  ; 5.334 ;       ;       ; 5.334 ;
+; testOp[4]   ; testRes[3]  ;       ; 5.684 ; 5.684 ;       ;
+; testOp[4]   ; testRes[4]  ; 5.575 ;       ;       ; 5.575 ;
+; testOp[5]   ; testRes[0]  ; 5.561 ; 5.940 ; 5.940 ; 5.561 ;
+; testOp[5]   ; testRes[1]  ; 5.456 ;       ;       ; 5.456 ;
+; testOp[5]   ; testRes[2]  ; 5.611 ;       ;       ; 5.611 ;
+; testOp[5]   ; testRes[3]  ;       ; 5.676 ; 5.676 ;       ;
+; testOp[5]   ; testRes[4]  ; 5.567 ;       ;       ; 5.567 ;
+; testSel1    ; testRes[0]  ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; testSel1    ; testRes[1]  ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; testSel1    ; testRes[2]  ; 5.736 ; 5.736 ; 5.736 ; 5.736 ;
+; testSel2[0] ; testRes[0]  ; 5.421 ; 5.421 ; 5.421 ; 5.421 ;
+; testSel2[0] ; testRes[1]  ;       ; 5.526 ; 5.526 ;       ;
+; testSel2[0] ; testRes[2]  ; 5.859 ; 5.859 ; 5.859 ; 5.859 ;
+; testSel2[0] ; testRes[3]  ; 5.949 ;       ;       ; 5.949 ;
+; testSel2[1] ; testRes[0]  ; 5.752 ; 5.752 ; 5.752 ; 5.752 ;
+; testSel2[1] ; testRes[1]  ; 5.482 ;       ;       ; 5.482 ;
+; testSel2[1] ; testRes[2]  ; 6.013 ; 6.013 ; 6.013 ; 6.013 ;
+; testSel2[1] ; testRes[3]  ; 5.902 ;       ;       ; 5.902 ;
+; testSel2[1] ; testRes[4]  ;       ; 5.427 ; 5.427 ;       ;
 +-------------+-------------+-------+-------+-------+-------+
 
 
@@ -334,40 +366,48 @@ No paths to report.
 +-------------+-------------+--------+--------+--------+--------+
 ; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +-------------+-------------+--------+--------+--------+--------+
-; testOp[0]   ; testRes[0]  ; 11.616 ;        ;        ; 11.616 ;
-; testOp[0]   ; testRes[1]  ; 13.274 ; 13.274 ; 13.274 ; 13.274 ;
-; testOp[0]   ; testRes[2]  ; 10.814 ;        ;        ; 10.814 ;
-; testOp[0]   ; testRes[3]  ;        ; 10.815 ; 10.815 ;        ;
-; testOp[0]   ; testRes[4]  ; 10.736 ;        ;        ; 10.736 ;
-; testOp[0]   ; testRes[5]  ; 13.028 ;        ;        ; 13.028 ;
-; testOp[0]   ; testRes[6]  ; 11.388 ; 11.388 ; 11.388 ; 11.388 ;
-; testOp[0]   ; testRes[7]  ; 10.979 ;        ;        ; 10.979 ;
-; testOp[1]   ; testRes[0]  ; 11.138 ; 11.138 ; 11.138 ; 11.138 ;
-; testOp[1]   ; testRes[1]  ; 12.826 ; 12.826 ; 12.826 ; 12.826 ;
-; testOp[1]   ; testRes[2]  ; 11.236 ; 11.236 ; 11.236 ; 11.236 ;
-; testOp[1]   ; testRes[3]  ;        ; 10.720 ; 10.720 ;        ;
-; testOp[1]   ; testRes[4]  ; 10.769 ; 10.769 ; 10.769 ; 10.769 ;
-; testOp[1]   ; testRes[5]  ; 12.985 ; 12.985 ; 12.985 ; 12.985 ;
-; testOp[1]   ; testRes[6]  ; 11.350 ; 11.350 ; 11.350 ; 11.350 ;
-; testOp[1]   ; testRes[7]  ;        ; 10.532 ; 10.532 ;        ;
-; testSel1    ; testRes[0]  ; 11.622 ; 11.622 ; 11.622 ; 11.622 ;
-; testSel1    ; testRes[1]  ; 13.282 ; 13.282 ; 13.282 ; 13.282 ;
-; testSel1    ; testRes[2]  ; 11.490 ; 11.490 ; 11.490 ; 11.490 ;
-; testSel2[0] ; testRes[0]  ; 12.353 ; 12.353 ; 12.353 ; 12.353 ;
-; testSel2[0] ; testRes[1]  ;        ; 14.043 ; 14.043 ;        ;
-; testSel2[0] ; testRes[2]  ; 11.821 ; 11.821 ; 11.821 ; 11.821 ;
-; testSel2[0] ; testRes[3]  ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
-; testSel2[0] ; testRes[4]  ; 11.793 ; 11.793 ; 11.793 ; 11.793 ;
-; testSel2[0] ; testRes[5]  ; 14.010 ;        ;        ; 14.010 ;
-; testSel2[0] ; testRes[6]  ; 12.360 ; 12.360 ; 12.360 ; 12.360 ;
-; testSel2[1] ; testRes[0]  ; 12.110 ; 12.110 ; 12.110 ; 12.110 ;
-; testSel2[1] ; testRes[1]  ; 13.800 ;        ;        ; 13.800 ;
-; testSel2[1] ; testRes[2]  ; 11.545 ; 11.545 ; 11.545 ; 11.545 ;
-; testSel2[1] ; testRes[3]  ; 11.071 ;        ;        ; 11.071 ;
-; testSel2[1] ; testRes[4]  ; 11.049 ; 11.049 ; 11.049 ; 11.049 ;
-; testSel2[1] ; testRes[5]  ; 13.296 ;        ;        ; 13.296 ;
-; testSel2[1] ; testRes[6]  ; 11.645 ;        ;        ; 11.645 ;
-; testSel2[1] ; testRes[7]  ; 11.047 ;        ;        ; 11.047 ;
+; testOp[0]   ; testRes[0]  ; 11.689 ;        ;        ; 11.689 ;
+; testOp[0]   ; testRes[1]  ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; testOp[0]   ; testRes[2]  ; 12.503 ;        ;        ; 12.503 ;
+; testOp[0]   ; testRes[3]  ;        ; 12.297 ; 12.297 ;        ;
+; testOp[0]   ; testRes[4]  ; 10.596 ; 10.596 ; 10.596 ; 10.596 ;
+; testOp[1]   ; testRes[0]  ; 11.530 ; 11.530 ; 11.530 ; 11.530 ;
+; testOp[1]   ; testRes[1]  ; 11.432 ; 11.432 ; 11.432 ; 11.432 ;
+; testOp[1]   ; testRes[2]  ; 12.195 ; 12.195 ; 12.195 ; 12.195 ;
+; testOp[1]   ; testRes[3]  ;        ; 11.518 ; 11.518 ;        ;
+; testOp[1]   ; testRes[4]  ; 10.287 ; 10.287 ; 10.287 ; 10.287 ;
+; testOp[2]   ; testRes[0]  ; 12.178 ; 13.275 ; 13.275 ; 12.178 ;
+; testOp[2]   ; testRes[1]  ; 11.906 ;        ;        ; 11.906 ;
+; testOp[2]   ; testRes[2]  ; 11.598 ;        ;        ; 11.598 ;
+; testOp[2]   ; testRes[3]  ;        ; 12.443 ; 12.443 ;        ;
+; testOp[2]   ; testRes[4]  ; 12.173 ;        ;        ; 12.173 ;
+; testOp[3]   ; testRes[0]  ; 11.130 ; 12.227 ; 12.227 ; 11.130 ;
+; testOp[3]   ; testRes[1]  ; 10.858 ;        ;        ; 10.858 ;
+; testOp[3]   ; testRes[2]  ; 10.480 ;        ;        ; 10.480 ;
+; testOp[3]   ; testRes[3]  ;        ; 11.395 ; 11.395 ;        ;
+; testOp[3]   ; testRes[4]  ; 11.125 ;        ;        ; 11.125 ;
+; testOp[4]   ; testRes[0]  ; 11.242 ; 12.339 ; 12.339 ; 11.242 ;
+; testOp[4]   ; testRes[1]  ; 10.970 ;        ;        ; 10.970 ;
+; testOp[4]   ; testRes[2]  ; 10.548 ;        ;        ; 10.548 ;
+; testOp[4]   ; testRes[3]  ;        ; 11.507 ; 11.507 ;        ;
+; testOp[4]   ; testRes[4]  ; 11.237 ;        ;        ; 11.237 ;
+; testOp[5]   ; testRes[0]  ; 11.121 ; 12.218 ; 12.218 ; 11.121 ;
+; testOp[5]   ; testRes[1]  ; 10.849 ;        ;        ; 10.849 ;
+; testOp[5]   ; testRes[2]  ; 11.415 ;        ;        ; 11.415 ;
+; testOp[5]   ; testRes[3]  ;        ; 11.386 ; 11.386 ;        ;
+; testOp[5]   ; testRes[4]  ; 11.116 ;        ;        ; 11.116 ;
+; testSel1    ; testRes[0]  ; 11.619 ; 11.268 ; 11.268 ; 11.619 ;
+; testSel1    ; testRes[1]  ; 11.362 ; 11.362 ; 11.362 ; 11.362 ;
+; testSel1    ; testRes[2]  ; 11.656 ; 11.656 ; 11.656 ; 11.656 ;
+; testSel2[0] ; testRes[0]  ; 11.175 ; 10.823 ; 10.823 ; 11.175 ;
+; testSel2[0] ; testRes[1]  ;        ; 11.154 ; 11.154 ;        ;
+; testSel2[0] ; testRes[2]  ; 12.266 ; 12.266 ; 12.266 ; 12.266 ;
+; testSel2[0] ; testRes[3]  ; 12.255 ;        ;        ; 12.255 ;
+; testSel2[1] ; testRes[0]  ; 11.976 ; 11.656 ; 11.656 ; 11.976 ;
+; testSel2[1] ; testRes[1]  ; 10.910 ;        ;        ; 10.910 ;
+; testSel2[1] ; testRes[2]  ; 12.615 ; 12.615 ; 12.615 ; 12.615 ;
+; testSel2[1] ; testRes[3]  ; 12.026 ;        ;        ; 12.026 ;
+; testSel2[1] ; testRes[4]  ;        ; 10.702 ; 10.702 ;        ;
 +-------------+-------------+--------+--------+--------+--------+
 
 
@@ -376,40 +416,48 @@ No paths to report.
 +-------------+-------------+-------+-------+-------+-------+
 ; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +-------------+-------------+-------+-------+-------+-------+
-; testOp[0]   ; testRes[0]  ; 5.835 ;       ;       ; 5.835 ;
-; testOp[0]   ; testRes[1]  ; 6.476 ; 6.476 ; 6.476 ; 6.476 ;
-; testOp[0]   ; testRes[2]  ; 5.497 ;       ;       ; 5.497 ;
-; testOp[0]   ; testRes[3]  ;       ; 5.495 ; 5.495 ;       ;
-; testOp[0]   ; testRes[4]  ; 5.460 ;       ;       ; 5.460 ;
-; testOp[0]   ; testRes[5]  ; 6.392 ;       ;       ; 6.392 ;
-; testOp[0]   ; testRes[6]  ; 5.762 ; 5.762 ; 5.762 ; 5.762 ;
-; testOp[0]   ; testRes[7]  ; 5.547 ;       ;       ; 5.547 ;
-; testOp[1]   ; testRes[0]  ; 5.667 ; 5.667 ; 5.667 ; 5.667 ;
-; testOp[1]   ; testRes[1]  ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; testOp[1]   ; testRes[2]  ; 5.489 ; 5.489 ; 5.489 ; 5.489 ;
-; testOp[1]   ; testRes[3]  ;       ; 5.488 ; 5.488 ;       ;
-; testOp[1]   ; testRes[4]  ; 5.447 ; 5.447 ; 5.447 ; 5.447 ;
-; testOp[1]   ; testRes[5]  ; 6.379 ; 6.379 ; 6.379 ; 6.379 ;
-; testOp[1]   ; testRes[6]  ; 5.754 ; 5.754 ; 5.754 ; 5.754 ;
-; testOp[1]   ; testRes[7]  ;       ; 5.370 ; 5.370 ;       ;
-; testSel1    ; testRes[0]  ; 5.848 ; 5.848 ; 5.848 ; 5.848 ;
-; testSel1    ; testRes[1]  ; 6.492 ; 6.492 ; 6.492 ; 6.492 ;
-; testSel1    ; testRes[2]  ; 5.749 ; 5.749 ; 5.749 ; 5.749 ;
-; testSel2[0] ; testRes[0]  ; 6.090 ; 6.090 ; 6.090 ; 6.090 ;
-; testSel2[0] ; testRes[1]  ;       ; 6.734 ; 6.734 ;       ;
-; testSel2[0] ; testRes[2]  ; 5.851 ; 5.851 ; 5.851 ; 5.851 ;
-; testSel2[0] ; testRes[3]  ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
-; testSel2[0] ; testRes[4]  ; 5.823 ; 5.823 ; 5.823 ; 5.823 ;
-; testSel2[0] ; testRes[5]  ; 6.758 ;       ;       ; 6.758 ;
-; testSel2[0] ; testRes[6]  ; 6.114 ; 6.114 ; 6.114 ; 6.114 ;
-; testSel2[1] ; testRes[0]  ; 6.014 ; 6.014 ; 6.014 ; 6.014 ;
-; testSel2[1] ; testRes[1]  ; 6.658 ;       ;       ; 6.658 ;
-; testSel2[1] ; testRes[2]  ; 5.759 ; 5.759 ; 5.759 ; 5.759 ;
-; testSel2[1] ; testRes[3]  ; 5.589 ;       ;       ; 5.589 ;
-; testSel2[1] ; testRes[4]  ; 5.566 ; 5.566 ; 5.566 ; 5.566 ;
-; testSel2[1] ; testRes[5]  ; 6.498 ;       ;       ; 6.498 ;
-; testSel2[1] ; testRes[6]  ; 5.856 ;       ;       ; 5.856 ;
-; testSel2[1] ; testRes[7]  ; 5.565 ;       ;       ; 5.565 ;
+; testOp[0]   ; testRes[0]  ; 5.741 ;       ;       ; 5.741 ;
+; testOp[0]   ; testRes[1]  ; 5.560 ; 5.560 ; 5.560 ; 5.560 ;
+; testOp[0]   ; testRes[2]  ; 5.961 ;       ;       ; 5.961 ;
+; testOp[0]   ; testRes[3]  ;       ; 5.975 ; 5.975 ;       ;
+; testOp[0]   ; testRes[4]  ; 5.373 ; 5.373 ; 5.373 ; 5.373 ;
+; testOp[1]   ; testRes[0]  ; 5.634 ; 5.698 ; 5.698 ; 5.634 ;
+; testOp[1]   ; testRes[1]  ; 5.660 ; 5.660 ; 5.660 ; 5.660 ;
+; testOp[1]   ; testRes[2]  ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; testOp[1]   ; testRes[3]  ;       ; 5.426 ; 5.426 ;       ;
+; testOp[1]   ; testRes[4]  ; 5.279 ; 5.279 ; 5.279 ; 5.279 ;
+; testOp[2]   ; testRes[0]  ; 6.078 ; 6.023 ; 6.023 ; 6.078 ;
+; testOp[2]   ; testRes[1]  ; 5.973 ;       ;       ; 5.973 ;
+; testOp[2]   ; testRes[2]  ; 5.841 ;       ;       ; 5.841 ;
+; testOp[2]   ; testRes[3]  ;       ; 6.039 ; 6.039 ;       ;
+; testOp[2]   ; testRes[4]  ; 6.084 ;       ;       ; 6.084 ;
+; testOp[3]   ; testRes[0]  ; 5.556 ; 5.935 ; 5.935 ; 5.556 ;
+; testOp[3]   ; testRes[1]  ; 5.451 ;       ;       ; 5.451 ;
+; testOp[3]   ; testRes[2]  ; 5.323 ;       ;       ; 5.323 ;
+; testOp[3]   ; testRes[3]  ;       ; 5.671 ; 5.671 ;       ;
+; testOp[3]   ; testRes[4]  ; 5.562 ;       ;       ; 5.562 ;
+; testOp[4]   ; testRes[0]  ; 5.569 ; 5.948 ; 5.948 ; 5.569 ;
+; testOp[4]   ; testRes[1]  ; 5.464 ;       ;       ; 5.464 ;
+; testOp[4]   ; testRes[2]  ; 5.334 ;       ;       ; 5.334 ;
+; testOp[4]   ; testRes[3]  ;       ; 5.684 ; 5.684 ;       ;
+; testOp[4]   ; testRes[4]  ; 5.575 ;       ;       ; 5.575 ;
+; testOp[5]   ; testRes[0]  ; 5.561 ; 5.940 ; 5.940 ; 5.561 ;
+; testOp[5]   ; testRes[1]  ; 5.456 ;       ;       ; 5.456 ;
+; testOp[5]   ; testRes[2]  ; 5.611 ;       ;       ; 5.611 ;
+; testOp[5]   ; testRes[3]  ;       ; 5.676 ; 5.676 ;       ;
+; testOp[5]   ; testRes[4]  ; 5.567 ;       ;       ; 5.567 ;
+; testSel1    ; testRes[0]  ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; testSel1    ; testRes[1]  ; 5.638 ; 5.638 ; 5.638 ; 5.638 ;
+; testSel1    ; testRes[2]  ; 5.736 ; 5.736 ; 5.736 ; 5.736 ;
+; testSel2[0] ; testRes[0]  ; 5.421 ; 5.421 ; 5.421 ; 5.421 ;
+; testSel2[0] ; testRes[1]  ;       ; 5.526 ; 5.526 ;       ;
+; testSel2[0] ; testRes[2]  ; 5.859 ; 5.859 ; 5.859 ; 5.859 ;
+; testSel2[0] ; testRes[3]  ; 5.949 ;       ;       ; 5.949 ;
+; testSel2[1] ; testRes[0]  ; 5.752 ; 5.752 ; 5.752 ; 5.752 ;
+; testSel2[1] ; testRes[1]  ; 5.482 ;       ;       ; 5.482 ;
+; testSel2[1] ; testRes[2]  ; 6.013 ; 6.013 ; 6.013 ; 6.013 ;
+; testSel2[1] ; testRes[3]  ; 5.902 ;       ;       ; 5.902 ;
+; testSel2[1] ; testRes[4]  ;       ; 5.427 ; 5.427 ;       ;
 +-------------+-------------+-------+-------+-------+-------+
 
 
@@ -438,10 +486,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 34    ; 34   ;
-; Unconstrained Output Ports      ; 8     ; 8    ;
-; Unconstrained Output Port Paths ; 34    ; 34   ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 42    ; 42   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 42    ; 42   ;
 +---------------------------------+-------+------+
 
 
@@ -451,7 +499,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 18 23:21:19 2018
+    Info: Processing started: Fri Oct 19 12:58:06 2018
 Info: Command: quartus_sta MultiCycle -c MultiCycle
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -484,9 +532,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Thu Oct 18 23:21:22 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4533 megabytes
+    Info: Processing ended: Fri Oct 19 12:58:12 2018
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 
