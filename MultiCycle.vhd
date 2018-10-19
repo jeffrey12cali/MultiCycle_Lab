@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity MultiCycle is
 	port(
-		testA: in std_logic_vector(7 downto 0);
-		testSel: in std_logic_vector(1 downto 0);
+		testSel1: in std_logic;
+		testSel2: in std_logic_vector(1 downto 0);
 		testOp: in std_logic_vector(1 downto 0);
 		testRes: out std_logic_vector(7 downto 0)
 	);
@@ -28,13 +28,24 @@ architecture behaviour of MultiCycle is
 			salida: out std_logic_vector(7 downto 0)
 		);
 	end component;
+	
+	component mux2
+		port(
+			regA,
+			PC: in std_logic_vector(7 downto 0);
+			sel1: in std_logic;
+			salida: out std_logic_vector(7 downto 0)
+			);
+	end component;
+	
 		
-	signal outMux: std_logic_vector(7 downto 0);
+	signal outMux: std_logic_vector(7 downto 0); 
+	signal outMux1: std_logic_vector(7 downto 0);
 	
 	begin
 		unit1: alu
 		port map(
-			a => testA,
+			a => outMux1,
 			b => outMux,
 			op => testOp,
 			aluOut => testRes
@@ -42,11 +53,22 @@ architecture behaviour of MultiCycle is
 		
 		unit2: mux
 		port map(
-			sel => testSel,
+			sel => testSel2,
 			salida => outMux,
 			a => "00000000",
 			b => "00000100",
 			c => "00110111",
 			d => "01100100"
 		);
+		
+		unit3: mux2
+		port map(
+			sel1 => testSel1,
+			salida =>outMux1,
+			regA =>"00010100",
+			PC => "00010101"
+		);
+		
 	end;
+
+

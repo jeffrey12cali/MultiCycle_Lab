@@ -1,14 +1,7 @@
 |MultiCycle
-testA[0] => alu:unit1.a[0]
-testA[1] => alu:unit1.a[1]
-testA[2] => alu:unit1.a[2]
-testA[3] => alu:unit1.a[3]
-testA[4] => alu:unit1.a[4]
-testA[5] => alu:unit1.a[5]
-testA[6] => alu:unit1.a[6]
-testA[7] => alu:unit1.a[7]
-testSel[0] => mux:unit2.sel[0]
-testSel[1] => mux:unit2.sel[1]
+testSel1 => mux2:unit3.sel1
+testSel2[0] => mux:unit2.sel[0]
+testSel2[1] => mux:unit2.sel[1]
 testOp[0] => alu:unit1.op[0]
 testOp[1] => alu:unit1.op[1]
 testRes[0] <= alu:unit1.aluOut[0]
@@ -170,5 +163,40 @@ salida[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 salida[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 salida[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 salida[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiCycle|mux2:unit3
+regA[0] => salida.DATAB
+regA[1] => salida.DATAB
+regA[2] => salida.DATAB
+regA[3] => salida.DATAB
+regA[4] => salida.DATAB
+regA[5] => salida.DATAB
+regA[6] => salida.DATAB
+regA[7] => salida.DATAB
+PC[0] => salida.DATAA
+PC[1] => salida.DATAA
+PC[2] => salida.DATAA
+PC[3] => salida.DATAA
+PC[4] => salida.DATAA
+PC[5] => salida.DATAA
+PC[6] => salida.DATAA
+PC[7] => salida.DATAA
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+sel1[0] => salida.OUTPUTSELECT
+salida[0] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[5] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[6] <= salida.DB_MAX_OUTPUT_PORT_TYPE
+salida[7] <= salida.DB_MAX_OUTPUT_PORT_TYPE
 
 
