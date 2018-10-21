@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Fri Oct 19 17:26:16 2018
+Sun Oct 21 01:09:41 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,14 +16,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "IR:unit7"
- 12. Port Connectivity Checks: "mux2:unit6"
- 13. Port Connectivity Checks: "registerFile:unit4"
- 14. Port Connectivity Checks: "mux2:unit3"
- 15. Port Connectivity Checks: "mux:unit2"
- 16. Port Connectivity Checks: "alu:unit1"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "mux2:unit9"
+ 12. Port Connectivity Checks: "IR:unit7"
+ 13. Port Connectivity Checks: "mux2:unit6"
+ 14. Port Connectivity Checks: "registerFile:unit4"
+ 15. Port Connectivity Checks: "mux2:unit3"
+ 16. Port Connectivity Checks: "mux:unit2"
+ 17. Port Connectivity Checks: "alu:unit1"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +50,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 19 17:26:16 2018           ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 21 01:09:41 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 47                                              ;
-;     Total combinational functions  ; 47                                              ;
+; Total logic elements               ; 16                                              ;
+;     Total combinational functions  ; 16                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 70                                              ;
+; Total pins                         ; 72                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -162,63 +163,63 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; mux3.vhd                         ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd         ;         ;
-; registerFile.vhd                 ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd ;         ;
-; memory.vhd                       ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memory.vhd       ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd         ;         ;
-; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd          ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd          ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd           ;         ;
-; MultiCycle.vhd                   ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; mux3.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd         ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd ;         ;
+; memory.vhd                       ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd       ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd         ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd          ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd          ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd           ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd           ;         ;
+; MultiCycle.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 47                ;
-;                                             ;                   ;
-; Total combinational functions               ; 47                ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 20                ;
-;     -- 3 input functions                    ; 18                ;
-;     -- <=2 input functions                  ; 9                 ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 37                ;
-;     -- arithmetic mode                      ; 10                ;
-;                                             ;                   ;
-; Total registers                             ; 0                 ;
-;     -- Dedicated logic registers            ; 0                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 70                ;
-; Embedded Multiplier 9-bit elements          ; 0                 ;
-; Maximum fan-out node                        ; alu:unit1|Mux21~2 ;
-; Maximum fan-out                             ; 22                ;
-; Total fan-out                               ; 183               ;
-; Average fan-out                             ; 1.56              ;
-+---------------------------------------------+-------------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimated Total logic elements              ; 16                   ;
+;                                             ;                      ;
+; Total combinational functions               ; 16                   ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 3                    ;
+;     -- 3 input functions                    ; 7                    ;
+;     -- <=2 input functions                  ; 6                    ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 15                   ;
+;     -- arithmetic mode                      ; 1                    ;
+;                                             ;                      ;
+; Total registers                             ; 0                    ;
+;     -- Dedicated logic registers            ; 0                    ;
+;     -- I/O registers                        ; 0                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 72                   ;
+; Embedded Multiplier 9-bit elements          ; 0                    ;
+; Maximum fan-out node                        ; IR:unit7|func_out[1] ;
+; Maximum fan-out                             ; 12                   ;
+; Total fan-out                               ; 51                   ;
+; Average fan-out                             ; 0.57                 ;
++---------------------------------------------+----------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |MultiCycle                ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |MultiCycle              ; work         ;
-;    |IR:unit7|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:unit7     ; work         ;
-;    |alu:unit1|             ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:unit1    ; work         ;
-;    |memory:unit8|          ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memory:unit8 ; work         ;
-;    |mux:unit2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:unit2    ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |MultiCycle                ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |MultiCycle           ; work         ;
+;    |IR:unit7|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:unit7  ; work         ;
+;    |alu:unit1|             ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:unit1 ; work         ;
+;    |mux:unit2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:unit2 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -253,16 +254,29 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|memory:unit8|data_out[0] ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux23          ;
-; 33:1               ; 3 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux31          ;
-; 1:1                ; 3 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MultiCycle|alu:unit1|Add0           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux23 ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux31 ;
+; 1:1                ; 3 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MultiCycle|alu:unit1|Add0  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2:unit9"                                              ;
++-----------+-------+----------+------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                              ;
++-----------+-------+----------+------------------------------------------------------+
+; pc[31..5] ; Input ; Info     ; Stuck at GND                                         ;
+; pc[1..0]  ; Input ; Info     ; Stuck at GND                                         ;
+; pc[4]     ; Input ; Info     ; Stuck at VCC                                         ;
+; pc[3]     ; Input ; Info     ; Stuck at GND                                         ;
+; pc[2]     ; Input ; Info     ; Stuck at VCC                                         ;
+; sel1      ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
++-----------+-------+----------+------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -350,7 +364,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -360,7 +374,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 19 17:26:10 2018
+    Info: Processing started: Sun Oct 21 01:09:39 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file mux3.vhd
@@ -398,9 +412,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file multicy
     Info (12022): Found design unit 1: MultiCycle-behaviour
     Info (12023): Found entity 1: MultiCycle
 Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(104): object "op_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(108): object "imm_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(109): object "jump_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(114): object "op_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(118): object "imm_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(119): object "jump_out" assigned a value but never read
 Info (12128): Elaborating entity "alu" for hierarchy "alu:unit1"
 Warning (10492): VHDL Process Statement warning at alu.vhd(32): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "mux" for hierarchy "mux:unit2"
@@ -511,23 +525,122 @@ Info (10041): Inferred latch for "op_out[3]" at IR.vhd(36)
 Info (10041): Inferred latch for "op_out[4]" at IR.vhd(36)
 Info (10041): Inferred latch for "op_out[5]" at IR.vhd(36)
 Info (12128): Elaborating entity "memory" for hierarchy "memory:unit8"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:unit10"
+Warning (10631): VHDL Process Statement warning at PC.vhd(14): inferring latch(es) for signal or variable "addr_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "addr_out[0]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[1]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[2]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[3]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[4]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[5]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[6]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[7]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[8]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[9]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[10]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[11]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[12]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[13]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[14]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[15]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[16]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[17]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[18]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[19]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[20]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[21]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[22]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[23]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[24]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[25]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[26]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[27]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[28]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[29]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[30]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[31]" at PC.vhd(14)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[5]" merged with LATCH primitive "IR:unit7|func_out[2]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[4]" merged with LATCH primitive "IR:unit7|func_out[2]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[3]" merged with LATCH primitive "IR:unit7|func_out[2]"
+    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[5]" merged with LATCH primitive "IR:unit7|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[4]" merged with LATCH primitive "IR:unit7|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[3]" merged with LATCH primitive "IR:unit7|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[2]" merged with LATCH primitive "IR:unit7|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[0]" merged with LATCH primitive "IR:unit7|func_out[1]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "testRes[5]" is stuck at GND
+    Warning (13410): Pin "testRes[6]" is stuck at GND
+    Warning (13410): Pin "testRes[9]" is stuck at GND
+    Warning (13410): Pin "testRes[10]" is stuck at GND
+    Warning (13410): Pin "testRes[11]" is stuck at GND
+    Warning (13410): Pin "testRes[12]" is stuck at GND
+    Warning (13410): Pin "testRes[13]" is stuck at GND
+    Warning (13410): Pin "testRes[14]" is stuck at GND
+    Warning (13410): Pin "testRes[15]" is stuck at GND
+    Warning (13410): Pin "testRes[16]" is stuck at GND
+    Warning (13410): Pin "testRes[17]" is stuck at GND
+    Warning (13410): Pin "testRes[18]" is stuck at GND
+    Warning (13410): Pin "testRes[19]" is stuck at GND
+    Warning (13410): Pin "testRes[20]" is stuck at GND
+    Warning (13410): Pin "testRes[21]" is stuck at GND
+    Warning (13410): Pin "testRes[22]" is stuck at GND
+    Warning (13410): Pin "testRes[23]" is stuck at GND
+    Warning (13410): Pin "testRes[24]" is stuck at GND
+    Warning (13410): Pin "testRes[25]" is stuck at GND
+    Warning (13410): Pin "testRes[26]" is stuck at GND
+    Warning (13410): Pin "testRes[27]" is stuck at GND
+    Warning (13410): Pin "testRes[28]" is stuck at GND
+    Warning (13410): Pin "testRes[29]" is stuck at GND
+    Warning (13410): Pin "testRes[30]" is stuck at GND
+    Warning (13410): Pin "testRes[31]" is stuck at GND
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "alu:unit1|Add0~1"
+    Info (17048): Logic cell "alu:unit1|Add0~10"
+    Info (17048): Logic cell "alu:unit1|Add0~14"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
+Warning (21074): Design contains 35 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "testSel3"
     Warning (15610): No output dependent on input pin "testSel4"
-Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 38 input pins
+    Warning (15610): No output dependent on input pin "testPCw"
+    Warning (15610): No output dependent on input pin "testPCadd[0]"
+    Warning (15610): No output dependent on input pin "testPCadd[1]"
+    Warning (15610): No output dependent on input pin "testPCadd[2]"
+    Warning (15610): No output dependent on input pin "testPCadd[3]"
+    Warning (15610): No output dependent on input pin "testPCadd[4]"
+    Warning (15610): No output dependent on input pin "testPCadd[5]"
+    Warning (15610): No output dependent on input pin "testPCadd[6]"
+    Warning (15610): No output dependent on input pin "testPCadd[7]"
+    Warning (15610): No output dependent on input pin "testPCadd[8]"
+    Warning (15610): No output dependent on input pin "testPCadd[9]"
+    Warning (15610): No output dependent on input pin "testPCadd[10]"
+    Warning (15610): No output dependent on input pin "testPCadd[11]"
+    Warning (15610): No output dependent on input pin "testPCadd[12]"
+    Warning (15610): No output dependent on input pin "testPCadd[13]"
+    Warning (15610): No output dependent on input pin "testPCadd[14]"
+    Warning (15610): No output dependent on input pin "testPCadd[15]"
+    Warning (15610): No output dependent on input pin "testPCadd[16]"
+    Warning (15610): No output dependent on input pin "testPCadd[17]"
+    Warning (15610): No output dependent on input pin "testPCadd[18]"
+    Warning (15610): No output dependent on input pin "testPCadd[19]"
+    Warning (15610): No output dependent on input pin "testPCadd[20]"
+    Warning (15610): No output dependent on input pin "testPCadd[21]"
+    Warning (15610): No output dependent on input pin "testPCadd[22]"
+    Warning (15610): No output dependent on input pin "testPCadd[23]"
+    Warning (15610): No output dependent on input pin "testPCadd[24]"
+    Warning (15610): No output dependent on input pin "testPCadd[25]"
+    Warning (15610): No output dependent on input pin "testPCadd[26]"
+    Warning (15610): No output dependent on input pin "testPCadd[27]"
+    Warning (15610): No output dependent on input pin "testPCadd[28]"
+    Warning (15610): No output dependent on input pin "testPCadd[29]"
+    Warning (15610): No output dependent on input pin "testPCadd[30]"
+    Warning (15610): No output dependent on input pin "testPCadd[31]"
+Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 47 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Fri Oct 19 17:26:16 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21061): Implemented 18 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info: Peak virtual memory: 4653 megabytes
+    Info: Processing ended: Sun Oct 21 01:09:41 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

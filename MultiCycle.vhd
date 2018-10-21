@@ -7,15 +7,16 @@ entity MultiCycle is
 		testSel2: in std_logic_vector(1 downto 0);
 		testSel3: in std_logic;
 		testSel4: in std_logic;
-		testMemory: in std_logic_vector(31 downto 0);
+		--testMemory: in std_logic_vector(31 downto 0);
 		--testOp: in std_logic_vector(5 downto 0);
 		--testRegister1: in std_logic_vector(4 downto 0);
 		--testRegister2: in std_logic_vector(4 downto 0);
 		testRes: out std_logic_vector(31 downto 0);
 		--testIr: in std_logic_vector(31 downto 0);
-		
-		testIrw: in std_logic
-		
+		testSelMuxPC: in std_logic;
+		testIrw: in std_logic;
+		testPCw: in std_logic;
+		testPCadd: in std_logic_vector(31 downto 0)
 	);
 end MultiCycle;
 
@@ -92,6 +93,14 @@ architecture behaviour of MultiCycle is
 		);
 	end component;
 	
+	component PC
+		port(
+			PCw: in std_logic;
+			addr: in std_logic_vector (31 downto 0);
+			addr_out: out std_logic_vector (31 downto 0)
+		);
+	end component;
+	
 	
 	signal outMux: std_logic_vector(31 downto 0); 
 	signal outMux1: std_logic_vector(31 downto 0);
@@ -100,6 +109,7 @@ architecture behaviour of MultiCycle is
 	signal outMux3: std_logic_vector(4 downto 0);
 	signal outMux4: std_logic_vector(31 downto 0);
 	signal outMemory: std_logic_vector(31 downto 0);
+	signal outMuxPC: std_logic_vector(31 downto 0);
 
 	signal op_out: std_logic_vector (5 downto 0);
 	signal r1_out: std_logic_vector (4 downto 0);
@@ -108,6 +118,8 @@ architecture behaviour of MultiCycle is
 	signal imm_out: std_logic_vector (15 downto 0);
 	signal jump_out: std_logic_vector (25 downto 0);
 	signal func_out: std_logic_vector (5 downto 0);
+	
+	signal PCaddrout: std_logic_vector(31 downto 0);
 
 	
 	
@@ -179,10 +191,23 @@ architecture behaviour of MultiCycle is
 			);
 		unit8: memory
 		port map(
-			address => testMemory,
+			address => outMuxPc,
 			data_out => outMemory
-			
+		);
 		
+		unit9: mux2
+		port map(
+			sel1 => testSelMuxPC,
+			salida => outMuxPC,
+			regA => PCaddrout,
+			PC => "00000000000000000000000000010100" --no se utiliza por ahora
+		);
+		
+		unit10: PC
+		port map(
+			PCw => testPCw,
+			addr => testPCadd, --tiene una dirección quemada
+			addr_out => PCaddrout
 		);
 		
 	end;
