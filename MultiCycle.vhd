@@ -243,7 +243,7 @@ architecture behaviour of MultiCycle is
 			sel => ALUsrcB_out,
 			salida => MuxSrcB,
 			a => BtoMUX, 
-			b => "00000000000000000000000000000100",
+			b => "00000000000000000000000000000001",
 			c => sgnExt_out,
 			d => sftl2_out
 		);

@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity MultiCycle
-# -- Compiling architecture structure of MultiCycle
+# -- Compiling entity TestCU
+# -- Compiling architecture structure of TestCU
 # 
-vsim work.multicycle
-# vsim work.multicycle 
+vsim work.testcu
+# vsim work.testcu 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,7 +31,7 @@ vsim work.multicycle
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.multicycle(structure)
+# Loading work.testcu(structure)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
@@ -40,38 +40,29 @@ vsim work.multicycle
 # Loading cycloneii.cycloneii_asynch_io(behave)
 # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 # Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/multicycle/MemDir \
-sim:/multicycle/clk \
-sim:/multicycle/Res \
-sim:/multicycle/wrReg \
-sim:/multicycle/wrData \
-sim:/multicycle/nextIns \
-sim:/multicycle/sts
-force -freeze sim:/multicycle/MemDir 00000001000010100101100000100010 0
-force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+sim:/testcu/op1 \
+sim:/testcu/st1 \
+sim:/testcu/ALUop1 \
+sim:/testcu/ALUsrcA1 \
+sim:/testcu/ALUsrcB1 \
+sim:/testcu/PCsrc1 \
+sim:/testcu/PCwrCond1 \
+sim:/testcu/PCwr1 \
+sim:/testcu/RegWr1 \
+sim:/testcu/RegDst1 \
+sim:/testcu/IorD1 \
+sim:/testcu/MemRd1 \
+sim:/testcu/MemWr1 \
+sim:/testcu/MemtoReg1 \
+sim:/testcu/IRwr1 \
+sim:/testcu/NextSt1
+force -freeze sim:/testcu/op1 000000 0
+force -freeze sim:/testcu/st1 0000 0
 run
+force -freeze sim:/testcu/st1 0001 0
 run
+force -freeze sim:/testcu/st1 0110 0
 run
-run
-run
-run
-run
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000001000 0
-run
-run
-run
-run
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000001100 0
-run
-run
-run
-run
+force -freeze sim:/testcu/st1 0111 0
 run

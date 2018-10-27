@@ -49,7 +49,7 @@ architecture behavior of controlUnit is
 				IorD <= '0';
 				MemRd <= '0';
 				ALUsrcA <= '0';
-				ALUsrcB <= "11";
+				ALUsrcB <= "10";
 				ALUop <= "00";
 				PCsrc <= "00";
 				IRwr <= '0';
