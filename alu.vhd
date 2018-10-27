@@ -16,6 +16,8 @@ end alu;
 
 architecture behavior of alu is
 
+signal temp: std_logic_vector(31 downto 0);
+
 begin 
 	process (a,b,func)
 		begin 
@@ -25,7 +27,7 @@ begin
 			temp <= a+b;
 		-- instrucción and
 		when "100100" =>
-			temp <= a+b;
+			temp <= a and b;
 		-- instrucción or
 		when "100101" =>
 			temp <= a or b;
@@ -35,6 +37,7 @@ begin
 			temp <= "11111111111111111111111111111111";
 			else
 			temp <= "00000000000000000000000000000000";
+			end if;
 		-- instrucción jr
 		when "001000" =>
 			temp <= a;

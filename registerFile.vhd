@@ -1,8 +1,3 @@
---Register_Data
---Input: Rs, Rt, Rd, Write Data
---Controls
---Outpus: Read Data 1, Read Data 2
---Jeff Grindel, Tom Demeter
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

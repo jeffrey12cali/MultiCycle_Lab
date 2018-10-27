@@ -41,11 +41,11 @@ ModelSim-Altera Info: # -- Loading package VITAL_Timing
 ModelSim-Altera Info: # -- Loading package VITAL_Primitives
 ModelSim-Altera Info: # -- Loading package cycloneii_atom_pack
 ModelSim-Altera Info: # -- Loading package cycloneii_components
-ModelSim-Altera Info: # -- Compiling entity MultiCycle
-ModelSim-Altera Info: # -- Compiling architecture structure of MultiCycle
+ModelSim-Altera Info: # -- Compiling entity controlUnit
+ModelSim-Altera Info: # -- Compiling architecture structure of controlUnit
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: vsim work.multicycle
-ModelSim-Altera Info: # vsim work.multicycle 
+ModelSim-Altera Info: vsim work.controlunit
+ModelSim-Altera Info: # vsim work.controlunit 
 ModelSim-Altera Info: # Loading std.standard
 ModelSim-Altera Info: # Loading std.textio(body)
 ModelSim-Altera Info: # Loading ieee.std_logic_1164(body)
@@ -53,53 +53,43 @@ ModelSim-Altera Info: # Loading ieee.vital_timing(body)
 ModelSim-Altera Info: # Loading ieee.vital_primitives(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_atom_pack(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_components
-ModelSim-Altera Info: # Loading work.multicycle(structure)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+ModelSim-Altera Info: # Loading work.controlunit(structure)
 ModelSim-Altera Info: # Loading ieee.std_logic_arith(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_io(structure)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_mux21(altvital)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_dffe(behave)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_asynch_io(behave)
+ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_ena_reg(behave)
-ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
-ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
-ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
 ModelSim-Altera Info: add wave -position insertpoint  \
-ModelSim-Altera Info: sim:/multicycle/testSel1 \
-ModelSim-Altera Info: sim:/multicycle/testSel2 \
-ModelSim-Altera Info: sim:/multicycle/testSel3 \
-ModelSim-Altera Info: sim:/multicycle/testSel4 \
-ModelSim-Altera Info: sim:/multicycle/testMemory \
-ModelSim-Altera Info: sim:/multicycle/testRes \
-ModelSim-Altera Info: sim:/multicycle/testIrw
-ModelSim-Altera Info: force -freeze sim:/multicycle/testSel1 1 0
-ModelSim-Altera Info: force -freeze sim:/multicycle/testSel2 00 0
-ModelSim-Altera Info: force -freeze sim:/multicycle/testSel3 0 0
-ModelSim-Altera Info: force -freeze sim:/multicycle/testSel4 0 0
-ModelSim-Altera Info: force -freeze sim:/multicycle/testIrw 1 0
-ModelSim-Altera Info: force -freeze sim:/multicycle/testMemory 00000000000000000000000000000001 0
+ModelSim-Altera Info: sim:/controlunit/op \
+ModelSim-Altera Info: sim:/controlunit/st \
+ModelSim-Altera Info: sim:/controlunit/ALUop \
+ModelSim-Altera Info: sim:/controlunit/ALUsrcA \
+ModelSim-Altera Info: sim:/controlunit/ALUsrcB \
+ModelSim-Altera Info: sim:/controlunit/PCsrc \
+ModelSim-Altera Info: sim:/controlunit/PCwrCond \
+ModelSim-Altera Info: sim:/controlunit/PCwr \
+ModelSim-Altera Info: sim:/controlunit/RegWr \
+ModelSim-Altera Info: sim:/controlunit/RegDst \
+ModelSim-Altera Info: sim:/controlunit/IorD \
+ModelSim-Altera Info: sim:/controlunit/MemRd \
+ModelSim-Altera Info: sim:/controlunit/MemWr \
+ModelSim-Altera Info: sim:/controlunit/MemtoReg \
+ModelSim-Altera Info: sim:/controlunit/IRwr \
+ModelSim-Altera Info: sim:/controlunit/NextSt
+ModelSim-Altera Info: force -freeze sim:/controlunit/op 000000 0
+ModelSim-Altera Info: force -freeze sim:/controlunit/st 0000 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/controlunit/st 0001 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/controlunit/st 0110 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/multicycle/testMemory 00000000000000000000000000000010 0
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/multicycle/testMemory 00000000000000000000000000000011 0
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/controlunit/st 0111 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 Info: NativeLink simulation flow was successful

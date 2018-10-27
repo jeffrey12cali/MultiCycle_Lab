@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity MultiCycle
-# -- Compiling architecture structure of MultiCycle
+# -- Compiling entity controlUnit
+# -- Compiling architecture structure of controlUnit
 # 
-vsim work.multicycle
-# vsim work.multicycle 
+vsim work.controlunit
+# vsim work.controlunit 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,52 +31,42 @@ vsim work.multicycle
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.multicycle(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading work.controlunit(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
 # Loading cycloneii.cycloneii_dffe(behave)
 # Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 # Loading cycloneii.cycloneii_ena_reg(behave)
-# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/multicycle/testSel1 \
-sim:/multicycle/testSel2 \
-sim:/multicycle/testSel3 \
-sim:/multicycle/testSel4 \
-sim:/multicycle/testMemory \
-sim:/multicycle/testRes \
-sim:/multicycle/testIrw
-force -freeze sim:/multicycle/testSel1 1 0
-force -freeze sim:/multicycle/testSel2 00 0
-force -freeze sim:/multicycle/testSel3 0 0
-force -freeze sim:/multicycle/testSel4 0 0
-force -freeze sim:/multicycle/testIrw 1 0
-force -freeze sim:/multicycle/testMemory 00000000000000000000000000000001 0
+sim:/controlunit/op \
+sim:/controlunit/st \
+sim:/controlunit/ALUop \
+sim:/controlunit/ALUsrcA \
+sim:/controlunit/ALUsrcB \
+sim:/controlunit/PCsrc \
+sim:/controlunit/PCwrCond \
+sim:/controlunit/PCwr \
+sim:/controlunit/RegWr \
+sim:/controlunit/RegDst \
+sim:/controlunit/IorD \
+sim:/controlunit/MemRd \
+sim:/controlunit/MemWr \
+sim:/controlunit/MemtoReg \
+sim:/controlunit/IRwr \
+sim:/controlunit/NextSt
+force -freeze sim:/controlunit/op 000000 0
+force -freeze sim:/controlunit/st 0000 0
 run
 run
+force -freeze sim:/controlunit/st 0001 0
 run
 run
+force -freeze sim:/controlunit/st 0110 0
 run
 run
-force -freeze sim:/multicycle/testMemory 00000000000000000000000000000010 0
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/multicycle/testMemory 00000000000000000000000000000011 0
-run
-run
-run
-run
-run
+force -freeze sim:/controlunit/st 0111 0
 run
 run

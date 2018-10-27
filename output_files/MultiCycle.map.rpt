@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Sun Oct 21 01:09:41 2018
+Fri Oct 26 23:36:34 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,16 +15,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "mux2:unit9"
- 12. Port Connectivity Checks: "IR:unit7"
- 13. Port Connectivity Checks: "mux2:unit6"
- 14. Port Connectivity Checks: "registerFile:unit4"
- 15. Port Connectivity Checks: "mux2:unit3"
- 16. Port Connectivity Checks: "mux:unit2"
- 17. Port Connectivity Checks: "alu:unit1"
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 21 01:09:41 2018           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 26 23:36:34 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
-; Top-level Entity Name              ; MultiCycle                                      ;
+; Top-level Entity Name              ; controlUnit                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 16                                              ;
-;     Total combinational functions  ; 16                                              ;
+; Total logic elements               ; 25                                              ;
+;     Total combinational functions  ; 25                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 72                                              ;
+; Total pins                         ; 30                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -73,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; MultiCycle         ; MultiCycle         ;
+; Top-level entity name                                                      ; controlUnit        ; MultiCycle         ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,79 +155,76 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; mux3.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd         ;         ;
-; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd ;         ;
-; memory.vhd                       ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd       ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd         ;         ;
-; mux.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd          ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd          ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd           ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd           ;         ;
-; MultiCycle.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; controlUnit.vhd                  ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                        ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Estimated Total logic elements              ; 16                   ;
-;                                             ;                      ;
-; Total combinational functions               ; 16                   ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 3                    ;
-;     -- 3 input functions                    ; 7                    ;
-;     -- <=2 input functions                  ; 6                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 15                   ;
-;     -- arithmetic mode                      ; 1                    ;
-;                                             ;                      ;
-; Total registers                             ; 0                    ;
-;     -- Dedicated logic registers            ; 0                    ;
-;     -- I/O registers                        ; 0                    ;
-;                                             ;                      ;
-; I/O pins                                    ; 72                   ;
-; Embedded Multiplier 9-bit elements          ; 0                    ;
-; Maximum fan-out node                        ; IR:unit7|func_out[1] ;
-; Maximum fan-out                             ; 12                   ;
-; Total fan-out                               ; 51                   ;
-; Average fan-out                             ; 0.57                 ;
-+---------------------------------------------+----------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 25    ;
+;                                             ;       ;
+; Total combinational functions               ; 25    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 11    ;
+;     -- 3 input functions                    ; 14    ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 25    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 30    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; st[1] ;
+; Maximum fan-out                             ; 10    ;
+; Total fan-out                               ; 98    ;
+; Average fan-out                             ; 1.78  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; |MultiCycle                ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |MultiCycle           ; work         ;
-;    |IR:unit7|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:unit7  ; work         ;
-;    |alu:unit1|             ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:unit1 ; work         ;
-;    |mux:unit2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:unit2 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |controlUnit               ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |controlUnit        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; IR:unit7|func_out[1]                               ; testIrw             ; yes                    ;
-; IR:unit7|func_out[2]                               ; testIrw             ; yes                    ;
-; IR:unit7|func_out[0]                               ; testIrw             ; yes                    ;
-; IR:unit7|func_out[5]                               ; testIrw             ; yes                    ;
-; IR:unit7|func_out[3]                               ; testIrw             ; yes                    ;
-; IR:unit7|func_out[4]                               ; testIrw             ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; ALUop[1]$latch                                      ; GND                 ; yes                    ;
+; ALUsrcA$latch                                       ; GND                 ; yes                    ;
+; ALUsrcB[0]$latch                                    ; GND                 ; yes                    ;
+; ALUsrcB[1]$latch                                    ; GND                 ; yes                    ;
+; PCwr$latch                                          ; GND                 ; yes                    ;
+; RegWr$latch                                         ; GND                 ; yes                    ;
+; RegDst$latch                                        ; GND                 ; yes                    ;
+; MemRd$latch                                         ; GND                 ; yes                    ;
+; IRwr$latch                                          ; GND                 ; yes                    ;
+; NextSt[0]$latch                                     ; ALUop[1]            ; yes                    ;
+; NextSt[1]$latch                                     ; ALUop[1]            ; yes                    ;
+; NextSt[2]$latch                                     ; ALUop[1]            ; yes                    ;
+; nxt_st[1]                                           ; Equal1              ; yes                    ;
+; nxt_st[2]                                           ; Equal1              ; yes                    ;
+; Number of user-specified and inferred latches = 14  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -254,111 +243,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux23 ;
-; 33:1               ; 3 bits    ; 66 LEs        ; 6 LEs                ; 60 LEs                 ; No         ; |MultiCycle|alu:unit1|Mux31 ;
-; 1:1                ; 3 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MultiCycle|alu:unit1|Add0  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-
-
-+-------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2:unit9"                                              ;
-+-----------+-------+----------+------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                              ;
-+-----------+-------+----------+------------------------------------------------------+
-; pc[31..5] ; Input ; Info     ; Stuck at GND                                         ;
-; pc[1..0]  ; Input ; Info     ; Stuck at GND                                         ;
-; pc[4]     ; Input ; Info     ; Stuck at VCC                                         ;
-; pc[3]     ; Input ; Info     ; Stuck at GND                                         ;
-; pc[2]     ; Input ; Info     ; Stuck at VCC                                         ;
-; sel1      ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
-+-----------+-------+----------+------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "IR:unit7"                                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; op   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; imm  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2:unit6"                                                ;
-+-------------+-------+----------+------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                              ;
-+-------------+-------+----------+------------------------------------------------------+
-; rega[31..5] ; Input ; Info     ; Stuck at GND                                         ;
-; rega[1..0]  ; Input ; Info     ; Stuck at GND                                         ;
-; rega[4]     ; Input ; Info     ; Stuck at VCC                                         ;
-; rega[3]     ; Input ; Info     ; Stuck at GND                                         ;
-; rega[2]     ; Input ; Info     ; Stuck at VCC                                         ;
-; pc[31..5]   ; Input ; Info     ; Stuck at GND                                         ;
-; pc[4]       ; Input ; Info     ; Stuck at VCC                                         ;
-; pc[3]       ; Input ; Info     ; Stuck at GND                                         ;
-; pc[2]       ; Input ; Info     ; Stuck at VCC                                         ;
-; pc[1]       ; Input ; Info     ; Stuck at GND                                         ;
-; pc[0]       ; Input ; Info     ; Stuck at VCC                                         ;
-; sel1        ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
-+-------------+-------+----------+------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registerFile:unit4"                                                                     ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; control  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; ctrl_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2:unit3"                                                ;
-+-------------+-------+----------+------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                              ;
-+-------------+-------+----------+------------------------------------------------------+
-; rega[31..5] ; Input ; Info     ; Stuck at GND                                         ;
-; rega[1..0]  ; Input ; Info     ; Stuck at GND                                         ;
-; rega[4]     ; Input ; Info     ; Stuck at VCC                                         ;
-; rega[3]     ; Input ; Info     ; Stuck at GND                                         ;
-; rega[2]     ; Input ; Info     ; Stuck at VCC                                         ;
-; sel1        ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
-+-------------+-------+----------+------------------------------------------------------+
-
-
-+--------------------------------------------+
-; Port Connectivity Checks: "mux:unit2"      ;
-+----------+-------+----------+--------------+
-; Port     ; Type  ; Severity ; Details      ;
-+----------+-------+----------+--------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND ;
-; b[2]     ; Input ; Info     ; Stuck at VCC ;
-; c[2..1]  ; Input ; Info     ; Stuck at VCC ;
-; c[31..3] ; Input ; Info     ; Stuck at GND ;
-; c[0]     ; Input ; Info     ; Stuck at GND ;
-; d[2..0]  ; Input ; Info     ; Stuck at VCC ;
-; d[31..3] ; Input ; Info     ; Stuck at GND ;
-+----------+-------+----------+--------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:unit1"                                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -374,9 +258,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 21 01:09:39 2018
+    Info: Processing started: Fri Oct 26 23:36:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
+    Info (12022): Found design unit 1: controlUnit-behavior
+    Info (12023): Found entity 1: controlUnit
 Info (12021): Found 2 design units, including 1 entities, in source file mux3.vhd
     Info (12022): Found design unit 1: mux3-case_arch2
     Info (12023): Found entity 1: mux3
@@ -394,7 +281,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
     Info (12022): Found design unit 1: mux-case_arch
     Info (12023): Found entity 1: mux
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-case_arch
+    Info (12022): Found design unit 1: alu-behavior
     Info (12023): Found entity 1: alu
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12022): Found design unit 1: IR-behavior
@@ -411,235 +298,78 @@ Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file multicycle.vhd
     Info (12022): Found design unit 1: MultiCycle-behaviour
     Info (12023): Found entity 1: MultiCycle
-Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(114): object "op_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(118): object "imm_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(119): object "jump_out" assigned a value but never read
-Info (12128): Elaborating entity "alu" for hierarchy "alu:unit1"
-Warning (10492): VHDL Process Statement warning at alu.vhd(32): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "mux" for hierarchy "mux:unit2"
-Warning (10492): VHDL Process Statement warning at mux.vhd(19): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(21): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(23): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(25): signal "d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:unit3"
-Warning (10492): VHDL Process Statement warning at mux2.vhd(20): signal "regA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux2.vhd(22): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:unit4"
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(45): object "REG_8" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(46): object "REG_9" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(47): object "REG_10" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(48): object "REG_11" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(49): object "REG_12" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(50): object "REG_13" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(51): object "REG_14" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(52): object "REG_15" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(53): object "REG_16" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(54): object "REG_17" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(55): object "REG_18" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(56): object "REG_19" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(57): object "REG_20" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(58): object "REG_21" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(59): object "REG_22" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(60): object "REG_23" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(61): object "REG_24" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at registerFile.vhd(62): object "REG_25" assigned a value but never read
-Info (12128): Elaborating entity "mux3" for hierarchy "mux3:unit5"
-Warning (10492): VHDL Process Statement warning at mux3.vhd(21): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux3.vhd(23): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "IR" for hierarchy "IR:unit7"
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "op_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r1_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r2_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r3_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "imm_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "jump_out", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "func_out", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "func_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "func_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "func_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "func_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "func_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "func_out[5]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[5]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[6]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[7]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[8]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[9]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[10]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[11]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[12]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[13]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[14]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[15]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[16]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[17]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[18]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[19]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[20]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[21]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[22]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[23]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[24]" at IR.vhd(36)
-Info (10041): Inferred latch for "jump_out[25]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[5]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[6]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[7]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[8]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[9]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[10]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[11]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[12]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[13]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[14]" at IR.vhd(36)
-Info (10041): Inferred latch for "imm_out[15]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r3_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r2_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "r1_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[0]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[1]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[2]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[3]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[4]" at IR.vhd(36)
-Info (10041): Inferred latch for "op_out[5]" at IR.vhd(36)
-Info (12128): Elaborating entity "memory" for hierarchy "memory:unit8"
-Info (12128): Elaborating entity "PC" for hierarchy "PC:unit10"
-Warning (10631): VHDL Process Statement warning at PC.vhd(14): inferring latch(es) for signal or variable "addr_out", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "addr_out[0]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[1]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[2]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[3]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[4]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[5]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[6]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[7]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[8]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[9]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[10]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[11]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[12]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[13]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[14]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[15]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[16]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[17]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[18]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[19]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[20]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[21]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[22]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[23]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[24]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[25]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[26]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[27]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[28]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[29]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[30]" at PC.vhd(14)
-Info (10041): Inferred latch for "addr_out[31]" at PC.vhd(14)
+Info (12127): Elaborating entity "controlUnit" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at controlUnit.vhd(68): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "IorD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemRd", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUsrcA", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUsrcB", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUop", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCsrc", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "IRwr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCwr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCwrCond", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "RegWr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemWr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "NextSt", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "nxt_st", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "nxt_st[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[2]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[3]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[2]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[3]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemtoReg" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemWr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "RegDst" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "RegWr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCwrCond" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCwr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "IRwr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCsrc[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCsrc[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUop[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUop[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcB[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcB[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcA" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemRd" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "IorD" at controlUnit.vhd(30)
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[5]" merged with LATCH primitive "IR:unit7|func_out[1]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[4]" merged with LATCH primitive "IR:unit7|func_out[1]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[3]" merged with LATCH primitive "IR:unit7|func_out[1]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[2]" merged with LATCH primitive "IR:unit7|func_out[1]"
-    Info (13026): Duplicate LATCH primitive "IR:unit7|func_out[0]" merged with LATCH primitive "IR:unit7|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "nxt_st[2]" merged with LATCH primitive "nxt_st[1]"
+Warning (13012): Latch NextSt[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal st[0]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal st[3]
+Warning (13012): Latch NextSt[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal st[0]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal st[3]
+Warning (13012): Latch NextSt[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal st[0]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal st[3]
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "NextSt[2]$latch" merged with LATCH primitive "NextSt[1]$latch"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "testRes[5]" is stuck at GND
-    Warning (13410): Pin "testRes[6]" is stuck at GND
-    Warning (13410): Pin "testRes[9]" is stuck at GND
-    Warning (13410): Pin "testRes[10]" is stuck at GND
-    Warning (13410): Pin "testRes[11]" is stuck at GND
-    Warning (13410): Pin "testRes[12]" is stuck at GND
-    Warning (13410): Pin "testRes[13]" is stuck at GND
-    Warning (13410): Pin "testRes[14]" is stuck at GND
-    Warning (13410): Pin "testRes[15]" is stuck at GND
-    Warning (13410): Pin "testRes[16]" is stuck at GND
-    Warning (13410): Pin "testRes[17]" is stuck at GND
-    Warning (13410): Pin "testRes[18]" is stuck at GND
-    Warning (13410): Pin "testRes[19]" is stuck at GND
-    Warning (13410): Pin "testRes[20]" is stuck at GND
-    Warning (13410): Pin "testRes[21]" is stuck at GND
-    Warning (13410): Pin "testRes[22]" is stuck at GND
-    Warning (13410): Pin "testRes[23]" is stuck at GND
-    Warning (13410): Pin "testRes[24]" is stuck at GND
-    Warning (13410): Pin "testRes[25]" is stuck at GND
-    Warning (13410): Pin "testRes[26]" is stuck at GND
-    Warning (13410): Pin "testRes[27]" is stuck at GND
-    Warning (13410): Pin "testRes[28]" is stuck at GND
-    Warning (13410): Pin "testRes[29]" is stuck at GND
-    Warning (13410): Pin "testRes[30]" is stuck at GND
-    Warning (13410): Pin "testRes[31]" is stuck at GND
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "alu:unit1|Add0~1"
-    Info (17048): Logic cell "alu:unit1|Add0~10"
-    Info (17048): Logic cell "alu:unit1|Add0~14"
+    Warning (13410): Pin "ALUop[0]" is stuck at GND
+    Warning (13410): Pin "PCsrc[0]" is stuck at GND
+    Warning (13410): Pin "PCsrc[1]" is stuck at GND
+    Warning (13410): Pin "PCwrCond" is stuck at GND
+    Warning (13410): Pin "IorD" is stuck at GND
+    Warning (13410): Pin "MemWr" is stuck at GND
+    Warning (13410): Pin "MemtoReg" is stuck at GND
+    Warning (13410): Pin "NextSt[3]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 35 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "testSel3"
-    Warning (15610): No output dependent on input pin "testSel4"
-    Warning (15610): No output dependent on input pin "testPCw"
-    Warning (15610): No output dependent on input pin "testPCadd[0]"
-    Warning (15610): No output dependent on input pin "testPCadd[1]"
-    Warning (15610): No output dependent on input pin "testPCadd[2]"
-    Warning (15610): No output dependent on input pin "testPCadd[3]"
-    Warning (15610): No output dependent on input pin "testPCadd[4]"
-    Warning (15610): No output dependent on input pin "testPCadd[5]"
-    Warning (15610): No output dependent on input pin "testPCadd[6]"
-    Warning (15610): No output dependent on input pin "testPCadd[7]"
-    Warning (15610): No output dependent on input pin "testPCadd[8]"
-    Warning (15610): No output dependent on input pin "testPCadd[9]"
-    Warning (15610): No output dependent on input pin "testPCadd[10]"
-    Warning (15610): No output dependent on input pin "testPCadd[11]"
-    Warning (15610): No output dependent on input pin "testPCadd[12]"
-    Warning (15610): No output dependent on input pin "testPCadd[13]"
-    Warning (15610): No output dependent on input pin "testPCadd[14]"
-    Warning (15610): No output dependent on input pin "testPCadd[15]"
-    Warning (15610): No output dependent on input pin "testPCadd[16]"
-    Warning (15610): No output dependent on input pin "testPCadd[17]"
-    Warning (15610): No output dependent on input pin "testPCadd[18]"
-    Warning (15610): No output dependent on input pin "testPCadd[19]"
-    Warning (15610): No output dependent on input pin "testPCadd[20]"
-    Warning (15610): No output dependent on input pin "testPCadd[21]"
-    Warning (15610): No output dependent on input pin "testPCadd[22]"
-    Warning (15610): No output dependent on input pin "testPCadd[23]"
-    Warning (15610): No output dependent on input pin "testPCadd[24]"
-    Warning (15610): No output dependent on input pin "testPCadd[25]"
-    Warning (15610): No output dependent on input pin "testPCadd[26]"
-    Warning (15610): No output dependent on input pin "testPCadd[27]"
-    Warning (15610): No output dependent on input pin "testPCadd[28]"
-    Warning (15610): No output dependent on input pin "testPCadd[29]"
-    Warning (15610): No output dependent on input pin "testPCadd[30]"
-    Warning (15610): No output dependent on input pin "testPCadd[31]"
-Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 40 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 18 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 102 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Sun Oct 21 01:09:41 2018
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Fri Oct 26 23:36:34 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
