@@ -1,0 +1,347 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Miscelanea\Documentos\MultiCycle_Lab\simulation\modelsim
+Ealu
+Z1 w1540663975
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dD:\Miscelanea\Documentos\MultiCycle_Lab\simulation\modelsim
+Z7 8D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd
+Z8 FD:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd
+l0
+L4
+VQd_S_A6eQ6FeIm?f3:j;d1
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1540671168.188000
+Z11 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
+Z12 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 ?ah:eZ8OM90NOA:ln]N1;2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 Qd_S_A6eQ6FeIm?f3:j;d1
+l21
+L17
+V:d]R:2@P4K7@40E=>l1_f3
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 I;@=bH7ULCS`N0[7?LIa90
+!i10b 1
+Econtrolunit
+Z15 w1540614991
+R4
+R5
+R6
+Z16 8D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
+Z17 FD:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
+l0
+L4
+VPmbc[Zh7>Od`AfR@4UPdn1
+R9
+31
+Z18 !s108 1540671166.653000
+Z19 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
+Z20 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
+R13
+R14
+!s100 VkN25g8:U=8@;72<Cc:[J3
+!i10b 1
+Abehavior
+R4
+R5
+DEx4 work 11 controlunit 0 22 Pmbc[Zh7>Od`AfR@4UPdn1
+l29
+L25
+VS2:5d^RK25E:F_8;ATjQE0
+R9
+31
+R18
+R19
+R20
+R13
+R14
+!s100 _FiD]<^b>J5>PhXNoSIiR2
+!i10b 1
+Eir
+Z21 w1540101080
+R4
+R5
+R6
+Z22 8D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd
+Z23 FD:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd
+l0
+L4
+Vec:CF?8@VRa[omN3^`<5F0
+R9
+31
+Z24 !s108 1540671168.404000
+Z25 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
+Z26 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
+R13
+R14
+!s100 mZJ]CSSIL`M:AA>c7PY=l1
+!i10b 1
+Abehavior
+R4
+R5
+DEx4 work 2 ir 0 22 ec:CF?8@VRa[omN3^`<5F0
+l27
+L18
+VHGlN_N3bCB6B^LBlP6XmV3
+R9
+31
+R24
+R25
+R26
+R13
+R14
+!s100 <^KO[PXHT1YYlA]7fA`Sa3
+!i10b 1
+Ememory
+Z27 w1540663631
+Z28 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+R6
+Z29 8D:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd
+Z30 FD:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd
+l0
+L6
+VQaI@Dnn;iXCPDH6blYkJF3
+R9
+31
+Z31 !s108 1540671167.388000
+Z32 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd|
+Z33 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/memory.vhd|
+R13
+R14
+!s100 `ko7SA=:i4P0_PXM4F7V63
+!i10b 1
+Acompor
+R28
+R4
+R5
+DEx4 work 6 memory 0 22 QaI@Dnn;iXCPDH6blYkJF3
+l29
+L19
+VS=bPlb5f^OOYa;?HaK:@63
+R9
+31
+R31
+R32
+R33
+R13
+R14
+!s100 2aK:]bC6NZZoHe_?`k@e=0
+!i10b 1
+Emulticycle
+w1540671147
+R4
+R5
+R6
+8D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
+FD:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
+l0
+L4
+V^I4LaWdLg2eL2=bB1SA^22
+!s100 Tf6kooQ_iPoH^Rk5LMMAA1
+R9
+31
+!i10b 1
+!s108 1540671168.905000
+!s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
+!s107 D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
+R13
+R14
+Emux
+R21
+R4
+R5
+R6
+Z34 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd
+Z35 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd
+l0
+L3
+VB8;W7[6a?7f=ajFXZ9aST3
+R9
+31
+Z36 !s108 1540671167.928000
+Z37 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
+Z38 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
+R13
+R14
+!s100 3oFZm2Z<K?g;hLIaZICIB1
+!i10b 1
+Acase_arch
+R4
+R5
+DEx4 work 3 mux 0 22 B8;W7[6a?7f=ajFXZ9aST3
+l14
+L13
+V3SAW?h]mCaeIWOIASP]]^1
+R9
+31
+R36
+R37
+R38
+R13
+R14
+!s100 ZOTen?aH7VzB0NN0[Y=9N0
+!i10b 1
+Emux2
+Z39 w1540655769
+R4
+R5
+R6
+Z40 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd
+Z41 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd
+l0
+L3
+VOC7c>A=6^cYP<_4mUzaLU0
+R9
+31
+Z42 !s108 1540671167.664000
+Z43 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
+Z44 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
+R13
+R14
+!s100 :z4`4`@[==bUKZVH3_@A13
+!i10b 1
+Acase_arch1
+R4
+R5
+DEx4 work 4 mux2 0 22 OC7c>A=6^cYP<_4mUzaLU0
+l15
+L14
+V9M=M[iZ9^c<Ic]GZHcDn42
+R9
+31
+R42
+R43
+R44
+R13
+R14
+!s100 Qi_ABOo:7nMBFfNjD0J]j1
+!i10b 1
+Emux3
+R21
+R4
+R5
+R6
+Z45 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd
+Z46 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd
+l0
+L3
+V5CKAS9[]GGFEi_4g2Pz[f0
+R9
+31
+Z47 !s108 1540671166.884000
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
+Z49 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
+R13
+R14
+!s100 gz[SDJPJ71@W]fHlGNaL50
+!i10b 1
+Acase_arch2
+R4
+R5
+DEx4 work 4 mux3 0 22 5CKAS9[]GGFEi_4g2Pz[f0
+l16
+L15
+VZ2m7iI14OM8369SC7d62Y1
+R9
+31
+R47
+R48
+R49
+R13
+R14
+!s100 X09z<E0X4<XaVAzjCJ3bE1
+!i10b 1
+Epc
+Z50 w1540663471
+R4
+R5
+R6
+Z51 8D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
+Z52 FD:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
+l0
+L4
+VSl4C0W[iC[nkjfc7=F:<^3
+R9
+31
+Z53 !s108 1540671168.624000
+Z54 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
+Z55 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
+R13
+R14
+!s100 =cYO7eNSA5H:SN80o:3[B2
+!i10b 1
+Abehavior
+R4
+R5
+DEx4 work 2 pc 0 22 Sl4C0W[iC[nkjfc7=F:<^3
+l13
+L12
+Vzh8PVUO8<K>nK?zP`]hfl1
+R9
+31
+R53
+R54
+R55
+R13
+R14
+!s100 AQH>>mNDohk]?f6ZAYGMN3
+!i10b 1
+Eregisterfile
+Z56 w1540663818
+R28
+R4
+R5
+R6
+Z57 8D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd
+Z58 FD:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd
+l0
+L5
+Vd^BhcjeOMX]51;gQ<Nij33
+R9
+31
+Z59 !s108 1540671167.194000
+Z60 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
+Z61 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
+R13
+R14
+!s100 7ZR3<[WFOHQ6XzzR5mPe52
+!i10b 1
+Abehave
+R28
+R4
+R5
+DEx4 work 12 registerfile 0 22 d^BhcjeOMX]51;gQ<Nij33
+l61
+L16
+V@0FlY?MG]nQLTQE_9Rh181
+R9
+31
+R59
+R60
+R61
+R13
+R14
+!s100 TWFa`63>=ckV_:^Vh[@d41
+!i10b 1

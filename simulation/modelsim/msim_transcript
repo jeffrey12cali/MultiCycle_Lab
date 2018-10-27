@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity controlUnit
-# -- Compiling architecture structure of controlUnit
+# -- Compiling entity MultiCycle
+# -- Compiling architecture structure of MultiCycle
 # 
-vsim work.controlunit
-# vsim work.controlunit 
+vsim work.multicycle
+# vsim work.multicycle 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,42 +31,31 @@ vsim work.controlunit
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.controlunit(structure)
+# Loading work.multicycle(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
 # Loading cycloneii.cycloneii_dffe(behave)
 # Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
 # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 # Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/controlunit/op \
-sim:/controlunit/st \
-sim:/controlunit/ALUop \
-sim:/controlunit/ALUsrcA \
-sim:/controlunit/ALUsrcB \
-sim:/controlunit/PCsrc \
-sim:/controlunit/PCwrCond \
-sim:/controlunit/PCwr \
-sim:/controlunit/RegWr \
-sim:/controlunit/RegDst \
-sim:/controlunit/IorD \
-sim:/controlunit/MemRd \
-sim:/controlunit/MemWr \
-sim:/controlunit/MemtoReg \
-sim:/controlunit/IRwr \
-sim:/controlunit/NextSt
-force -freeze sim:/controlunit/op 000000 0
-force -freeze sim:/controlunit/st 0000 0
+sim:/multicycle/MemDir \
+sim:/multicycle/clk \
+sim:/multicycle/Res \
+sim:/multicycle/wrReg \
+sim:/multicycle/wrData \
+sim:/multicycle/sts
+force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
+force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
 run
 run
-force -freeze sim:/controlunit/st 0001 0
 run
-run
-force -freeze sim:/controlunit/st 0110 0
-run
-run
-force -freeze sim:/controlunit/st 0111 0
 run
 run

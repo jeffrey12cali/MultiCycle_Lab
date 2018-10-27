@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MultiCycle
-Sun Oct 21 01:09:50 2018
+Sat Oct 27 15:10:35 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,37 +16,23 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Minimum Pulse Width: 'testIrw'
- 12. Setup Times
- 13. Hold Times
- 14. Clock to Output Times
- 15. Minimum Clock to Output Times
- 16. Propagation Delay
- 17. Minimum Propagation Delay
- 18. Fast Model Setup Summary
- 19. Fast Model Hold Summary
- 20. Fast Model Recovery Summary
- 21. Fast Model Removal Summary
- 22. Fast Model Minimum Pulse Width Summary
- 23. Fast Model Minimum Pulse Width: 'testIrw'
- 24. Setup Times
- 25. Hold Times
- 26. Clock to Output Times
- 27. Minimum Clock to Output Times
- 28. Propagation Delay
- 29. Minimum Propagation Delay
- 30. Multicorner Timing Analysis Summary
- 31. Setup Times
- 32. Hold Times
- 33. Clock to Output Times
- 34. Minimum Clock to Output Times
- 35. Progagation Delay
- 36. Minimum Progagation Delay
- 37. Clock Transfers
- 38. Report TCCS
- 39. Report RSKM
- 40. Unconstrained Paths
- 41. TimeQuest Timing Analyzer Messages
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
 
 
 
@@ -93,13 +79,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                              ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
-; testIrw    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { testIrw } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+----------
+; Clocks ;
+----------
+No clocks to report.
 
 
 ---------------------------
@@ -132,120 +115,28 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
+------------------------------------------
 ; Slow Model Minimum Pulse Width Summary ;
-+---------+--------+---------------------+
-; Clock   ; Slack  ; End Point TNS       ;
-+---------+--------+---------------------+
-; testIrw ; -1.469 ; -1.469              ;
-+---------+--------+---------------------+
+------------------------------------------
+No paths to report.
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'testIrw'                                                                  ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                  ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
-; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; testIrw ; Rise       ; testIrw                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Fall       ; IR:unit7|func_out[1]    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Fall       ; IR:unit7|func_out[1]    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Rise       ; testIrw|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Rise       ; testIrw|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Rise       ; unit7|func_out[1]|datad ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Rise       ; unit7|func_out[1]|datad ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 9.549 ;    ;    ; 9.549 ;
++------------+-------------+-------+----+----+-------+
 
 
-+--------------------------------------------------------------------------+
-; Setup Times                                                              ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; 5.777 ; 5.777 ; Fall       ; testIrw         ;
-+--------------+------------+-------+-------+------------+-----------------+
-
-
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; -4.751 ; -4.751 ; Fall       ; testIrw         ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 8.402 ; 8.402 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 7.273 ; 7.273 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 7.451 ; 7.451 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 8.091 ; 8.091 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 8.402 ; 8.402 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 6.134 ; 6.134 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 7.032 ; 7.032 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 6.285 ; 6.285 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                           ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 6.134 ; 6.134 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 6.147 ; 6.147 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 6.628 ; 6.628 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 6.551 ; 6.551 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 6.136 ; 6.136 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 6.134 ; 6.134 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 6.453 ; 6.453 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 6.285 ; 6.285 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+---------------------------------------------------------------+
-; Propagation Delay                                             ;
-+-------------+-------------+--------+--------+--------+--------+
-; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+-------------+-------------+--------+--------+--------+--------+
-; testSel1    ; testRes[2]  ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
-; testSel1    ; testRes[3]  ;        ; 11.573 ; 11.573 ;        ;
-; testSel1    ; testRes[4]  ;        ; 10.391 ; 10.391 ;        ;
-; testSel1    ; testRes[8]  ; 10.577 ;        ;        ; 10.577 ;
-; testSel2[0] ; testRes[0]  ; 10.732 ; 10.732 ; 10.732 ; 10.732 ;
-; testSel2[0] ; testRes[2]  ; 11.634 ; 11.634 ; 11.634 ; 11.634 ;
-; testSel2[0] ; testRes[3]  ; 11.945 ;        ;        ; 11.945 ;
-; testSel2[0] ; testRes[7]  ; 11.049 ; 11.049 ; 11.049 ; 11.049 ;
-; testSel2[1] ; testRes[0]  ; 10.556 ; 10.556 ; 10.556 ; 10.556 ;
-; testSel2[1] ; testRes[1]  ; 10.924 ; 10.924 ; 10.924 ; 10.924 ;
-; testSel2[1] ; testRes[2]  ; 11.462 ; 11.462 ; 11.462 ; 11.462 ;
-; testSel2[1] ; testRes[3]  ; 11.773 ;        ;        ; 11.773 ;
-; testSel2[1] ; testRes[7]  ; 10.826 ; 10.826 ; 10.826 ; 10.826 ;
-+-------------+-------------+--------+--------+--------+--------+
-
-
-+---------------------------------------------------------------+
-; Minimum Propagation Delay                                     ;
-+-------------+-------------+--------+--------+--------+--------+
-; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+-------------+-------------+--------+--------+--------+--------+
-; testSel1    ; testRes[2]  ; 11.234 ; 10.211 ; 10.211 ; 11.234 ;
-; testSel1    ; testRes[3]  ;        ; 11.573 ; 11.573 ;        ;
-; testSel1    ; testRes[4]  ;        ; 10.190 ; 10.190 ;        ;
-; testSel1    ; testRes[8]  ; 10.338 ;        ;        ; 10.338 ;
-; testSel2[0] ; testRes[0]  ; 9.644  ; 10.732 ; 10.732 ; 9.644  ;
-; testSel2[0] ; testRes[2]  ; 10.531 ; 11.634 ; 11.634 ; 10.531 ;
-; testSel2[0] ; testRes[3]  ; 11.945 ;        ;        ; 11.945 ;
-; testSel2[0] ; testRes[7]  ; 11.049 ; 9.905  ; 9.905  ; 11.049 ;
-; testSel2[1] ; testRes[0]  ; 9.654  ; 10.556 ; 10.556 ; 9.654  ;
-; testSel2[1] ; testRes[1]  ; 9.914  ; 10.924 ; 10.924 ; 9.914  ;
-; testSel2[1] ; testRes[2]  ; 10.308 ; 11.462 ; 11.462 ; 10.308 ;
-; testSel2[1] ; testRes[3]  ; 11.773 ;        ;        ; 11.773 ;
-; testSel2[1] ; testRes[7]  ; 10.826 ; 9.926  ; 9.926  ; 10.826 ;
-+-------------+-------------+--------+--------+--------+--------+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 9.549 ;    ;    ; 9.549 ;
++------------+-------------+-------+----+----+-------+
 
 
 ----------------------------
@@ -272,120 +163,28 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
+------------------------------------------
 ; Fast Model Minimum Pulse Width Summary ;
-+---------+--------+---------------------+
-; Clock   ; Slack  ; End Point TNS       ;
-+---------+--------+---------------------+
-; testIrw ; -1.222 ; -1.222              ;
-+---------+--------+---------------------+
+------------------------------------------
+No paths to report.
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'testIrw'                                                                  ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                  ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; testIrw ; Rise       ; testIrw                 ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Fall       ; IR:unit7|func_out[1]    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Fall       ; IR:unit7|func_out[1]    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Rise       ; testIrw|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Rise       ; testIrw|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; testIrw ; Rise       ; unit7|func_out[1]|datad ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; testIrw ; Rise       ; unit7|func_out[1]|datad ;
-+--------+--------------+----------------+------------------+---------+------------+-------------------------+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 5.016 ;    ;    ; 5.016 ;
++------------+-------------+-------+----+----+-------+
 
 
-+--------------------------------------------------------------------------+
-; Setup Times                                                              ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; 2.971 ; 2.971 ; Fall       ; testIrw         ;
-+--------------+------------+-------+-------+------------+-----------------+
-
-
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; -2.618 ; -2.618 ; Fall       ; testIrw         ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 3.714 ; 3.714 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 3.234 ; 3.234 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 3.355 ; 3.355 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 3.579 ; 3.579 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 3.714 ; 3.714 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 2.858 ; 2.858 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 3.145 ; 3.145 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 2.961 ; 2.961 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                           ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 2.852 ; 2.852 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 2.852 ; 2.852 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 3.061 ; 3.061 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 3.014 ; 3.014 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 2.872 ; 2.872 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 2.858 ; 2.858 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 2.931 ; 2.931 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 2.961 ; 2.961 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+-----------------------------------------------------------+
-; Propagation Delay                                         ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; testSel1    ; testRes[2]  ; 5.590 ; 5.590 ; 5.590 ; 5.590 ;
-; testSel1    ; testRes[3]  ;       ; 5.726 ; 5.726 ;       ;
-; testSel1    ; testRes[4]  ;       ; 5.291 ; 5.291 ;       ;
-; testSel1    ; testRes[8]  ; 5.396 ;       ;       ; 5.396 ;
-; testSel2[0] ; testRes[0]  ; 5.395 ; 5.395 ; 5.395 ; 5.395 ;
-; testSel2[0] ; testRes[2]  ; 5.737 ; 5.737 ; 5.737 ; 5.737 ;
-; testSel2[0] ; testRes[3]  ; 5.872 ;       ;       ; 5.872 ;
-; testSel2[0] ; testRes[7]  ; 5.499 ; 5.499 ; 5.499 ; 5.499 ;
-; testSel2[1] ; testRes[0]  ; 5.328 ; 5.328 ; 5.328 ; 5.328 ;
-; testSel2[1] ; testRes[1]  ; 5.519 ; 5.519 ; 5.519 ; 5.519 ;
-; testSel2[1] ; testRes[2]  ; 5.671 ; 5.671 ; 5.671 ; 5.671 ;
-; testSel2[1] ; testRes[3]  ; 5.806 ;       ;       ; 5.806 ;
-; testSel2[1] ; testRes[7]  ; 5.428 ; 5.428 ; 5.428 ; 5.428 ;
-+-------------+-------------+-------+-------+-------+-------+
-
-
-+-----------------------------------------------------------+
-; Minimum Propagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; testSel1    ; testRes[2]  ; 5.590 ; 5.226 ; 5.226 ; 5.590 ;
-; testSel1    ; testRes[3]  ;       ; 5.726 ; 5.726 ;       ;
-; testSel1    ; testRes[4]  ;       ; 5.211 ; 5.211 ;       ;
-; testSel1    ; testRes[8]  ; 5.309 ;       ;       ; 5.309 ;
-; testSel2[0] ; testRes[0]  ; 5.019 ; 5.395 ; 5.395 ; 5.019 ;
-; testSel2[0] ; testRes[2]  ; 5.367 ; 5.737 ; 5.737 ; 5.367 ;
-; testSel2[0] ; testRes[3]  ; 5.872 ;       ;       ; 5.872 ;
-; testSel2[0] ; testRes[7]  ; 5.499 ; 5.084 ; 5.084 ; 5.499 ;
-; testSel2[1] ; testRes[0]  ; 5.015 ; 5.328 ; 5.328 ; 5.015 ;
-; testSel2[1] ; testRes[1]  ; 5.157 ; 5.519 ; 5.519 ; 5.157 ;
-; testSel2[1] ; testRes[2]  ; 5.296 ; 5.671 ; 5.671 ; 5.296 ;
-; testSel2[1] ; testRes[3]  ; 5.806 ;       ;       ; 5.806 ;
-; testSel2[1] ; testRes[7]  ; 5.428 ; 5.091 ; 5.091 ; 5.428 ;
-+-------------+-------------+-------+-------+-------+-------+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 5.016 ;    ;    ; 5.016 ;
++------------+-------------+-------+----+----+-------+
 
 
 +----------------------------------------------------------------------------+
@@ -393,103 +192,27 @@ No paths to report.
 +------------------+-------+------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
-;  testIrw         ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -1.469              ;
-;  testIrw         ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+--------------------------------------------------------------------------+
-; Setup Times                                                              ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; 5.777 ; 5.777 ; Fall       ; testIrw         ;
-+--------------+------------+-------+-------+------------+-----------------+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 9.549 ;    ;    ; 9.549 ;
++------------+-------------+-------+----+----+-------+
 
 
-+----------------------------------------------------------------------------+
-; Hold Times                                                                 ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; testSelMuxPC ; testIrw    ; -2.618 ; -2.618 ; Fall       ; testIrw         ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Clock to Output Times                                                   ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 8.402 ; 8.402 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 7.273 ; 7.273 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 7.451 ; 7.451 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 8.091 ; 8.091 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 8.402 ; 8.402 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 6.134 ; 6.134 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 7.032 ; 7.032 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 6.285 ; 6.285 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                           ;
-+-------------+------------+-------+-------+------------+-----------------+
-; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------+------------+-------+-------+------------+-----------------+
-; testRes[*]  ; testIrw    ; 2.852 ; 2.852 ; Fall       ; testIrw         ;
-;  testRes[0] ; testIrw    ; 2.852 ; 2.852 ; Fall       ; testIrw         ;
-;  testRes[1] ; testIrw    ; 3.061 ; 3.061 ; Fall       ; testIrw         ;
-;  testRes[2] ; testIrw    ; 3.014 ; 3.014 ; Fall       ; testIrw         ;
-;  testRes[3] ; testIrw    ; 2.872 ; 2.872 ; Fall       ; testIrw         ;
-;  testRes[4] ; testIrw    ; 2.858 ; 2.858 ; Fall       ; testIrw         ;
-;  testRes[7] ; testIrw    ; 2.931 ; 2.931 ; Fall       ; testIrw         ;
-;  testRes[8] ; testIrw    ; 2.961 ; 2.961 ; Fall       ; testIrw         ;
-+-------------+------------+-------+-------+------------+-----------------+
-
-
-+---------------------------------------------------------------+
-; Progagation Delay                                             ;
-+-------------+-------------+--------+--------+--------+--------+
-; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+-------------+-------------+--------+--------+--------+--------+
-; testSel1    ; testRes[2]  ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
-; testSel1    ; testRes[3]  ;        ; 11.573 ; 11.573 ;        ;
-; testSel1    ; testRes[4]  ;        ; 10.391 ; 10.391 ;        ;
-; testSel1    ; testRes[8]  ; 10.577 ;        ;        ; 10.577 ;
-; testSel2[0] ; testRes[0]  ; 10.732 ; 10.732 ; 10.732 ; 10.732 ;
-; testSel2[0] ; testRes[2]  ; 11.634 ; 11.634 ; 11.634 ; 11.634 ;
-; testSel2[0] ; testRes[3]  ; 11.945 ;        ;        ; 11.945 ;
-; testSel2[0] ; testRes[7]  ; 11.049 ; 11.049 ; 11.049 ; 11.049 ;
-; testSel2[1] ; testRes[0]  ; 10.556 ; 10.556 ; 10.556 ; 10.556 ;
-; testSel2[1] ; testRes[1]  ; 10.924 ; 10.924 ; 10.924 ; 10.924 ;
-; testSel2[1] ; testRes[2]  ; 11.462 ; 11.462 ; 11.462 ; 11.462 ;
-; testSel2[1] ; testRes[3]  ; 11.773 ;        ;        ; 11.773 ;
-; testSel2[1] ; testRes[7]  ; 10.826 ; 10.826 ; 10.826 ; 10.826 ;
-+-------------+-------------+--------+--------+--------+--------+
-
-
-+-----------------------------------------------------------+
-; Minimum Progagation Delay                                 ;
-+-------------+-------------+-------+-------+-------+-------+
-; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+-------------+-------------+-------+-------+-------+-------+
-; testSel1    ; testRes[2]  ; 5.590 ; 5.226 ; 5.226 ; 5.590 ;
-; testSel1    ; testRes[3]  ;       ; 5.726 ; 5.726 ;       ;
-; testSel1    ; testRes[4]  ;       ; 5.211 ; 5.211 ;       ;
-; testSel1    ; testRes[8]  ; 5.309 ;       ;       ; 5.309 ;
-; testSel2[0] ; testRes[0]  ; 5.019 ; 5.395 ; 5.395 ; 5.019 ;
-; testSel2[0] ; testRes[2]  ; 5.367 ; 5.737 ; 5.737 ; 5.367 ;
-; testSel2[0] ; testRes[3]  ; 5.872 ;       ;       ; 5.872 ;
-; testSel2[0] ; testRes[7]  ; 5.499 ; 5.084 ; 5.084 ; 5.499 ;
-; testSel2[1] ; testRes[0]  ; 5.015 ; 5.328 ; 5.328 ; 5.015 ;
-; testSel2[1] ; testRes[1]  ; 5.157 ; 5.519 ; 5.519 ; 5.157 ;
-; testSel2[1] ; testRes[2]  ; 5.296 ; 5.671 ; 5.671 ; 5.296 ;
-; testSel2[1] ; testRes[3]  ; 5.806 ;       ;       ; 5.806 ;
-; testSel2[1] ; testRes[7]  ; 5.428 ; 5.091 ; 5.091 ; 5.428 ;
-+-------------+-------------+-------+-------+-------+-------+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; MemDir[2]  ; Res[2]      ; 5.016 ;    ;    ; 5.016 ;
++------------+-------------+-------+----+----+-------+
 
 
 -------------------
@@ -517,10 +240,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 14    ; 14   ;
-; Unconstrained Output Ports      ; 7     ; 7    ;
-; Unconstrained Output Port Paths ; 20    ; 20   ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
@@ -530,46 +253,41 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 21 01:09:49 2018
+    Info: Processing started: Sat Oct 27 15:10:34 2018
 Info: Command: quartus_sta MultiCycle -c MultiCycle
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'MultiCycle.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name testIrw testIrw
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case minimum pulse width slack is -1.469
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.469        -1.469 testIrw 
+Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case minimum pulse width slack is -1.222
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.222        -1.222 testIrw 
+Info (332140): No Minimum Pulse Width paths to report
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4555 megabytes
-    Info: Processing ended: Sun Oct 21 01:09:50 2018
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4567 megabytes
+    Info: Processing ended: Sat Oct 27 15:10:35 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

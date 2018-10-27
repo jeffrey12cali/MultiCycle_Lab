@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity clockbox is 
+    port (clk: inout bit);
+    end clockbox;
+    
+architecture behavioral of clockbox is
+    begin 
+        process
+          begin 
+            clk <= not(clk);
+        end process;
+        
+end behavioral;

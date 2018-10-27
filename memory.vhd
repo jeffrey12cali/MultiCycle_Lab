@@ -20,7 +20,7 @@ architecture compor of memory is
 
 
 
-constant mem_add: std_logic_vector(31 downto 0) := "00000001000010100000000000000000";
+constant mem_add: std_logic_vector(31 downto 0) := "00000001000010100101100000100000";
 constant mem_sub: std_logic_vector(31 downto 0) := "00000001000010100000000000000001";
 constant mem_and: std_logic_vector(31 downto 0) := "00000001000010100000000000000010";
 constant mem_or: std_logic_vector(31 downto 0) := "00000001000010100000000000111111";

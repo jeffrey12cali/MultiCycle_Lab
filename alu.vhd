@@ -6,7 +6,7 @@ port(
 	
 	a: in std_logic_vector (31 downto 0);
 	b: in std_logic_vector(31 downto 0);
-	func: in std_logic_vector (5 downto 0);
+	func: in std_logic_vector (2 downto 0);
 	aluOut: out std_logic_vector (31 downto 0);
 	zero: out std_logic
 	
@@ -19,28 +19,28 @@ architecture behavior of alu is
 signal temp: std_logic_vector(31 downto 0);
 
 begin 
-	process (a,b,func)
+	process (func)
 		begin 
 		case (func) is
 		-- instrucción add
-		when "100000" =>
+		when "010" =>
 			temp <= a+b;
+		-- instrucción sub
+		when "110" =>
+			temp <= a - b;
 		-- instrucción and
-		when "100100" =>
+		when "000" =>
 			temp <= a and b;
 		-- instrucción or
-		when "100101" =>
+		when "001" =>
 			temp <= a or b;
 		-- instrucción stl
-		when "101010" =>
+		when "111" =>
 			if (a<b) then
 			temp <= "11111111111111111111111111111111";
 			else
 			temp <= "00000000000000000000000000000000";
 			end if;
-		-- instrucción jr
-		when "001000" =>
-			temp <= a;
 		-- otras instrucciones
 		when others =>
 			temp <= not(a and b);

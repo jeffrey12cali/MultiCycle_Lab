@@ -13,7 +13,7 @@ architecture behavior of PC is
 	begin
 	process(PCw, addr) begin
 		if (PCw = '1') then
-			addr_out <= "00000000000000000000000000000001";
+			addr_out <= addr;
 		end if;
 	end process;
 end architecture;

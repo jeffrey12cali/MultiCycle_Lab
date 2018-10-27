@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 entity mux2 is 
 port
 (
-	regA,
-	PC: in std_logic_vector(31 downto 0);
+	dataSrc0,
+	dataSrc1: in std_logic_vector(31 downto 0);
 	sel1: in std_logic_vector(0 downto 0);
 	salida: out std_logic_vector(31 downto 0)
 	
@@ -17,9 +17,9 @@ begin
 	begin
 		case (sel1) is
 			when "0" =>
-				salida <= regA;
+				salida <= dataSrc0;
 			when others =>
-				salida <= PC;
+				salida <= dataSrc1;
 		end case;
 	end process;
 end case_arch1;

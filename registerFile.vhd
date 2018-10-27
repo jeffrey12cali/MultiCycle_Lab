@@ -7,18 +7,18 @@ entity registerFile is
 		 RR2: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 2 
 		 WR: in std_logic_vector(4 downto 0);		--5-bit Write Register
 		 WD: in std_logic_vector(31 downto 0);		--32-bit Write Data
-		 Control: in std_logic_vector(5 downto 0);	--6-bit Opcode/Function
+		 RegWR: in std_logic;
 		 RD1: out std_logic_vector(31 downto 0); 	--32-bit output1
-		 RD2: out std_logic_vector(31 downto 0); 	--32-bit output2
-		 CTRL_OUT: out std_logic_vector(5 downto 0));--Control Output to pass through the control values for alu operation
-end entity registerFile;
+		 RD2: out std_logic_vector(31 downto 0)	 --32-bit output2
+	);
+end entity;
 
 architecture behave of registerFile is 
 
 constant C_REG_0: std_logic_vector(31 downto 0) := x"00000000";
-constant C_REG_8: std_logic_vector(31 downto 0) := x"00000080";
+constant C_REG_8: std_logic_vector(31 downto 0) := x"00000080"; --this
 constant C_REG_9: std_logic_vector(31 downto 0) := x"00000090";
-constant C_REG_10: std_logic_vector(31 downto 0) := x"00000100";
+constant C_REG_10: std_logic_vector(31 downto 0) := x"00000100"; -- and this
 constant C_REG_11: std_logic_vector(31 downto 0) := x"00000110";
 constant C_REG_12: std_logic_vector(31 downto 0) := x"00000120";
 constant C_REG_13: std_logic_vector(31 downto 0) := x"00000130";	--Change to determine BEQ or BNE
@@ -55,8 +55,6 @@ signal REG_22: std_logic_vector(31 downto 0) := x"00000220";
 signal REG_23: std_logic_vector(31 downto 0) := x"00000230";
 signal REG_24: std_logic_vector(31 downto 0) := x"00000240";
 signal REG_25: std_logic_vector(31 downto 0) := x"00000250";
-
-signal Write_Control: std_logic := '0';
 
 begin 
 		
@@ -101,30 +99,25 @@ begin
 	       C_REG_25 when (RR2 = "11001") else			
 	       x"FFFFFFFF";
 	
-	Write_Control <= '1' when (Control = "100011" or Control = "100000" or Control = "100101" or Control = "101010" or Control = "001101" or Control = "000010" or Control = "001111") else
-					 '0';
-	
 	--Write Operations
-	REG_8 <= WD when (WR = "01000" and Write_Control = '1');
-	REG_9 <= WD when (WR = "01001" and Write_Control = '1');
-	REG_10 <= WD when (WR = "01010" and Write_Control = '1');
-	REG_11 <= WD when (WR = "01011" and Write_Control = '1');
-	REG_12 <= WD when (WR = "01100" and Write_Control = '1');
-	REG_13 <= WD when (WR = "01101" and Write_Control = '1');
-	REG_14 <= WD when (WR = "01110" and Write_Control = '1');
-	REG_15 <= WD when (WR = "01111" and Write_Control = '1');
-	REG_16 <= WD when (WR = "10000" and Write_Control = '1');
-	REG_17 <= WD when (WR = "10001" and Write_Control = '1');
-	REG_18 <= WD when (WR = "10010" and Write_Control = '1');
-	REG_19 <= WD when (WR = "10011" and Write_Control = '1');
-	REG_20 <= WD when (WR = "10100" and Write_Control = '1');
-	REG_21 <= WD when (WR = "10101" and Write_Control = '1');
-	REG_22 <= WD when (WR = "10110" and Write_Control = '1');
-	REG_23 <= WD when (WR = "10111" and Write_Control = '1');
-	REG_24 <= WD when (WR = "11000" and Write_Control = '1');
-	REG_25 <= WD when (WR = "11001" and Write_Control = '1');
-	
-	
-	CTRL_OUT <= Control;
+	REG_8 <= WD when (WR = "01000" and RegWR = '1');
+	REG_9 <= WD when (WR = "01001" and RegWR = '1');
+	REG_10 <= WD when (WR = "01010" and RegWR = '1');
+	REG_11 <= WD when (WR = "01011" and RegWR = '1');
+	REG_12 <= WD when (WR = "01100" and RegWR = '1');
+	REG_13 <= WD when (WR = "01101" and RegWR = '1');
+	REG_14 <= WD when (WR = "01110" and RegWR = '1');
+	REG_15 <= WD when (WR = "01111" and RegWR = '1');
+	REG_16 <= WD when (WR = "10000" and RegWR = '1');
+	REG_17 <= WD when (WR = "10001" and RegWR = '1');
+	REG_18 <= WD when (WR = "10010" and RegWR = '1');
+	REG_19 <= WD when (WR = "10011" and RegWR = '1');
+	REG_20 <= WD when (WR = "10100" and RegWR = '1');
+	REG_21 <= WD when (WR = "10101" and RegWR = '1');
+	REG_22 <= WD when (WR = "10110" and RegWR = '1');
+	REG_23 <= WD when (WR = "10111" and RegWR = '1');
+	REG_24 <= WD when (WR = "11000" and RegWR = '1');
+	REG_25 <= WD when (WR = "11001" and RegWR = '1');
+
 	
 end architecture behave;
