@@ -21,15 +21,19 @@ architecture compor of memory is
 
 
 constant mem_add: std_logic_vector(31 downto 0) := "00000001000010100101100000100000";
-constant mem_sub: std_logic_vector(31 downto 0) := "00000001000010100000000000000001";
-constant mem_and: std_logic_vector(31 downto 0) := "00000001000010100000000000000010";
-constant mem_or: std_logic_vector(31 downto 0) := "00000001000010100000000000111111";
+constant mem_sub: std_logic_vector(31 downto 0) := "00000001000010100101100000100010";
+constant mem_and: std_logic_vector(31 downto 0) := "00000001000010100101100000100100";
+constant mem_or: std_logic_vector(31 downto 0) := "00000001000010100101100000100101";
+constant mem_beq: std_logic_vector(31 downto 0) := "00010001000010000000000000000001";
+constant mem_jump: std_logic_vector(31 downto 0) := "00001000000000000000000000000001";
 
 
 begin
-	data_out <= mem_add when (address = "00000000000000000000000000000001") else
-					mem_sub when (address = "00000000000000000000000000000010") else
-					mem_and when (address = "00000000000000000000000000000011") else
-					mem_or;	
+	data_out <= mem_add when (address = "00000000000000000000000000000100") else
+					mem_sub when (address = "00000000000000000000000000001000") else
+					mem_and when (address = "00000000000000000000000000001100") else
+					mem_or when (address = "00000000000000000000000000001110") else
+					mem_beq when (address = "00000000000000000000000000010000") else
+					mem_jump;
 
 end architecture compor;

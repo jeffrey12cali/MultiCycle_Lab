@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Sat Oct 27 17:35:26 2018
+Sat Oct 27 18:54:48 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,16 +17,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "mux3jump:JUMPMUX"
- 13. Port Connectivity Checks: "reg32bit:MDR"
- 14. Port Connectivity Checks: "controlUnit:CONTROLU"
- 15. Port Connectivity Checks: "mux2:MUXPC"
- 16. Port Connectivity Checks: "mux2:MUXMemReg"
- 17. Port Connectivity Checks: "mux2:MUXA"
- 18. Port Connectivity Checks: "mux:MUXB"
- 19. Port Connectivity Checks: "alu:ALUCOMP"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "reg32bit:MDR"
+ 13. Port Connectivity Checks: "controlUnit:CONTROLU"
+ 14. Port Connectivity Checks: "mux2:MUXPC"
+ 15. Port Connectivity Checks: "mux2:MUXMemReg"
+ 16. Port Connectivity Checks: "mux2:MUXA"
+ 17. Port Connectivity Checks: "mux:MUXB"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -52,16 +50,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 27 17:35:26 2018           ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 27 18:54:48 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 239                                             ;
-;     Total combinational functions  ; 239                                             ;
-;     Dedicated logic registers      ; 34                                              ;
-; Total registers                    ; 34                                              ;
-; Total pins                         ; 106                                             ;
+; Total logic elements               ; 393                                             ;
+;     Total combinational functions  ; 393                                             ;
+;     Dedicated logic registers      ; 38                                              ;
+; Total registers                    ; 38                                              ;
+; Total pins                         ; 138                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -190,34 +188,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                        ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Estimated Total logic elements              ; 239                  ;
-;                                             ;                      ;
-; Total combinational functions               ; 239                  ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 98                   ;
-;     -- 3 input functions                    ; 129                  ;
-;     -- <=2 input functions                  ; 12                   ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 201                  ;
-;     -- arithmetic mode                      ; 38                   ;
-;                                             ;                      ;
-; Total registers                             ; 34                   ;
-;     -- Dedicated logic registers            ; 34                   ;
-;     -- I/O registers                        ; 0                    ;
-;                                             ;                      ;
-; I/O pins                                    ; 106                  ;
-; Embedded Multiplier 9-bit elements          ; 0                    ;
-; Maximum fan-out node                        ; NewState:NEWST|CS[1] ;
-; Maximum fan-out                             ; 68                   ;
-; Total fan-out                               ; 940                  ;
-; Average fan-out                             ; 2.48                 ;
-+---------------------------------------------+----------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 393                 ;
+;                                             ;                     ;
+; Total combinational functions               ; 393                 ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 224                 ;
+;     -- 3 input functions                    ; 155                 ;
+;     -- <=2 input functions                  ; 14                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 361                 ;
+;     -- arithmetic mode                      ; 32                  ;
+;                                             ;                     ;
+; Total registers                             ; 38                  ;
+;     -- Dedicated logic registers            ; 38                  ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 138                 ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+; Maximum fan-out node                        ; alu:ALUCOMP|Mux21~1 ;
+; Maximum fan-out                             ; 64                  ;
+; Total fan-out                               ; 1567                ;
+; Average fan-out                             ; 2.75                ;
++---------------------------------------------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -225,18 +223,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |MultiCycle                ; 239 (0)           ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |MultiCycle                      ; work         ;
+; |MultiCycle                ; 393 (12)          ; 38 (0)       ; 0           ; 0            ; 0       ; 0         ; 138  ; 0            ; |MultiCycle                      ; work         ;
 ;    |ALUControl:ALUCONTRL|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|ALUControl:ALUCONTRL ; work         ;
-;    |IR:INSTREG|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG           ; work         ;
-;    |NewState:NEWST|        ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|NewState:NEWST       ; work         ;
+;    |IR:INSTREG|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG           ; work         ;
+;    |NewState:NEWST|        ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|NewState:NEWST       ; work         ;
 ;    |PC:PROGCOUNT|          ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|PC:PROGCOUNT         ; work         ;
-;    |alu:ALUCOMP|           ; 142 (142)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:ALUCOMP          ; work         ;
-;    |controlUnit:CONTROLU|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|controlUnit:CONTROLU ; work         ;
-;    |memory:MEM|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memory:MEM           ; work         ;
+;    |alu:ALUCOMP|           ; 184 (184)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:ALUCOMP          ; work         ;
+;    |controlUnit:CONTROLU|  ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|controlUnit:CONTROLU ; work         ;
+;    |memory:MEM|            ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memory:MEM           ; work         ;
 ;    |mux2:MUXA|             ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux2:MUXA            ; work         ;
 ;    |mux3:MUXRegDst|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3:MUXRegDst       ; work         ;
-;    |mux:MUXB|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:MUXB             ; work         ;
+;    |mux3jump:JUMPMUX|      ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3jump:JUMPMUX     ; work         ;
+;    |mux:MUXB|              ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:MUXB             ; work         ;
 ;    |reg32bit:regALU|       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regALU      ; work         ;
+;    |reg32bit:regB|         ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regB        ; work         ;
+;    |registerFile:REGFILE|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|registerFile:REGFILE ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -246,65 +247,86 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+-------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
 +-----------------------------------------------------+-------------------------------+------------------------+
-; IR:INSTREG|imm_out[14]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; controlUnit:CONTROLU|ALUsrcB[0]                     ; GND                           ; yes                    ;
-; controlUnit:CONTROLU|ALUsrcB[1]                     ; GND                           ; yes                    ;
-; PC:PROGCOUNT|addr_out[16]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; controlUnit:CONTROLU|ALUsrcA                        ; GND                           ; yes                    ;
-; PC:PROGCOUNT|addr_out[14]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[12]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; IR:INSTREG|imm_out[11]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[13]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[12]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[11]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[9]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[10]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[8]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[7]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[5]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[6]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[4]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[5]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[3]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[4]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[2]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[3]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[1]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[2]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; IR:INSTREG|imm_out[0]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[1]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[0]                            ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[15]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[28]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[29]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[30]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[31]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[24]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[25]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[26]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[27]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[20]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[21]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[22]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[23]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[17]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[18]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; PC:PROGCOUNT|addr_out[19]                           ; controlUnit:CONTROLU|PCwr     ; yes                    ;
-; controlUnit:CONTROLU|ALUop[1]                       ; GND                           ; yes                    ;
-; IR:INSTREG|func_out[3]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; IR:INSTREG|func_out[0]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
-; IR:INSTREG|func_out[2]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|ALUop[0]                       ; GND                           ; yes                    ;
 ; IR:INSTREG|func_out[1]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|ALUop[1]                       ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcB[0]                     ; GND                           ; yes                    ;
+; IR:INSTREG|imm_out[0]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcB[1]                     ; GND                           ; yes                    ;
+; PC:PROGCOUNT|addr_out[0]                            ; comb                          ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcA                        ; GND                           ; yes                    ;
+; IR:INSTREG|func_out[2]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|func_out[0]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[31]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[30]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[29]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[28]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[27]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[26]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[25]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[24]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[23]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[22]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[21]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[20]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[19]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[18]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[17]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[16]                           ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[14]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[15]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[14]                           ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[12]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[13]                           ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[11]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[12]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[11]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[10]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[9]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[8]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[7]                            ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[5]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[6]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[5]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[4]                            ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[2]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[3]                            ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[1]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[2]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[1]                            ; comb                          ; yes                    ;
 ; IR:INSTREG|r3_out[0]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
 ; controlUnit:CONTROLU|RegDst                         ; GND                           ; yes                    ;
+; IR:INSTREG|r2_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
 ; IR:INSTREG|r3_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|r2_out[3]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
 ; IR:INSTREG|r3_out[3]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|PCsrc[1]                       ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|PCsrc[0]                       ; GND                           ; yes                    ;
+; IR:INSTREG|jump_out[0]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[1]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[2]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[5]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[11]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[12]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[14]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[17]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[19]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|jump_out[24]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
 ; controlUnit:CONTROLU|IRwr                           ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|PCwrCond                       ; GND                           ; yes                    ;
 ; controlUnit:CONTROLU|PCwr                           ; GND                           ; yes                    ;
+; IR:INSTREG|r1_out[3]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
 ; controlUnit:CONTROLU|NextSt[0]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
 ; controlUnit:CONTROLU|NextSt[1]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
 ; controlUnit:CONTROLU|NextSt[2]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
-; Number of user-specified and inferred latches = 58  ;                               ;                        ;
+; controlUnit:CONTROLU|NextSt[3]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[0]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[1]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[2]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[3]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; IR:INSTREG|op_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|op_out[2]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; Number of user-specified and inferred latches = 79  ;                               ;                        ;
 +-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -314,15 +336,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; NewState:NEWST|CS[3]                   ; Stuck at GND due to stuck port data_in ;
-; reg32bit:regB|dt_out[8]                ; Stuck at VCC due to stuck port data_in ;
 ; reg32bit:regA|dt_out[7]                ; Stuck at VCC due to stuck port data_in ;
-; reg32bit:regB|dt_out[1..7,9..31]       ; Merged with reg32bit:regB|dt_out[0]    ;
 ; reg32bit:regA|dt_out[1..6,8..31]       ; Merged with reg32bit:regA|dt_out[0]    ;
-; reg32bit:regB|dt_out[0]                ; Stuck at GND due to stuck port data_in ;
-; reg32bit:regA|dt_out[0]                ; Stuck at GND due to stuck port data_in ;
+; reg32bit:regB|dt_out[1..6,9..31]       ; Merged with reg32bit:regB|dt_out[0]    ;
+; reg32bit:regA|dt_out[0]                ; Merged with reg32bit:regB|dt_out[0]    ;
 ; NewState:NEWST|CS[2]                   ; Merged with NewState:NEWST|CS[1]       ;
-; Total Number of Removed Registers = 66 ;                                        ;
+; Total Number of Removed Registers = 62 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -331,7 +350,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 38    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -341,25 +360,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux26    ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux21 ;
-; 1:1                ; 18 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MultiCycle|alu:ALUCOMP|Add0  ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux18 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux3jump:JUMPMUX"                                                                     ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; salida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux18             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux26             ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux19     ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux17     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |MultiCycle|memory:MEM|data_out[5]     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux21          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MultiCycle|controlUnit:CONTROLU|RegWr ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |MultiCycle|memory:MEM|data_out[27]    ;
+; 1:1                ; 19 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |MultiCycle|alu:ALUCOMP|Add0           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -425,15 +440,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:ALUCOMP"                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -449,7 +455,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Oct 27 17:35:23 2018
+    Info: Processing started: Sat Oct 27 18:54:44 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
@@ -508,10 +514,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux3jum
     Info (12022): Found design unit 1: mux3jump-case_arch2
     Info (12023): Found entity 1: mux3jump
 Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(199): object "MemRd_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(200): object "MemWr_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(211): object "MDRtoMUX" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(226): object "newPC" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(200): object "MemRd_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(201): object "MemWr_out" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MultiCycle.vhd(212): object "MDRtoMUX" assigned a value but never read
 Info (12128): Elaborating entity "alu" for hierarchy "alu:ALUCOMP"
 Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -669,7 +674,7 @@ Info (10041): Inferred latch for "addr_out[29]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[30]" at PC.vhd(14)
 Info (10041): Inferred latch for "addr_out[31]" at PC.vhd(14)
 Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:CONTROLU"
-Warning (10492): VHDL Process Statement warning at controlUnit.vhd(68): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlUnit.vhd(75): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "IorD", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemRd", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUsrcA", which holds its previous value in one or more paths through the process
@@ -720,38 +725,55 @@ Warning (10492): VHDL Process Statement warning at mux3jump.vhd(20): signal "a" 
 Warning (10492): VHDL Process Statement warning at mux3jump.vhd(22): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mux3jump.vhd(24): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[1]" merged with LATCH primitive "IR:INSTREG|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[1]" merged with LATCH primitive "IR:INSTREG|func_out[1]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|func_out[0]" merged with LATCH primitive "IR:INSTREG|imm_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[0]" merged with LATCH primitive "IR:INSTREG|imm_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[2]" merged with LATCH primitive "IR:INSTREG|func_out[2]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[2]" merged with LATCH primitive "IR:INSTREG|func_out[2]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[5]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[5]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[17]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|r2_out[1]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[14]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
     Info (13026): Duplicate LATCH primitive "IR:INSTREG|r3_out[3]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[12]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
     Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[12]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
     Info (13026): Duplicate LATCH primitive "IR:INSTREG|r3_out[1]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[11]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
     Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[11]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
     Info (13026): Duplicate LATCH primitive "IR:INSTREG|r3_out[0]" merged with LATCH primitive "IR:INSTREG|imm_out[14]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|func_out[3]" merged with LATCH primitive "IR:INSTREG|imm_out[4]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[3]" merged with LATCH primitive "IR:INSTREG|imm_out[4]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|func_out[2]" merged with LATCH primitive "IR:INSTREG|imm_out[4]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[2]" merged with LATCH primitive "IR:INSTREG|imm_out[4]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|func_out[1]" merged with LATCH primitive "IR:INSTREG|imm_out[1]"
-    Info (13026): Duplicate LATCH primitive "IR:INSTREG|func_out[0]" merged with LATCH primitive "IR:INSTREG|imm_out[0]"
-    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|NextSt[2]" merged with LATCH primitive "controlUnit:CONTROLU|NextSt[1]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[19]" merged with LATCH primitive "IR:INSTREG|r2_out[3]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[24]" merged with LATCH primitive "IR:INSTREG|r2_out[3]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|r1_out[3]" merged with LATCH primitive "IR:INSTREG|r2_out[3]"
+    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|nxt_st[2]" merged with LATCH primitive "controlUnit:CONTROLU|nxt_st[1]"
 Warning (13012): Latch controlUnit:CONTROLU|NextSt[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal NewState:NEWST|CS[2]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal NewState:NEWST|CS[1]
 Warning (13012): Latch controlUnit:CONTROLU|NextSt[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[2]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|NextSt[2]" merged with LATCH primitive "controlUnit:CONTROLU|NextSt[1]"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wrReg[2]" is stuck at GND
     Warning (13410): Pin "wrReg[4]" is stuck at GND
-    Warning (13410): Pin "sts[3]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 377 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 566 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 73 output pins
-    Info (21061): Implemented 271 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 82 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Sat Oct 27 17:35:26 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 428 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 86 warnings
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Sat Oct 27 18:54:48 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

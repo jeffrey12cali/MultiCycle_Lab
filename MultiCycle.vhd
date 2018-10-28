@@ -8,6 +8,7 @@ entity MultiCycle is
 		Res: out std_logic_vector(31 downto 0);
 		wrReg: out std_logic_vector(4 downto 0);
 		wrData: out std_logic_vector(31 downto 0);
+		nextIns: out std_logic_vector(31 downto 0);
 		sts: out std_logic_vector(3 downto 0)
 	);
 end MultiCycle;
@@ -225,13 +226,16 @@ architecture behaviour of MultiCycle is
 	
 	signal newPC: std_logic_vector(31 downto 0);
 	
+	signal zero_out: std_logic;
+	
 	begin
 		ALUCOMP: alu
 		port map(
 			a => MuxSrcA,
 			b => MuxSrcB,
 			func => ALUContOP_out,
-			aluOut => ALUres_out
+			aluOut => ALUres_out,
+			zero => zero_out
 		);
 		
 		MUXB: mux
@@ -308,8 +312,8 @@ architecture behaviour of MultiCycle is
 		
 		PROGCOUNT: PC
 		port map(
-			PCw => (PCwr_out or (PCWrCond_out)),
-			addr => memDir, --tiene una dirección quemada
+			PCw => (PCwr_out or (PCWrCond_out and zero_out)),
+			addr => memDir,
 			addr_out => PCaddrout
 		);
 		
@@ -412,6 +416,7 @@ architecture behaviour of MultiCycle is
 		sts <= currentS_out;
 		wrReg <= outMux3;
 		wrData <= outMux4;
+		nextIns <= newPC;
 		
 		
 	end;

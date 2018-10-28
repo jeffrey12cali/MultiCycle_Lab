@@ -60,10 +60,10 @@ ModelSim-Altera Info: # Loading cycloneii.cycloneii_io(structure)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_mux21(altvital)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_dffe(behave)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_asynch_io(behave)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_and1(altvital)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_ena_reg(behave)
+ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+ModelSim-Altera Info: # Loading cycloneii.cycloneii_and1(altvital)
 ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
 ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
 ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -73,9 +73,25 @@ ModelSim-Altera Info: sim:/multicycle/clk \
 ModelSim-Altera Info: sim:/multicycle/Res \
 ModelSim-Altera Info: sim:/multicycle/wrReg \
 ModelSim-Altera Info: sim:/multicycle/wrData \
+ModelSim-Altera Info: sim:/multicycle/nextIns \
 ModelSim-Altera Info: sim:/multicycle/sts
-ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000001000010100101100000100010 0
 ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000001000 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000001100 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
