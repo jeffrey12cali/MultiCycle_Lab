@@ -41,11 +41,11 @@ ModelSim-Altera Info: # -- Loading package VITAL_Timing
 ModelSim-Altera Info: # -- Loading package VITAL_Primitives
 ModelSim-Altera Info: # -- Loading package cycloneii_atom_pack
 ModelSim-Altera Info: # -- Loading package cycloneii_components
-ModelSim-Altera Info: # -- Compiling entity TestCU
-ModelSim-Altera Info: # -- Compiling architecture structure of TestCU
+ModelSim-Altera Info: # -- Compiling entity registers
+ModelSim-Altera Info: # -- Compiling architecture structure of registers
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: vsim work.testcu
-ModelSim-Altera Info: # vsim work.testcu 
+ModelSim-Altera Info: vsim work.registers
+ModelSim-Altera Info: # vsim work.registers 
 ModelSim-Altera Info: # Loading std.standard
 ModelSim-Altera Info: # Loading std.textio(body)
 ModelSim-Altera Info: # Loading ieee.std_logic_1164(body)
@@ -53,39 +53,34 @@ ModelSim-Altera Info: # Loading ieee.vital_timing(body)
 ModelSim-Altera Info: # Loading ieee.vital_primitives(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_atom_pack(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_components
-ModelSim-Altera Info: # Loading work.testcu(structure)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+ModelSim-Altera Info: # Loading work.registers(structure)
 ModelSim-Altera Info: # Loading ieee.std_logic_arith(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_io(structure)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_mux21(altvital)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_dffe(behave)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_asynch_io(behave)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_ena_reg(behave)
+ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
+ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
 ModelSim-Altera Info: add wave -position insertpoint  \
-ModelSim-Altera Info: sim:/testcu/op1 \
-ModelSim-Altera Info: sim:/testcu/st1 \
-ModelSim-Altera Info: sim:/testcu/ALUop1 \
-ModelSim-Altera Info: sim:/testcu/ALUsrcA1 \
-ModelSim-Altera Info: sim:/testcu/ALUsrcB1 \
-ModelSim-Altera Info: sim:/testcu/PCsrc1 \
-ModelSim-Altera Info: sim:/testcu/PCwrCond1 \
-ModelSim-Altera Info: sim:/testcu/PCwr1 \
-ModelSim-Altera Info: sim:/testcu/RegWr1 \
-ModelSim-Altera Info: sim:/testcu/RegDst1 \
-ModelSim-Altera Info: sim:/testcu/IorD1 \
-ModelSim-Altera Info: sim:/testcu/MemRd1 \
-ModelSim-Altera Info: sim:/testcu/MemWr1 \
-ModelSim-Altera Info: sim:/testcu/MemtoReg1 \
-ModelSim-Altera Info: sim:/testcu/IRwr1 \
-ModelSim-Altera Info: sim:/testcu/NextSt1
-ModelSim-Altera Info: force -freeze sim:/testcu/op1 000000 0
-ModelSim-Altera Info: force -freeze sim:/testcu/st1 0000 0
+ModelSim-Altera Info: sim:/registers/address1 \
+ModelSim-Altera Info: sim:/registers/address2 \
+ModelSim-Altera Info: sim:/registers/address3 \
+ModelSim-Altera Info: sim:/registers/data1 \
+ModelSim-Altera Info: sim:/registers/data2 \
+ModelSim-Altera Info: sim:/registers/data3 \
+ModelSim-Altera Info: sim:/registers/RegWrite
+ModelSim-Altera Info: force -freeze sim:/registers/address1 00000 0
+ModelSim-Altera Info: force -freeze sim:/registers/address2 00001 0
+ModelSim-Altera Info: force -freeze sim:/registers/address3 00000 0
+ModelSim-Altera Info: force -freeze sim:/registers/data3 00000000000000000000000000000001 0
+ModelSim-Altera Info: force -freeze sim:/registers/RegWrite 0 0
 ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/testcu/st1 0001 0
 ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/testcu/st1 0110 0
+ModelSim-Altera Info: force -freeze sim:/registers/RegWrite 1 0
 ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/testcu/st1 0111 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/registers/RegWrite 0 0
+ModelSim-Altera Info: force -freeze sim:/registers/data3 00000000000000000000000000000011 0
 ModelSim-Altera Info: run
 Info: NativeLink simulation flow was successful

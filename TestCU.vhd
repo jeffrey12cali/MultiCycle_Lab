@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity TestCU is
 	port(
 		op1: in std_logic_vector(5 downto 0); -- opcode
-		st1: in std_logic_vector(3 downto 0); -- estado actual
+		clock: in bit;
 		ALUop1: out std_logic_vector(1 downto 0);
 		ALUsrcA1: out std_logic;
 		ALUsrcB1: out std_logic_vector(1 downto 0);
@@ -44,11 +44,22 @@ architecture behavior of TestCU is
 		);
 	end component;
 	
+	component NewState
+		port(
+			NewS: in std_logic_vector (3 downto 0);
+			clk: in bit;
+			CS: out std_logic_vector (3 downto 0)
+		);
+	end component;
+	
+	signal ns_in: std_logic_vector(3 downto 0);
+	signal ns_out: std_logic_vector(3 downto 0);
+	
 	begin
 		CONTUN: controlUnit
 		port map(
 			op => op1,
-			st => st1,
+			st => ns_in,
 			ALUop => ALUop1,
 			ALUsrcA => ALUsrcA1,
 			ALUsrcB => ALUsrcB1,
@@ -62,8 +73,17 @@ architecture behavior of TestCU is
 			MemWr => MemWr1,
 			MemtoReg => MemtoReg1,
 			IRwr => IRwr1,
-			NextSt => NextSt1
+			NextSt => ns_out
 		);
+		
+		NWST: NewState
+		port map(
+			NewS => ns_out,
+			clk => clock,
+			CS => ns_in
+		);
+		
+		NextSt1 <= ns_in;
 		
 end architecture;
 

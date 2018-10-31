@@ -75,13 +75,13 @@ architecture behaviour of MultiCycle is
 		func: out std_logic_vector (5 downto 0)
 		);
 	end component;
-	component memory
+	component memoryV2
 		port (
-		address: in std_logic_vector(31 downto 0);
-		--write_data: in std_logic_vector(31 downto 0);
-		data_out: out std_logic_vector(31 downto 0)
-		--memWrite,memRead,clk: in  std_logic
-	
+			addrIn : in std_logic_vector(31 downto 0); --address Input 
+			dataOut : out std_logic_vector(31 downto 0); --data Output rs
+			WrData: in std_logic_vector(31 downto 0); --data Input 
+			MemRead : in std_logic;
+			MemWrite : in std_logic
 		);
 	end component;
 	
@@ -296,10 +296,13 @@ architecture behaviour of MultiCycle is
 			func => func_out
 			);
 			
-		MEM: memory
+		MEM: memoryV2
 		port map(
-			address => outMuxPc,
-			data_out => outMemory
+			addrIn => outMuxPc,
+			dataOut => outMemory,
+			WrData => BtoMUX,
+			MemRead => MemRd_out,
+			MemWrite => MemWr_out
 		);
 		
 		MUXPC: mux2
