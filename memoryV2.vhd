@@ -15,8 +15,11 @@ entity memoryV2 is
 architecture behavior of memoryV2 is
 --Internal Variables--
   signal address : std_logic_vector(5 downto 0);
-  type RAM is array (integer range<>) of std_logic_vector(31 downto 0);
-  signal MEM : RAM(0 to 63);
+  type RAM is array (0 to 7) of std_logic_vector(31 downto 0);
+  signal MEM : RAM := ( 
+						0 => "00000000000000010001000000100000",
+						others => (others => '0')
+					);
 
 
 begin
@@ -28,7 +31,7 @@ MEM_WRITE:
     process (addrIn, WrData, MemWrite)
      begin
         if( MemWrite='1') then 
-          mem( conv_integer(address)) <= WrData;
+          MEM( conv_integer(address)) <= WrData;
         end if;
     end process; 
 
@@ -36,7 +39,7 @@ MEM_READ:
     process (addrIn, MemRead)
      begin
         if(MemRead='1') then 
-          dataOut <= mem(conv_integer(address));
+          dataOut <= MEM(conv_integer(address));
         end if;
     end process;
 

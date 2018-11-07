@@ -24,22 +24,15 @@ architecture behavior of registerFile is
     signal MEM : RAM (0 to 31);
      
 	begin
-	  
-		 --Memory Write Block 
-		 MEM_WRITE:
-		 process (WR, WD, RegWR) begin
-			  if(RegWR ='1') then 
-					MEM( conv_integer(WR))<= WD;
-			  end if;
-		 end process;   
-	  
-		 MEM_READ: 
-		 process (RR1, RR2, RegWr) begin
-			  data_out1 <= MEM( conv_integer(RR1));
-			  data_out2 <= MEM( conv_integer(RR2));
-		 end process;
-		 
-		 RD1 <= data_out1; 
-		 RD2 <= data_out2; 
+
+		process(RegWR) is
+		begin
+			if (RegWR = '1') then
+				MEM(conv_integer(WR)) <= WD;
+			end if;
+		end process;
+		
+		RD1 <= MEM(conv_integer(RR1));
+		RD2 <= MEM(conv_integer(RR2));
 	
 end architecture behavior;
