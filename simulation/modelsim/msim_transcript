@@ -32,17 +32,14 @@ vsim work.multicycle
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.multicycle(structure)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
 # Loading cycloneii.cycloneii_dffe(behave)
 # Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
 # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 # Loading cycloneii.cycloneii_ena_reg(behave)
 # ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
@@ -56,3 +53,10 @@ sim:/multicycle/wrReg \
 sim:/multicycle/wrData \
 sim:/multicycle/nextIns \
 sim:/multicycle/sts
+force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
+force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run

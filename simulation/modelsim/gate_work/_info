@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dD:\Miscelanea\Documentos\MultiCycle_Lab\simulation\modelsim
 Emulticycle
-Z1 w1541605471
+Z1 w1541620412
 Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
 Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
 Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
@@ -21,7 +21,7 @@ V:Yi_cXzgdU8^2H1RgngCS2
 Z11 OV;C;10.1d;51
 31
 !i10b 1
-Z12 !s108 1541605478.194000
+Z12 !s108 1541620419.471000
 Z13 !s90 -reportprogress|300|-93|-work|work|MultiCycle.vho|
 Z14 !s107 MultiCycle.vho|
 Z15 o-93 -work work -O0
@@ -34,10 +34,10 @@ R5
 R6
 R7
 DEx4 work 10 multicycle 0 22 :Yi_cXzgdU8^2H1RgngCS2
-l420
+l584
 L187
-V@GAOWOzSLQ]TmniR^k=4P1
-!s100 2kE>V;?2IMCG:GIi;LCC00
+VR:O?CHAXmOS_LeW7]0]]N0
+!s100 gIMUSZ]ADjVI0ATMdeGkP0
 R11
 31
 !i10b 1

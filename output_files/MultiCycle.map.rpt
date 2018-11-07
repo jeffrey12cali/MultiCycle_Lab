@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Wed Nov 07 11:14:26 2018
+Wed Nov 07 14:53:22 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,20 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Elapsed Time Per Partition
-  6. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "mux2:MUXPC"
+ 14. Port Connectivity Checks: "mux2:MUXMemReg"
+ 15. Port Connectivity Checks: "mux2:MUXA"
+ 16. Port Connectivity Checks: "mux:MUXB"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +49,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Nov 07 11:14:26 2018               ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 07 14:53:22 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
-; Top-level Entity Name              ; memoryV2                                        ;
+; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 314                                             ;
+;     Total combinational functions  ; 219                                             ;
+;     Dedicated logic registers      ; 196                                             ;
+; Total registers                    ; 196                                             ;
+; Total pins                         ; 138                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -60,7 +72,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; memoryV2           ; MultiCycle         ;
+; Top-level entity name                                                      ; MultiCycle         ; MultiCycle         ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -150,6 +162,745 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; controlUnit.vhd                  ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd  ;         ;
+; mux3.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd         ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd         ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd          ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd          ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd           ;         ;
+; SignExtend.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd   ;         ;
+; ShiftLeft2_1.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd           ;         ;
+; MultiCycle.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd   ;         ;
+; ALUControl.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd   ;         ;
+; NewState.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd     ;         ;
+; reg32bit.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd     ;         ;
+; ShiftLeft2_2.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd ;         ;
+; mux3jump.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd     ;         ;
+; memoryV2.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd     ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 314   ;
+;                                             ;       ;
+; Total combinational functions               ; 219   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 6     ;
+;     -- 3 input functions                    ; 201   ;
+;     -- <=2 input functions                  ; 12    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 188   ;
+;     -- arithmetic mode                      ; 31    ;
+;                                             ;       ;
+; Total registers                             ; 196   ;
+;     -- Dedicated logic registers            ; 196   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 138   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 98    ;
+; Total fan-out                               ; 1239  ;
+; Average fan-out                             ; 2.24  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |MultiCycle                ; 219 (0)           ; 196 (0)      ; 0           ; 0            ; 0       ; 0         ; 138  ; 0            ; |MultiCycle                      ; work         ;
+;    |IR:INSTREG|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG           ; work         ;
+;    |NewState:NEWST|        ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|NewState:NEWST       ; work         ;
+;    |PC:PROGCOUNT|          ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|PC:PROGCOUNT         ; work         ;
+;    |alu:ALUCOMP|           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:ALUCOMP          ; work         ;
+;    |controlUnit:CONTROLU|  ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|controlUnit:CONTROLU ; work         ;
+;    |memoryV2:MEM|          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memoryV2:MEM         ; work         ;
+;    |mux2:MUXA|             ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux2:MUXA            ; work         ;
+;    |mux3:MUXRegDst|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3:MUXRegDst       ; work         ;
+;    |mux:MUXB|              ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:MUXB             ; work         ;
+;    |reg32bit:regALU|       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regALU      ; work         ;
+;    |reg32bit:regA|         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regA        ; work         ;
+;    |reg32bit:regB|         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regB        ; work         ;
+;    |registerFile:REGFILE|  ; 65 (65)           ; 96 (96)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|registerFile:REGFILE ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; IR:INSTREG|r2_out[0]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|RegDst                         ; GND                           ; yes                    ;
+; IR:INSTREG|r3_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|PCsrc[1]                       ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|ALUop[0]                       ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcB[1]                     ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcB[0]                     ; GND                           ; yes                    ;
+; PC:PROGCOUNT|addr_out[0]                            ; comb                          ; yes                    ;
+; controlUnit:CONTROLU|ALUsrcA                        ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|PCsrc[0]                       ; GND                           ; yes                    ;
+; PC:PROGCOUNT|addr_out[1]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[2]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[3]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[4]                            ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[5]                               ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[5]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[6]                            ; comb                          ; yes                    ;
+; IR:INSTREG|jump_out[5]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[7]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[8]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[9]                            ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[10]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[11]                           ; comb                          ; yes                    ;
+; IR:INSTREG|imm_out[12]                              ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[12]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[13]                           ; comb                          ; yes                    ;
+; IR:INSTREG|jump_out[12]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[14]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[15]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[16]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[17]                           ; comb                          ; yes                    ;
+; IR:INSTREG|jump_out[16]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[18]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[19]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[20]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[21]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[22]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[23]                           ; comb                          ; yes                    ;
+; IR:INSTREG|jump_out[22]                             ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; PC:PROGCOUNT|addr_out[24]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[25]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[26]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[27]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[28]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[29]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[30]                           ; comb                          ; yes                    ;
+; PC:PROGCOUNT|addr_out[31]                           ; comb                          ; yes                    ;
+; controlUnit:CONTROLU|IRwr                           ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|PCwrCond                       ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|PCwr                           ; GND                           ; yes                    ;
+; IR:INSTREG|r1_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; controlUnit:CONTROLU|NextSt[0]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
+; controlUnit:CONTROLU|NextSt[1]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
+; controlUnit:CONTROLU|NextSt[2]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
+; controlUnit:CONTROLU|NextSt[3]                      ; controlUnit:CONTROLU|ALUop[1] ; yes                    ;
+; controlUnit:CONTROLU|MemRd                          ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|RegWr                          ; GND                           ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[0]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[1]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[2]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; controlUnit:CONTROLU|nxt_st[3]                      ; controlUnit:CONTROLU|Equal1   ; yes                    ;
+; IR:INSTREG|op_out[0]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|op_out[1]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; IR:INSTREG|op_out[5]                                ; controlUnit:CONTROLU|IRwr     ; yes                    ;
+; Number of user-specified and inferred latches = 64  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++-------------------------------------------------------------+----------------------------------------+
+; Register name                                               ; Reason for Removal                     ;
++-------------------------------------------------------------+----------------------------------------+
+; reg32bit:MDR|dt_out[0..31]                                  ; Lost fanout                            ;
+; memoryV2:MEM|MEM~36                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~37                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~38                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~39                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~40                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~41                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~42                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~43                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~44                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~45                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~46                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~47                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~48                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~49                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~50                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~51                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~52                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~53                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~54                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~55                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~56                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~57                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~58                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~59                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~60                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~61                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~62                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~63                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~64                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~65                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~66                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~67                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~68                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~69                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~70                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~71                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~72                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~73                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~74                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~75                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~76                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~77                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~78                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~79                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~80                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~81                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~82                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~83                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~84                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~85                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~86                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~87                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~88                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~89                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~90                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~91                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~92                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~93                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~94                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~95                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~96                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~97                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~98                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~99                                         ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~100                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~101                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~102                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~103                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~104                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~105                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~106                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~107                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~108                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~109                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~110                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~111                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~112                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~113                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~114                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~115                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~116                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~117                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~118                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~119                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~120                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~121                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~122                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~123                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~124                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~125                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~126                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~127                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~128                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~129                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~130                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~131                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~132                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~133                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~134                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~135                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~136                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~137                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~138                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~139                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~140                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~141                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~142                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~143                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~144                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~145                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~146                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~147                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~148                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~149                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~150                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~151                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~152                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~153                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~154                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~155                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~156                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~157                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~158                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~159                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~160                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~161                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~162                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~163                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~164                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~165                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~166                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~167                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~168                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~169                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~170                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~171                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~172                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~173                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~174                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~175                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~176                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~177                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~178                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~179                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~180                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~181                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~182                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~183                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~184                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~185                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~186                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~187                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~188                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~189                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~190                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~191                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~192                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~193                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~194                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~195                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~196                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~197                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~198                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~199                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~200                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~201                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~202                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~203                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~204                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~205                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~206                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~207                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~208                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~209                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~210                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~211                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~212                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~213                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~214                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~215                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~216                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~217                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~218                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~219                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~220                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~221                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~222                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~223                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~224                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~225                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~226                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~227                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~228                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~229                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~230                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~231                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~232                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~233                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~234                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~235                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~236                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~237                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~238                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~239                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~240                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~241                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~242                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~243                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~244                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~245                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~246                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~247                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~248                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~249                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~250                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~251                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~252                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~253                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~254                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~255                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~256                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~257                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~258                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~259                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~260                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~261                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~262                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~263                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~264                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~265                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~266                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~267                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~268                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~269                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~270                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~271                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~272                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~273                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~274                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~275                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~276                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~277                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~278                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~279                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~280                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~281                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~282                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~283                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~284                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~285                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~286                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~287                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~288                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~289                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~290                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|MEM~291                                        ; Stuck at GND due to stuck port clock   ;
+; memoryV2:MEM|dataOut[0..4,6..11,13,14,17..21,23..25,28..30] ; Stuck at GND due to stuck port data_in ;
+; registerFile:REGFILE|MEM~132                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~164                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~196                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~228                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~260                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~133                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~165                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~197                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~229                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~261                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~134                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~166                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~198                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~230                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~262                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~135                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~167                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~199                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~231                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~263                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~136                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~168                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~200                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~232                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~264                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~137                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~169                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~201                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~233                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~265                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~138                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~170                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~202                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~234                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~266                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~139                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~171                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~203                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~235                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~267                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~140                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~172                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~204                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~236                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~268                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~141                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~173                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~205                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~237                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~269                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~142                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~174                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~206                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~238                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~270                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~143                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~175                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~207                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~239                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~271                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~144                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~176                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~208                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~240                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~272                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~145                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~177                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~209                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~241                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~273                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~146                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~178                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~210                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~242                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~274                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~147                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~179                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~211                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~243                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~275                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~148                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~180                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~212                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~244                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~276                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~149                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~181                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~213                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~245                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~277                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~150                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~182                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~214                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~246                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~278                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~151                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~183                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~215                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~247                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~279                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~152                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~184                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~216                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~248                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~280                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~153                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~185                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~217                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~249                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~281                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~154                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~186                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~218                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~250                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~282                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~155                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~187                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~219                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~251                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~283                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~156                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~188                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~220                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~252                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~284                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~157                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~189                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~221                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~253                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~285                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~158                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~190                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~222                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~254                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~286                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~159                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~191                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~223                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~255                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~287                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~160                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~192                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~224                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~256                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~288                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~161                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~193                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~225                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~257                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~289                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~162                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~194                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~226                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~258                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~290                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~163                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~195                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~227                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~259                                ; Lost fanout                            ;
+; registerFile:REGFILE|MEM~291                                ; Lost fanout                            ;
+; memoryV2:MEM|dataOut[15]                                    ; Stuck at GND due to stuck port data_in ;
+; memoryV2:MEM|dataOut[5,12]                                  ; Merged with memoryV2:MEM|dataOut[16]   ;
+; memoryV2:MEM|dataOut[26,27,31]                              ; Merged with memoryV2:MEM|dataOut[22]   ;
+; NewState:NEWST|CS[3]                                        ; Stuck at GND due to stuck port data_in ;
+; NewState:NEWST|CS[2]                                        ; Merged with NewState:NEWST|CS[1]       ;
+; Total Number of Removed Registers = 480                     ;                                        ;
++-------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                           ;
++---------------------+-------------------------+---------------------------------------------------------------------------------------+
+; Register name       ; Reason for Removal      ; Registers Removed due to This Register                                                ;
++---------------------+-------------------------+---------------------------------------------------------------------------------------+
+; memoryV2:MEM|MEM~57 ; Stuck at GND            ; memoryV2:MEM|dataOut[21], registerFile:REGFILE|MEM~132, registerFile:REGFILE|MEM~164, ;
+;                     ; due to stuck port clock ; registerFile:REGFILE|MEM~133, registerFile:REGFILE|MEM~165,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~134, registerFile:REGFILE|MEM~166,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~135, registerFile:REGFILE|MEM~167,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~136, registerFile:REGFILE|MEM~168,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~137, registerFile:REGFILE|MEM~169,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~138, registerFile:REGFILE|MEM~170,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~139, registerFile:REGFILE|MEM~171,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~140, registerFile:REGFILE|MEM~172,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~141, registerFile:REGFILE|MEM~173,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~142, registerFile:REGFILE|MEM~174,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~143, registerFile:REGFILE|MEM~175,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~144, registerFile:REGFILE|MEM~176,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~145, registerFile:REGFILE|MEM~177,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~146, registerFile:REGFILE|MEM~178,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~147, registerFile:REGFILE|MEM~179,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~148, registerFile:REGFILE|MEM~180,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~149, registerFile:REGFILE|MEM~181,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~150, registerFile:REGFILE|MEM~182,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~151, registerFile:REGFILE|MEM~183,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~152, registerFile:REGFILE|MEM~184,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~153, registerFile:REGFILE|MEM~185,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~154, registerFile:REGFILE|MEM~186,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~155, registerFile:REGFILE|MEM~187,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~156, registerFile:REGFILE|MEM~188,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~157, registerFile:REGFILE|MEM~189,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~158, registerFile:REGFILE|MEM~190,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~159, registerFile:REGFILE|MEM~191,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~160, registerFile:REGFILE|MEM~192,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~161, registerFile:REGFILE|MEM~193,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~162, registerFile:REGFILE|MEM~194,                           ;
+;                     ;                         ; registerFile:REGFILE|MEM~163, registerFile:REGFILE|MEM~195                            ;
+; memoryV2:MEM|MEM~36 ; Stuck at GND            ; memoryV2:MEM|dataOut[0]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~37 ; Stuck at GND            ; memoryV2:MEM|dataOut[1]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~38 ; Stuck at GND            ; memoryV2:MEM|dataOut[2]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~39 ; Stuck at GND            ; memoryV2:MEM|dataOut[3]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~40 ; Stuck at GND            ; memoryV2:MEM|dataOut[4]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~42 ; Stuck at GND            ; memoryV2:MEM|dataOut[6]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~43 ; Stuck at GND            ; memoryV2:MEM|dataOut[7]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~44 ; Stuck at GND            ; memoryV2:MEM|dataOut[8]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~45 ; Stuck at GND            ; memoryV2:MEM|dataOut[9]                                                               ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~46 ; Stuck at GND            ; memoryV2:MEM|dataOut[10]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~47 ; Stuck at GND            ; memoryV2:MEM|dataOut[11]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~49 ; Stuck at GND            ; memoryV2:MEM|dataOut[13]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~50 ; Stuck at GND            ; memoryV2:MEM|dataOut[14]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~51 ; Stuck at GND            ; memoryV2:MEM|dataOut[15]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~53 ; Stuck at GND            ; memoryV2:MEM|dataOut[17]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~54 ; Stuck at GND            ; memoryV2:MEM|dataOut[18]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~55 ; Stuck at GND            ; memoryV2:MEM|dataOut[19]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~56 ; Stuck at GND            ; memoryV2:MEM|dataOut[20]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~59 ; Stuck at GND            ; memoryV2:MEM|dataOut[23]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~60 ; Stuck at GND            ; memoryV2:MEM|dataOut[24]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~61 ; Stuck at GND            ; memoryV2:MEM|dataOut[25]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~64 ; Stuck at GND            ; memoryV2:MEM|dataOut[28]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~65 ; Stuck at GND            ; memoryV2:MEM|dataOut[29]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
+; memoryV2:MEM|MEM~66 ; Stuck at GND            ; memoryV2:MEM|dataOut[30]                                                              ;
+;                     ; due to stuck port clock ;                                                                                       ;
++---------------------+-------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 196   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux15             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux31             ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux18             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux31     ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux28     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux1           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MultiCycle|controlUnit:CONTROLU|RegWr ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2:MUXPC"                                         ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; sel1 ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
++------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2:MUXMemReg"                                     ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; sel1 ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
++------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2:MUXA"                                          ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; sel1 ; Input ; Info     ; Connecting a non-array bit to a single-element array ;
++------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "mux:MUXB"       ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[31..1] ; Input ; Info     ; Stuck at GND ;
+; b[0]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -165,7 +916,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 07 11:14:25 2018
+    Info: Processing started: Wed Nov 07 14:53:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
@@ -229,48 +980,242 @@ Info (12021): Found 2 design units, including 1 entities, in source file testcu.
 Info (12021): Found 2 design units, including 1 entities, in source file memoryv2.vhd
     Info (12022): Found design unit 1: memoryV2-behavior
     Info (12023): Found entity 1: memoryV2
-Info (12127): Elaborating entity "memoryV2" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at memoryV2.vhd(34): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at memoryV2.vhd(42): signal "MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at memoryV2.vhd(42): signal "address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at memoryV2.vhd(38): inferring latch(es) for signal or variable "dataOut", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "dataOut[0]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[1]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[2]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[3]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[4]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[5]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[6]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[7]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[8]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[9]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[10]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[11]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[12]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[13]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[14]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[15]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[16]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[17]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[18]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[19]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[20]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[21]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[22]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[23]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[24]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[25]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[26]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[27]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[28]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[29]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[30]" at memoryV2.vhd(38)
-Info (10041): Inferred latch for "dataOut[31]" at memoryV2.vhd(38)
-Error (276000): Cannot synthesize initialized RAM logic "MEM" File: D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd Line: 19
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 6 warnings
-    Error: Peak virtual memory: 4651 megabytes
-    Error: Processing ended: Wed Nov 07 11:14:26 2018
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALUCOMP"
+Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(27): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(30): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(30): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(33): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(33): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(36): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(36): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(39): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(39): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(46): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(46): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(48): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "mux" for hierarchy "mux:MUXB"
+Warning (10492): VHDL Process Statement warning at mux.vhd(19): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(21): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(23): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(25): signal "d" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:MUXA"
+Warning (10492): VHDL Process Statement warning at mux2.vhd(20): signal "dataSrc0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux2.vhd(22): signal "dataSrc1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:REGFILE"
+Info (12128): Elaborating entity "mux3" for hierarchy "mux3:MUXRegDst"
+Warning (10492): VHDL Process Statement warning at mux3.vhd(21): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux3.vhd(23): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "IR" for hierarchy "IR:INSTREG"
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "op_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r1_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r2_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "r3_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "imm_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "jump_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at IR.vhd(36): inferring latch(es) for signal or variable "func_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "func_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "func_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "func_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "func_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "func_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "func_out[5]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[5]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[6]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[7]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[8]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[9]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[10]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[11]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[12]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[13]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[14]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[15]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[16]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[17]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[18]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[19]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[20]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[21]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[22]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[23]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[24]" at IR.vhd(36)
+Info (10041): Inferred latch for "jump_out[25]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[5]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[6]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[7]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[8]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[9]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[10]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[11]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[12]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[13]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[14]" at IR.vhd(36)
+Info (10041): Inferred latch for "imm_out[15]" at IR.vhd(36)
+Info (10041): Inferred latch for "r3_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "r3_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "r3_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "r3_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "r3_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "r2_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "r2_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "r2_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "r2_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "r2_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "r1_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "r1_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "r1_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "r1_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "r1_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[0]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[1]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[2]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[3]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[4]" at IR.vhd(36)
+Info (10041): Inferred latch for "op_out[5]" at IR.vhd(36)
+Info (12128): Elaborating entity "memoryV2" for hierarchy "memoryV2:MEM"
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PROGCOUNT"
+Warning (10631): VHDL Process Statement warning at PC.vhd(14): inferring latch(es) for signal or variable "addr_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "addr_out[0]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[1]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[2]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[3]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[4]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[5]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[6]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[7]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[8]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[9]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[10]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[11]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[12]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[13]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[14]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[15]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[16]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[17]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[18]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[19]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[20]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[21]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[22]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[23]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[24]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[25]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[26]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[27]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[28]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[29]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[30]" at PC.vhd(14)
+Info (10041): Inferred latch for "addr_out[31]" at PC.vhd(14)
+Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:CONTROLU"
+Warning (10492): VHDL Process Statement warning at controlUnit.vhd(75): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "IorD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemRd", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUsrcA", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUsrcB", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "ALUop", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCsrc", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "IRwr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCwr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "PCwrCond", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "RegWr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemWr", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "NextSt", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at controlUnit.vhd(30): inferring latch(es) for signal or variable "nxt_st", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "nxt_st[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[2]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "nxt_st[3]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[2]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "NextSt[3]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemtoReg" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemWr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "RegDst" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "RegWr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCwrCond" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCwr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "IRwr" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCsrc[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "PCsrc[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUop[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUop[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcB[0]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcB[1]" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "ALUsrcA" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "MemRd" at controlUnit.vhd(30)
+Info (10041): Inferred latch for "IorD" at controlUnit.vhd(30)
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ALUCONTRL"
+Info (12128): Elaborating entity "NewState" for hierarchy "NewState:NEWST"
+Info (12128): Elaborating entity "reg32bit" for hierarchy "reg32bit:MDR"
+Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SNGEXT"
+Info (12128): Elaborating entity "ShiftLeft2_1" for hierarchy "ShiftLeft2_1:UPSLF"
+Info (12128): Elaborating entity "ShiftLeft2_2" for hierarchy "ShiftLeft2_2:DOWNSLF"
+Info (12128): Elaborating entity "mux3jump" for hierarchy "mux3jump:JUMPMUX"
+Warning (10492): VHDL Process Statement warning at mux3jump.vhd(20): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux3jump.vhd(22): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux3jump.vhd(24): signal "c" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "registerFile:REGFILE|MEM" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "memoryV2:MEM|MEM" is uninferred due to inappropriate RAM size
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[16]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[5]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[5]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|jump_out[12]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|imm_out[12]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|r3_out[1]" merged with LATCH primitive "IR:INSTREG|r2_out[0]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|r1_out[1]" merged with LATCH primitive "IR:INSTREG|jump_out[22]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|op_out[0]" merged with LATCH primitive "IR:INSTREG|jump_out[22]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|op_out[1]" merged with LATCH primitive "IR:INSTREG|jump_out[22]"
+    Info (13026): Duplicate LATCH primitive "IR:INSTREG|op_out[5]" merged with LATCH primitive "IR:INSTREG|jump_out[22]"
+    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|nxt_st[3]" merged with LATCH primitive "controlUnit:CONTROLU|nxt_st[0]"
+    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|nxt_st[2]" merged with LATCH primitive "controlUnit:CONTROLU|nxt_st[1]"
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal NewState:NEWST|CS[1]
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Warning (13012): Latch controlUnit:CONTROLU|NextSt[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[1]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal NewState:NEWST|CS[1]
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "controlUnit:CONTROLU|NextSt[2]" merged with LATCH primitive "controlUnit:CONTROLU|NextSt[1]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "wrReg[2]" is stuck at GND
+    Warning (13410): Pin "wrReg[3]" is stuck at GND
+    Warning (13410): Pin "wrReg[4]" is stuck at GND
+    Warning (13410): Pin "sts[3]" is stuck at GND
+Info (17049): 192 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 486 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 348 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Wed Nov 07 14:53:22 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

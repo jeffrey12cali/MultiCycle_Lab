@@ -20,8 +20,12 @@ architecture behavior of registerFile is
     signal data_out1 : std_logic_vector(31 downto 0);
     signal data_out2 : std_logic_vector(31 downto 0);
      
-    type RAM is array (integer range<>)of std_logic_vector(31 downto 0);
-    signal MEM : RAM (0 to 31);
+    type RAM is array (0 to 7)of std_logic_vector(31 downto 0);
+    signal MEM : RAM := (
+							0 => "00000000000000000000000000000000",
+							1 => "00000000000000000000000000000001",
+							others => (others => '0')
+						);
      
 	begin
 

@@ -280,7 +280,7 @@ architecture behaviour of MultiCycle is
 			sel1 => MemtoReg_out, 
 			salida => outMux4,  
 			dataSrc0 => ALUOut,
-			dataSrc1 => "00000000000000000000000000010101"   -- cambiar
+			dataSrc1 => MDRtoMUX
 		);
 
 		INSTREG: IR
@@ -415,7 +415,7 @@ architecture behaviour of MultiCycle is
 		
 		
 		-- prints
-		Res <= ALUres_out;
+		Res <= outMux4;
 		sts <= currentS_out;
 		wrReg <= outMux3;
 		wrData <= outMux4;
