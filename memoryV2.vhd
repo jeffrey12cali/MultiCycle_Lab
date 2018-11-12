@@ -17,7 +17,7 @@ architecture behavior of memoryV2 is
   signal address : std_logic_vector(5 downto 0);
   type RAM is array (0 to 7) of std_logic_vector(31 downto 0);
   signal MEM : RAM := ( 
-						0 => "00000000000000010001000000100000",
+						0 => "00000000000000100000100000100000",
 						1 => "10001100010000000000000000000000",
 						others => (others => '0')
 					);

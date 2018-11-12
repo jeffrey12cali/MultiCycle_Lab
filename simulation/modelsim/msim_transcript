@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity MultiCycle
-# -- Compiling architecture structure of MultiCycle
+# -- Compiling entity registerFile
+# -- Compiling architecture structure of registerFile
 # 
-vsim work.multicycle
-# vsim work.multicycle 
+vsim work.registerfile
+# vsim work.registerfile 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,7 +31,7 @@ vsim work.multicycle
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.multicycle(structure)
+# Loading work.registerfile(structure)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
@@ -46,15 +46,33 @@ vsim work.multicycle
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/multicycle/MemDir \
-sim:/multicycle/clk \
-sim:/multicycle/Res \
-sim:/multicycle/wrReg \
-sim:/multicycle/wrData \
-sim:/multicycle/nextIns \
-sim:/multicycle/sts
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
-force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+sim:/registerfile/RR1 \
+sim:/registerfile/RR2 \
+sim:/registerfile/WR \
+sim:/registerfile/WD \
+sim:/registerfile/RegWR \
+sim:/registerfile/RD1 \
+sim:/registerfile/RD2
+force -freeze sim:/registerfile/RR1 0000 0
+# Value length (4) does not equal array index length (5).
+# 
+# ** Error: (vsim-4011) Invalid force value: 0000 0.
+# 
+force -freeze sim:/registerfile/RR1 00000 0
+force -freeze sim:/registerfile/RR2 00001 0
+force -freeze sim:/registerfile/WR 00000 0
+force -freeze sim:/registerfile/WD 00000000000000000000000000000011 0
+force -freeze sim:/registerfile/RegWR 1 0
+run
+run
+run
+run
+force -freeze sim:/registerfile/RegWR 0 0
+run
+run
+run
+run
+force -freeze sim:/registerfile/RegWR 1 0
 run
 run
 run

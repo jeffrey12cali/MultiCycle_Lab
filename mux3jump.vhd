@@ -13,7 +13,7 @@ end mux3jump;
 
 architecture case_arch2 of mux3jump is
 begin
-	process(sel1)
+	process(sel1,a,b,c)
 	begin
 		case (sel1) is
 			when "00" =>

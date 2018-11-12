@@ -14,7 +14,7 @@ end mux3;
 
 architecture case_arch2 of mux3 is
 begin
-	process(sel1)
+	process(sel1,a,b)
 	begin
 		case (sel1) is
 			when '0' =>

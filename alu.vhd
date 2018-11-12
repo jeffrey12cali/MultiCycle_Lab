@@ -19,7 +19,7 @@ architecture behavior of alu is
 signal temp: std_logic_vector(31 downto 0);
 
 begin 
-	process (func)
+	process (func, a, b) -- hice un cambio aqui
 		begin 
 		case (func) is
 		-- instrucción add

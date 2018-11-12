@@ -12,7 +12,7 @@ end mux;
 
 architecture case_arch of mux is
 begin
-	process(sel)
+	process(sel,a,b,c,d)
 	begin
 		case (sel) is
 			when "00" =>

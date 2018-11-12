@@ -228,6 +228,8 @@ architecture behaviour of MultiCycle is
 	
 	signal zero_out: std_logic;
 	
+	signal PCwrite: std_logic;
+	
 	begin
 		ALUCOMP: alu
 		port map(
@@ -315,7 +317,7 @@ architecture behaviour of MultiCycle is
 		
 		PROGCOUNT: PC
 		port map(
-			PCw => (PCwr_out or (PCWrCond_out and zero_out)),
+			PCw => PCwrite,
 			addr => memDir,
 			addr_out => PCaddrout
 		);
@@ -408,6 +410,9 @@ architecture behaviour of MultiCycle is
 			sel1 => PCsrc_out,
 			salida => newPC
 		);
+		
+		-- PC WRITE
+		PCwrite <= (PCwr_out or (PCWrCond_out and zero_out));
 		
 		-- jump
 		jump_sig(27 downto 0) <= shiftup_out;
