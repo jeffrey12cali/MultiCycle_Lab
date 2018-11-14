@@ -13,9 +13,9 @@ end entity;
 architecture behavior of PC is
 	begin
 	process(PCw, addr, reset) begin
-		if (reset = '1') then
-			addr_out <= "00000000000000000000000000000000";
-		elsif (PCw = '1') then
+		--if (reset = '1') then
+		--	addr_out <= "00000000000000000000000000000000";
+		if (PCw = '1') then
 			addr_out <= addr;
 		end if;
 	end process;

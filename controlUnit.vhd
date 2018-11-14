@@ -5,6 +5,7 @@ entity controlUnit is
 	port(
 		op: in std_logic_vector(5 downto 0); -- opcode
 		st: in std_logic_vector(3 downto 0); -- estado actual
+		rst: in std_logic;
 		ALUop: out std_logic_vector(1 downto 0);
 		ALUsrcA: out std_logic;
 		ALUsrcB: out std_logic_vector(1 downto 0);
@@ -27,9 +28,25 @@ architecture behavior of controlUnit is
 	signal nxt_st: std_logic_vector(3 downto 0);
 
 	begin
-		process(op, st)
+		process(op, st, rst)
 			begin
-			if (st = "0000") then
+			if (rst = '1') then
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				NextSt <= "0000";
+			
+			elsif (st = "0000") then
 				IorD <= '0';
 				MemRd <= '1';
 				ALUsrcA <= '0';
@@ -209,6 +226,22 @@ architecture behavior of controlUnit is
 				PCsrc <= "10";
 				IRwr <= '0';
 				PCWr <= '1';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				NextSt <= "0000";
+			
+			else
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
 				PCwrCond <= '0';
 				RegWr <= '0';
 				RegDst <= '0';

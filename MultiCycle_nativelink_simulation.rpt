@@ -68,8 +68,13 @@ ModelSim-Altera Warning: # ** Warning: Design size of 2 instances exceeds ModelS
 ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
 ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
 ModelSim-Altera Info: add wave -position insertpoint  \
+ModelSim-Altera Info: sim:/multicycle/MemDir \
 ModelSim-Altera Info: sim:/multicycle/clk \
 ModelSim-Altera Info: sim:/multicycle/rst \
+ModelSim-Altera Info: sim:/multicycle/PCMUX \
+ModelSim-Altera Info: sim:/multicycle/ActDir \
+ModelSim-Altera Info: sim:/multicycle/AREG \
+ModelSim-Altera Info: sim:/multicycle/BREG \
 ModelSim-Altera Info: sim:/multicycle/ALOUT \
 ModelSim-Altera Info: sim:/multicycle/ALUA \
 ModelSim-Altera Info: sim:/multicycle/ALUB \
@@ -77,57 +82,130 @@ ModelSim-Altera Info: sim:/multicycle/wrReg \
 ModelSim-Altera Info: sim:/multicycle/wrData \
 ModelSim-Altera Info: sim:/multicycle/nextIns \
 ModelSim-Altera Info: sim:/multicycle/sts
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
+ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: restart
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: restart
+ModelSim-Altera Warning: # ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
+ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
 ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
-ModelSim-Altera Error: # ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
-ModelSim-Altera Info: # 
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
-ModelSim-Altera Error: # ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
-ModelSim-Altera Info: # 
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
-ModelSim-Altera Error: # ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
-ModelSim-Altera Info: # 
 ModelSim-Altera Info: run
-Error: Errors encountered while running modelsim do file
-Error: NativeLink simulation flow was NOT successful
-
-
-
-================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
-Nativelink TCL script failed with errorCode:  1
-Nativelink TCL script failed with errorInfo:  1
-    (procedure "launch_sim" line 1)
-    invoked from within
-"launch_sim launch_args_hash"
-    ("eval" body line 1)
-    invoked from within
-"eval launch_sim launch_args_hash"
-    invoked from within
-"if [ info exists ::errorCode ] {
-				set savedCode $::errorCode
-				set savedInfo $::errorInfo
-				error $result $savedInfo $savedCode
-			} else {
-			..."
-    invoked from within
-"if [catch {eval launch_sim launch_args_hash} result ] {
-			set status 1
-			if [ info exists ::errorCode ] {
-				set savedCode $::errorCode
-				set sav..."
-    (procedure "run_sim" line 78)
-    invoked from within
-"run_sim run_sim_args_hash"
-    invoked from within
-"if [ info exists ::errorCode ] {
-			set savedCode $::errorCode
-			set savedInfo $::errorInfo
-			error "$result" $savedInfo $savedCode
-		} else {
-			er..."
-    (procedure "run_eda_simulation_tool" line 330)
-    invoked from within
-"run_eda_simulation_tool eda_opts_hash"
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000010 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+Info: NativeLink simulation flow was successful

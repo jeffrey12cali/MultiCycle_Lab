@@ -3,8 +3,13 @@ use ieee.std_logic_1164.all;
 
 entity MultiCycle is
 	port(
+		MemDir: in std_logic_vector(31 downto 0);
 		clk: in bit;
 		rst: in std_logic;
+		PCMUX: out std_logic_vector(31 downto 0);
+		ActDir: out std_logic_vector(31 downto 0);
+		AREG: out std_logic_vector(4 downto 0);
+		BREG: out std_logic_vector(4 downto 0);
 		ALOUT: out std_logic_vector(31 downto 0);
 		ALUA: out std_logic_vector(31 downto 0);
 		ALUB: out std_logic_vector(31 downto 0);
@@ -100,6 +105,7 @@ architecture behaviour of MultiCycle is
 		port(
 			op: in std_logic_vector(5 downto 0); -- opcode
 			st: in std_logic_vector(3 downto 0); -- estado actual
+			rst: in std_logic;
 			ALUop: out std_logic_vector(1 downto 0);
 			ALUsrcA: out std_logic;
 			ALUsrcB: out std_logic_vector(1 downto 0);
@@ -322,7 +328,7 @@ architecture behaviour of MultiCycle is
 		PROGCOUNT: PC
 		port map(
 			PCw => PCwrite,
-			addr => newPC,
+			addr => MemDir,
 			reset => rst,
 			addr_out => PCaddrout
 		);
@@ -331,6 +337,7 @@ architecture behaviour of MultiCycle is
 		port map(
 			op => op_out,
 			st => currentS_out,
+			rst => rst,
 			ALUop => ALUop_out,
 			ALUsrcA => ALUsrcA_out,
 			ALUsrcB => ALUsrcB_out,
@@ -425,9 +432,13 @@ architecture behaviour of MultiCycle is
 		
 		
 		-- prints
+		ActDir <= outMemory;
 		ALOUT <= ALUres_out;
 		ALUA <= MuxSrcA;
 		ALUB <= MuxSrcB;
+		AREG <= r1_out;
+		BREG <= r2_out;
+		PCMUX <= outMuxPc;
 		sts <= currentS_out;
 		wrReg <= outMux3;
 		wrData <= outMux4;

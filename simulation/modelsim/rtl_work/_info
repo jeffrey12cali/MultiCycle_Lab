@@ -17,7 +17,7 @@ L4
 VQd_S_A6eQ6FeIm?f3:j;d1
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1542050408.014000
+Z10 !s108 1542218836.929000
 Z11 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
 Z12 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
 Z13 o-93 -work work -O0
@@ -54,7 +54,7 @@ L4
 VOI9?CJB7U3oUS<k?:U``Q3
 R9
 31
-Z18 !s108 1542050409.717000
+Z18 !s108 1542218838.399000
 Z19 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd|
 Z20 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd|
 R13
@@ -78,7 +78,7 @@ R14
 !s100 REQRAFK74Ca:z]m11FH3a3
 !i10b 1
 Econtrolunit
-Z21 w1540943469
+Z21 w1542215602
 R4
 R5
 R6
@@ -86,23 +86,23 @@ Z22 8D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
 Z23 FD:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
 l0
 L4
-VPmbc[Zh7>Od`AfR@4UPdn1
+V@[OhC69FUc7l`8<Jn[N<;1
 R9
 31
-Z24 !s108 1542050406.785000
+Z24 !s108 1542218835.748000
 Z25 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
 Z26 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
 R13
 R14
-!s100 VkN25g8:U=8@;72<Cc:[J3
+!s100 Bz]lJcLg7m;jjgSP;]7k31
 !i10b 1
 Abehavior
 R4
 R5
-DEx4 work 11 controlunit 0 22 Pmbc[Zh7>Od`AfR@4UPdn1
-l29
-L25
-V3JjXc5Pk;BTz5mVkaYYTR3
+DEx4 work 11 controlunit 0 22 @[OhC69FUc7l`8<Jn[N<;1
+l30
+L26
+V_d:_kKPWB[[hP6kCGz>CS1
 R9
 31
 R24
@@ -110,7 +110,7 @@ R25
 R26
 R13
 R14
-!s100 =TDW?9dBjkl1;86Vk5Jo<2
+!s100 c>fFoUL]`4M[<Q8YW@khV3
 !i10b 1
 Eir
 Z27 w1540101080
@@ -124,7 +124,7 @@ L4
 Vec:CF?8@VRa[omN3^`<5F0
 R9
 31
-Z30 !s108 1542050408.244000
+Z30 !s108 1542218837.148000
 Z31 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
 Z32 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
 R13
@@ -148,7 +148,7 @@ R14
 !s100 <^KO[PXHT1YYlA]7fA`Sa3
 !i10b 1
 Ememoryv2
-Z33 w1542050395
+Z33 w1542168834
 R2
 R3
 R4
@@ -163,7 +163,7 @@ VUMM1U2WdRb]hY>d67]HD13
 R9
 31
 !i10b 1
-Z36 !s108 1542050411.244000
+Z36 !s108 1542218839.843000
 Z37 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd|
 Z38 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd|
 R13
@@ -174,10 +174,10 @@ R3
 R4
 R5
 DEx4 work 8 memoryv2 0 22 UMM1U2WdRb]hY>d67]HD13
-l26
+l27
 L15
-VFoQ@lL`3z<4bO;=jJlOMb0
-!s100 mfl[nMkRA84Dc4z5k@B5G2
+VGZeloO_PhITXiVNoU8LoN3
+!s100 O:`k=d=8fcc0SKGNOYO<g2
 R9
 31
 !i10b 1
@@ -187,7 +187,7 @@ R38
 R13
 R14
 Emulticycle
-Z39 w1542045437
+Z39 w1542218230
 R4
 R5
 R6
@@ -195,23 +195,23 @@ Z40 8D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
 Z41 FD:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
 l0
 L4
-V3@13Xh0=<DE6:@b5dNVW80
+VMbC8`[9RE>c1_`Lm^a7TV2
 R9
 31
-Z42 !s108 1542050409.418000
+Z42 !s108 1542218838.139000
 Z43 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
 Z44 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
 R13
 R14
-!s100 Qo>h802@NSM>>8S[c^6`D1
+!s100 ;YKIcmk^^;Y_Lk:_[aWnV2
 !i10b 1
 Abehaviour
 R4
 R5
-DEx4 work 10 multicycle 0 22 3@13Xh0=<DE6:@b5dNVW80
-l233
-L16
-VezmGKF?WeYgQ`1^3z^FDE1
+DEx4 work 10 multicycle 0 22 MbC8`[9RE>c1_`Lm^a7TV2
+l240
+L21
+VVzhHQ6a3Bd^ZkGag=WbOH3
 R9
 31
 R42
@@ -219,7 +219,7 @@ R43
 R44
 R13
 R14
-!s100 ;mbh[ZmU=D?jJ:DlLBK=E2
+!s100 4W9?zJ42nP0QmDHm<^j143
 !i10b 1
 Emux
 Z45 w1542047308
@@ -233,7 +233,7 @@ L3
 VB8;W7[6a?7f=ajFXZ9aST3
 R9
 31
-Z48 !s108 1542050407.754000
+Z48 !s108 1542218836.679000
 Z49 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
 Z50 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
 R13
@@ -268,7 +268,7 @@ L3
 V;BC[MH5AiJYm9HL>iYBAe2
 R9
 31
-Z54 !s108 1542050407.484000
+Z54 !s108 1542218836.419000
 Z55 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
 Z56 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
 R13
@@ -303,7 +303,7 @@ L3
 V5CKAS9[]GGFEi_4g2Pz[f0
 R9
 31
-Z60 !s108 1542050406.955000
+Z60 !s108 1542218835.979000
 Z61 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
 Z62 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
 R13
@@ -338,7 +338,7 @@ L3
 VkIG;D82bfY<in_b1YKH7a3
 R9
 31
-Z66 !s108 1542050410.954000
+Z66 !s108 1542218839.529000
 Z67 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd|
 Z68 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd|
 R13
@@ -373,7 +373,7 @@ L4
 VLC4a10h>V>M7@g9[k`Q<f2
 R9
 31
-Z72 !s108 1542050410.003000
+Z72 !s108 1542218838.679000
 Z73 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd|
 Z74 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd|
 R13
@@ -397,7 +397,7 @@ R14
 !s100 <VF39>l0_CKnmTM74iZz]0
 !i10b 1
 Epc
-Z75 w1540663471
+Z75 w1542218633
 R4
 R5
 R6
@@ -405,23 +405,23 @@ Z76 8D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
 Z77 FD:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
 l0
 L4
-VSl4C0W[iC[nkjfc7=F:<^3
+VNIBi10?LjiK6bReRSbKYA0
 R9
 31
-Z78 !s108 1542050409.134000
+Z78 !s108 1542218837.829000
 Z79 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
 Z80 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
 R13
 R14
-!s100 =cYO7eNSA5H:SN80o:3[B2
+!s100 hlmB0BL_FCA[F2c7gQIh40
 !i10b 1
 Abehavior
 R4
 R5
-DEx4 work 2 pc 0 22 Sl4C0W[iC[nkjfc7=F:<^3
-l13
-L12
-Vzh8PVUO8<K>nK?zP`]hfl1
+DEx4 work 2 pc 0 22 NIBi10?LjiK6bReRSbKYA0
+l14
+L13
+V8`AHF<DN8KTa`Z3:1g_Z_1
 R9
 31
 R78
@@ -429,7 +429,7 @@ R79
 R80
 R13
 R14
-!s100 AQH>>mNDohk]?f6ZAYGMN3
+!s100 b:fcQ3NA9>?>cGU@P3L3]1
 !i10b 1
 Ereg32bit
 Z81 w1540676046
@@ -443,7 +443,7 @@ L4
 V1@g@?]NN>0BCIIJHY1XfU2
 R9
 31
-Z84 !s108 1542050410.344000
+Z84 !s108 1542218838.969000
 Z85 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd|
 Z86 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd|
 R13
@@ -467,7 +467,7 @@ R14
 !s100 mn8LFWGN1PXEO6Lbi4X7T1
 !i10b 1
 Eregisterfile
-Z87 w1542048367
+Z87 w1542164117
 R2
 R3
 R4
@@ -480,7 +480,7 @@ L5
 VVRENEC4bn;V6BmJ9ma7jG2
 R9
 31
-Z90 !s108 1542050407.219000
+Z90 !s108 1542218836.219000
 Z91 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
 Z92 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
 R13
@@ -493,9 +493,9 @@ R3
 R4
 R5
 DEx4 work 12 registerfile 0 22 VRENEC4bn;V6BmJ9ma7jG2
-l30
+l31
 L17
-VQ>3S8D8>2nNn^V@@c=QGj0
+VJYPHdQm:kE4A65KNI:bB?1
 R9
 31
 R90
@@ -503,7 +503,7 @@ R91
 R92
 R13
 R14
-!s100 jU959>6EB=zZ0RlQjBZOg2
+!s100 cb0E@Tb218LVj>5<]2lR<1
 !i10b 1
 Eshiftleft2_1
 Z93 w1540677751
@@ -517,7 +517,7 @@ L4
 VRL0nY=I82:fKXX8Ge@g_B0
 R9
 31
-Z96 !s108 1542050408.868000
+Z96 !s108 1542218837.548000
 Z97 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd|
 Z98 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd|
 R13
@@ -552,7 +552,7 @@ L4
 VCM<Lf==Gb`3:7MKb:oO<=0
 R9
 31
-Z102 !s108 1542050410.639000
+Z102 !s108 1542218839.239000
 Z103 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd|
 Z104 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd|
 R13
@@ -587,7 +587,7 @@ L4
 Vg[jFHTQZ_oG=hJfVD?Dbh0
 R9
 31
-Z107 !s108 1542050408.474000
+Z107 !s108 1542218837.309000
 Z108 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd|
 Z109 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd|
 R13
