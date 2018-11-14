@@ -19,11 +19,11 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneii_atom_pack
 # -- Loading package cycloneii_components
-# -- Compiling entity registerFile
-# -- Compiling architecture structure of registerFile
+# -- Compiling entity MultiCycle
+# -- Compiling architecture structure of MultiCycle
 # 
-vsim work.registerfile
-# vsim work.registerfile 
+vsim work.multicycle
+# vsim work.multicycle 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -31,10 +31,10 @@ vsim work.registerfile
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.registerfile(structure)
+# Loading work.multicycle(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -46,35 +46,26 @@ vsim work.registerfile
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/registerfile/RR1 \
-sim:/registerfile/RR2 \
-sim:/registerfile/WR \
-sim:/registerfile/WD \
-sim:/registerfile/RegWR \
-sim:/registerfile/RD1 \
-sim:/registerfile/RD2
-force -freeze sim:/registerfile/RR1 0000 0
-# Value length (4) does not equal array index length (5).
+sim:/multicycle/clk \
+sim:/multicycle/rst \
+sim:/multicycle/ALOUT \
+sim:/multicycle/ALUA \
+sim:/multicycle/ALUB \
+sim:/multicycle/wrReg \
+sim:/multicycle/wrData \
+sim:/multicycle/nextIns \
+sim:/multicycle/sts
+force -freeze sim:/multicycle/rst 1 0
+run
+force -freeze sim:/multicycle/rst 0 0
+force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
 # 
-# ** Error: (vsim-4011) Invalid force value: 0000 0.
+run
+# ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
 # 
-force -freeze sim:/registerfile/RR1 00000 0
-force -freeze sim:/registerfile/RR2 00001 0
-force -freeze sim:/registerfile/WR 00000 0
-force -freeze sim:/registerfile/WD 00000000000000000000000000000011 0
-force -freeze sim:/registerfile/RegWR 1 0
 run
-run
-run
-run
-force -freeze sim:/registerfile/RegWR 0 0
-run
-run
-run
-run
-force -freeze sim:/registerfile/RegWR 1 0
-run
-run
-run
-run
+# ** Error: (vsim-3601) Iteration limit reached at time 100 ps.
+# 
 run

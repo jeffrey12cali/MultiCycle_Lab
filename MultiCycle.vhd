@@ -3,9 +3,11 @@ use ieee.std_logic_1164.all;
 
 entity MultiCycle is
 	port(
-		MemDir: in std_logic_vector(31 downto 0);
 		clk: in bit;
-		Res: out std_logic_vector(31 downto 0);
+		rst: in std_logic;
+		ALOUT: out std_logic_vector(31 downto 0);
+		ALUA: out std_logic_vector(31 downto 0);
+		ALUB: out std_logic_vector(31 downto 0);
 		wrReg: out std_logic_vector(4 downto 0);
 		wrData: out std_logic_vector(31 downto 0);
 		nextIns: out std_logic_vector(31 downto 0);
@@ -89,6 +91,7 @@ architecture behaviour of MultiCycle is
 		port(
 			PCw: in std_logic;
 			addr: in std_logic_vector (31 downto 0);
+			reset: in std_logic;
 			addr_out: out std_logic_vector (31 downto 0)
 		);
 	end component;
@@ -231,6 +234,7 @@ architecture behaviour of MultiCycle is
 	signal PCwrite: std_logic;
 	
 	begin
+	
 		ALUCOMP: alu
 		port map(
 			a => MuxSrcA,
@@ -310,7 +314,7 @@ architecture behaviour of MultiCycle is
 		MUXPC: mux2
 		port map(
 			sel1 => IorD_out,
-			salida => outMuxPC,
+			salida => outMuxPc,
 			dataSrc0 => PCaddrout,
 			dataSrc1 => ALUOut
 		);
@@ -318,7 +322,8 @@ architecture behaviour of MultiCycle is
 		PROGCOUNT: PC
 		port map(
 			PCw => PCwrite,
-			addr => memDir,
+			addr => newPC,
+			reset => rst,
 			addr_out => PCaddrout
 		);
 		
@@ -404,7 +409,7 @@ architecture behaviour of MultiCycle is
 		
 		JUMPMUX: mux3jump
 		port map(
-			a => Alures_out,
+			a => ALUres_out,
 			b => ALUOut,
 			c => jump_sig,
 			sel1 => PCsrc_out,
@@ -420,11 +425,14 @@ architecture behaviour of MultiCycle is
 		
 		
 		-- prints
-		Res <= outMux4;
+		ALOUT <= ALUres_out;
+		ALUA <= MuxSrcA;
+		ALUB <= MuxSrcB;
 		sts <= currentS_out;
 		wrReg <= outMux3;
 		wrData <= outMux4;
 		nextIns <= newPC;
+		
 		
 		
 	end;

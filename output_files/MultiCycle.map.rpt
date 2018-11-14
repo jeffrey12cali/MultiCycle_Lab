@@ -1,6 +1,6 @@
 Analysis & Synthesis report for MultiCycle
-Mon Nov 12 15:00:47 2018
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Nov 13 23:18:14 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,12 +10,7 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,20 +36,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 12 15:00:47 2018           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Failed - Tue Nov 13 23:18:14 2018               ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
-; Top-level Entity Name              ; registerFile                                    ;
+; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 584                                             ;
-;     Total combinational functions  ; 330                                             ;
-;     Dedicated logic registers      ; 256                                             ;
-; Total registers                    ; 256                                             ;
-; Total pins                         ; 112                                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,7 +59,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; registerFile       ; MultiCycle         ;
+; Top-level entity name                                                      ; MultiCycle         ; MultiCycle         ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,86 +149,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 584   ;
-;                                             ;       ;
-; Total combinational functions               ; 330   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 256   ;
-;     -- 3 input functions                    ; 72    ;
-;     -- <=2 input functions                  ; 2     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 330   ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 256   ;
-;     -- Dedicated logic registers            ; 256   ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 112   ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; RegWR ;
-; Maximum fan-out                             ; 256   ;
-; Total fan-out                               ; 2074  ;
-; Average fan-out                             ; 2.97  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |registerFile              ; 330 (330)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 112  ; 0            ; |registerFile       ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 256   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 256   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 12 15:00:44 2018
+    Info: Processing started: Tue Nov 13 23:18:12 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
@@ -270,9 +192,26 @@ Info (12021): Found 2 design units, including 1 entities, in source file shiftle
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: PC-behavior
     Info (12023): Found entity 1: PC
-Info (12021): Found 2 design units, including 1 entities, in source file multicycle.vhd
-    Info (12022): Found design unit 1: MultiCycle-behaviour
-    Info (12023): Found entity 1: MultiCycle
+Error (10500): VHDL syntax error at MultiCycle.vhd(242) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 242
+Error (10500): VHDL syntax error at MultiCycle.vhd(248) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 248
+Error (10500): VHDL syntax error at MultiCycle.vhd(251) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 251
+Error (10500): VHDL syntax error at MultiCycle.vhd(258) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 258
+Error (10500): VHDL syntax error at MultiCycle.vhd(261) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 261
+Error (10500): VHDL syntax error at MultiCycle.vhd(266) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 266
+Error (10500): VHDL syntax error at MultiCycle.vhd(269) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 269
+Error (10500): VHDL syntax error at MultiCycle.vhd(277) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 277
+Error (10500): VHDL syntax error at MultiCycle.vhd(280) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 280
+Error (10500): VHDL syntax error at MultiCycle.vhd(285) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 285
+Error (10500): VHDL syntax error at MultiCycle.vhd(288) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 288
+Error (10500): VHDL syntax error at MultiCycle.vhd(293) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 293
+Error (10500): VHDL syntax error at MultiCycle.vhd(296) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 296
+Error (10500): VHDL syntax error at MultiCycle.vhd(306) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 306
+Error (10500): VHDL syntax error at MultiCycle.vhd(309) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 309
+Error (10500): VHDL syntax error at MultiCycle.vhd(315) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 315
+Error (10500): VHDL syntax error at MultiCycle.vhd(318) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 318
+Error (10500): VHDL syntax error at MultiCycle.vhd(323) near text ";";  expecting ":=", or "<=" File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 323
+Error (10500): VHDL syntax error at MultiCycle.vhd(326) near text "port";  expecting "(", or "'", or "." File: D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd Line: 326
+Info (12021): Found 0 design units, including 0 entities, in source file multicycle.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file alucontrol.vhd
     Info (12022): Found design unit 1: ALUControl-behavior
     Info (12023): Found entity 1: ALUControl
@@ -297,26 +236,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file testcu.
 Info (12021): Found 2 design units, including 1 entities, in source file memoryv2.vhd
     Info (12022): Found design unit 1: memoryV2-behavior
     Info (12023): Found entity 1: memoryV2
-Info (12127): Elaborating entity "registerFile" for the top level hierarchy
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "MEM" is uninferred due to inappropriate RAM size
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "RR1[3]"
-    Warning (15610): No output dependent on input pin "RR1[4]"
-    Warning (15610): No output dependent on input pin "RR2[3]"
-    Warning (15610): No output dependent on input pin "RR2[4]"
-    Warning (15610): No output dependent on input pin "WR[3]"
-    Warning (15610): No output dependent on input pin "WR[4]"
-Info (21057): Implemented 696 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 48 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 584 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 420 megabytes
-    Info: Processing ended: Mon Nov 12 15:00:47 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 19 errors, 2 warnings
+    Error: Peak virtual memory: 4647 megabytes
+    Error: Processing ended: Tue Nov 13 23:18:14 2018
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
 
 

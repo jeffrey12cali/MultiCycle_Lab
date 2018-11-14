@@ -60,6 +60,9 @@ architecture behavior of controlUnit is
 				MemWr <= '0';
 				MemtoReg <= '0';
 				case(op) is
+					-- lw o sw
+					when "100011" | "101011" =>
+						nxt_st <= "0010";
 					-- tipo R
 					when "000000" =>
 						nxt_st <= "0110";
@@ -73,6 +76,80 @@ architecture behavior of controlUnit is
 						nxt_st <= "0000";
 				end case;
 				NextSt <= nxt_st;
+				
+			elsif (st = "0010") then
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '1';
+				ALUsrcB <= "10";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				case(op) is
+					-- lw
+					when "100011" =>
+						nxt_st <= "0011";
+					-- sw
+					when "101011" =>
+						nxt_st <= "0101";
+					when others =>
+						nxt_st <= "0000";
+				end case;
+				NextSt <= nxt_st;
+				
+			elsif (st = "0011") then
+				IorD <= '1';
+				MemRd <= '1';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				NextSt <= "0100";
+				
+			elsif (st = "0100") then
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '1';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '1';
+				NextSt <= "0000";
+				
+			elsif (st = "0101") then
+				IorD <= '1';
+				MemRd <= '0';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '1';
+				MemtoReg <= '0';
+				NextSt <= "0000";
 			
 			elsif (st = "0110") then
 				IorD <= '0';
