@@ -86,14 +86,27 @@ ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 000000000000000000000
 ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: restart
-ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000010 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
@@ -111,58 +124,25 @@ ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
 ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
+ModelSim-Altera Info: restart
+ModelSim-Altera Warning: # ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
+ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
+ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {250 ps} -r 500
+ModelSim-Altera Info: noforce sim:/multicycle/rst
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
-ModelSim-Altera Info: run
+ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
@@ -181,7 +161,6 @@ ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/MemDir 00000000000000000000000000000010 0
-ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Wed Nov 14 14:53:30 2018
+Wed Nov 14 18:12:32 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 14 14:53:30 2018           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 14 18:12:32 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 1,540                                           ;
-;     Total combinational functions  ; 1,047                                           ;
+;     Total combinational functions  ; 1,049                                           ;
 ;     Dedicated logic registers      ; 676                                             ;
 ; Total registers                    ; 676                                             ;
 ; Total pins                         ; 277                                             ;
@@ -157,29 +157,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; controlUnit.vhd                  ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd  ;         ;
-; mux3.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd         ;         ;
-; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd         ;         ;
-; mux.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd          ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd          ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd           ;         ;
-; SignExtend.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd   ;         ;
-; ShiftLeft2_1.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd           ;         ;
-; MultiCycle.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd   ;         ;
-; ALUControl.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd   ;         ;
-; NewState.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd     ;         ;
-; reg32bit.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd     ;         ;
-; ShiftLeft2_2.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd ;         ;
-; mux3jump.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd     ;         ;
-; memoryV2.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; controlUnit.vhd                  ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/controlUnit.vhd  ;         ;
+; mux3.vhd                         ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/mux3.vhd         ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/registerFile.vhd ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/mux2.vhd         ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/mux.vhd          ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/alu.vhd          ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/IR.vhd           ;         ;
+; SignExtend.vhd                   ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/SignExtend.vhd   ;         ;
+; ShiftLeft2_1.vhd                 ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/ShiftLeft2_1.vhd ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/PC.vhd           ;         ;
+; MultiCycle.vhd                   ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/MultiCycle.vhd   ;         ;
+; ALUControl.vhd                   ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/ALUControl.vhd   ;         ;
+; NewState.vhd                     ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/NewState.vhd     ;         ;
+; reg32bit.vhd                     ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/reg32bit.vhd     ;         ;
+; ShiftLeft2_2.vhd                 ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/ShiftLeft2_2.vhd ;         ;
+; mux3jump.vhd                     ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/mux3jump.vhd     ;         ;
+; memoryV2.vhd                     ; yes             ; User VHDL File  ; C:/Users/Jeffrey Garcia/Documents/MultiCycle_Lab/memoryV2.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -189,14 +189,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------+
 ; Estimated Total logic elements              ; 1,540                      ;
 ;                                             ;                            ;
-; Total combinational functions               ; 1047                       ;
+; Total combinational functions               ; 1049                       ;
 ; Logic element usage by number of LUT inputs ;                            ;
 ;     -- 4 input functions                    ; 702                        ;
 ;     -- 3 input functions                    ; 312                        ;
-;     -- <=2 input functions                  ; 33                         ;
+;     -- <=2 input functions                  ; 35                         ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 984                        ;
+;     -- normal mode                          ; 986                        ;
 ;     -- arithmetic mode                      ; 63                         ;
 ;                                             ;                            ;
 ; Total registers                             ; 676                        ;
@@ -207,7 +207,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ; Maximum fan-out node                        ; controlUnit:CONTROLU|MemWr ;
 ; Maximum fan-out                             ; 256                        ;
-; Total fan-out                               ; 5899                       ;
+; Total fan-out                               ; 5901                       ;
 ; Average fan-out                             ; 2.95                       ;
 +---------------------------------------------+----------------------------+
 
@@ -217,7 +217,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |MultiCycle                ; 1047 (13)         ; 676 (0)      ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |MultiCycle                      ; work         ;
+; |MultiCycle                ; 1049 (13)         ; 676 (0)      ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |MultiCycle                      ; work         ;
 ;    |ALUControl:ALUCONTRL|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|ALUControl:ALUCONTRL ; work         ;
 ;    |IR:INSTREG|            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG           ; work         ;
 ;    |NewState:NEWST|        ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|NewState:NEWST       ; work         ;
@@ -235,7 +235,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |reg32bit:regALU|       ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regALU      ; work         ;
 ;    |reg32bit:regA|         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regA        ; work         ;
 ;    |reg32bit:regB|         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regB        ; work         ;
-;    |registerFile:REGFILE|  ; 331 (331)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|registerFile:REGFILE ; work         ;
+;    |registerFile:REGFILE|  ; 333 (333)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|registerFile:REGFILE ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -396,7 +396,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -406,7 +406,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 14 14:53:24 2018
+    Info: Processing started: Wed Nov 14 18:12:13 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
@@ -661,9 +661,9 @@ Info (21057): Implemented 1881 device resources after synthesis - the final reso
     Info (21059): Implemented 243 output pins
     Info (21061): Implemented 1604 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Wed Nov 14 14:53:30 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Wed Nov 14 18:12:32 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:05
 
 
