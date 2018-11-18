@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity MultiCycle is
 	port(
-		MemDir: in std_logic_vector(31 downto 0);
+		--MemDir: in std_logic_vector(31 downto 0);
 		clk: in bit;
 		rst: in std_logic;
 		PCMUX: out std_logic_vector(31 downto 0);
@@ -84,6 +84,7 @@ architecture behaviour of MultiCycle is
 	end component;
 	component memoryV2
 		port (
+			clk : in bit;
 			addrIn : in std_logic_vector(31 downto 0); --address Input 
 			dataOut : out std_logic_vector(31 downto 0); --data Output rs
 			WrData: in std_logic_vector(31 downto 0); --data Input 
@@ -94,6 +95,8 @@ architecture behaviour of MultiCycle is
 	
 	component PC
 		port(
+			rst: in std_logic;
+			clk: in bit;
 			PCw: in std_logic;
 			addr: in std_logic_vector (31 downto 0);
 			reset: in std_logic;
@@ -310,6 +313,7 @@ architecture behaviour of MultiCycle is
 			
 		MEM: memoryV2
 		port map(
+			clk => clk,
 			addrIn => outMuxPc,
 			dataOut => outMemory,
 			WrData => BtoMUX,
@@ -327,8 +331,10 @@ architecture behaviour of MultiCycle is
 		
 		PROGCOUNT: PC
 		port map(
+			rst => rst,
+			clk => clk,
 			PCw => PCwrite,
-			addr => MemDir,
+			addr => newPC,
 			reset => rst,
 			addr_out => PCaddrout
 		);

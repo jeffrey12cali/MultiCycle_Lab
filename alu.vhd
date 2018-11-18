@@ -34,7 +34,7 @@ begin
 		-- instrucción or
 		when "001" =>
 			temp <= a or b;
-		-- instrucción stl
+		-- instrucción slt
 		when "111" =>
 			if (a<b) then
 			temp <= "11111111111111111111111111111111";

@@ -1,15 +1,15 @@
-Fitter Status : Successful - Wed Nov 14 18:13:13 2018
+Fitter Status : Successful - Sat Nov 17 10:58:47 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : MultiCycle
 Top-level Entity Name : MultiCycle
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 1,232 / 18,752 ( 7 % )
-    Total combinational functions : 1,049 / 18,752 ( 6 % )
-    Dedicated logic registers : 676 / 18,752 ( 4 % )
-Total registers : 676
-Total pins : 277 / 315 ( 88 % )
+Total logic elements : 291 / 18,752 ( 2 % )
+    Total combinational functions : 282 / 18,752 ( 2 % )
+    Dedicated logic registers : 109 / 18,752 ( < 1 % )
+Total registers : 109
+Total pins : 245 / 315 ( 78 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )

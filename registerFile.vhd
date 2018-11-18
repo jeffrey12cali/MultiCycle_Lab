@@ -4,6 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity registerFile is
    port (
+		clk: in bit;
 		RR1: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 1
 		RR2: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 2 
 		WR: in std_logic_vector(4 downto 0);		--5-bit Write Register
@@ -26,14 +27,15 @@ architecture behavior of registerFile is
 							1 => "00000000000000000000000000000001",
 							2 => "00000000000000000000000000000001",
 							3 => "00000000000000000000000000000011",
+							4 => "00000000000000000000000000000000",
 							others => (others => '0')
 						);
      
 	begin
 
-		process(RegWR) is
+		process(RegWR, clk) is
 		begin
-			if (RegWR = '1') then
+			if (clk='0' and clk'event and RegWR = '1') then
 				MEM(conv_integer(WR)) <= WD;
 			end if;
 		end process;

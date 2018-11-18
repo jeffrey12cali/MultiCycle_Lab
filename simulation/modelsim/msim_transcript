@@ -46,7 +46,6 @@ vsim work.multicycle
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 add wave -position insertpoint  \
-sim:/multicycle/MemDir \
 sim:/multicycle/clk \
 sim:/multicycle/rst \
 sim:/multicycle/PCMUX \
@@ -60,103 +59,12 @@ sim:/multicycle/wrReg \
 sim:/multicycle/wrData \
 sim:/multicycle/nextIns \
 sim:/multicycle/sts
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
 force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
 force -freeze sim:/multicycle/rst 0 0
 run
 force -freeze sim:/multicycle/rst 1 0
 run
 force -freeze sim:/multicycle/rst 0 0
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000010 0
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
-force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/multicycle/rst 0 0
-run
-force -freeze sim:/multicycle/rst 1 0
-run
-force -freeze sim:/multicycle/rst 0 0
-run
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
-run
-run
-run
-restart
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000000 0
-force -freeze sim:/multicycle/clk 1 0, 0 {250 ps} -r 500
-noforce sim:/multicycle/rst
-force -freeze sim:/multicycle/rst 0 0
-run
-run
-force -freeze sim:/multicycle/rst 1 0
-run
-force -freeze sim:/multicycle/rst 0 0
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000001 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/multicycle/MemDir 00000000000000000000000000000010 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 run
 run
 run
