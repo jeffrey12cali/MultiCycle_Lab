@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Nov 17 10:58:37 2018
+Analysis & Synthesis Status : Successful - Tue Nov 20 16:32:52 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : MultiCycle
 Top-level Entity Name : MultiCycle
 Family : Cyclone II
-Total logic elements : 339
-    Total combinational functions : 278
-    Dedicated logic registers : 109
-Total registers : 109
-Total pins : 245
+Total logic elements : 1,510
+    Total combinational functions : 996
+    Dedicated logic registers : 742
+Total registers : 742
+Total pins : 277
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

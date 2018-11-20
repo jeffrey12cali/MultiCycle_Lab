@@ -49,6 +49,7 @@ add wave -position insertpoint  \
 sim:/multicycle/clk \
 sim:/multicycle/rst \
 sim:/multicycle/PCMUX \
+sim:/multicycle/MEMDATA \
 sim:/multicycle/ActDir \
 sim:/multicycle/AREG \
 sim:/multicycle/BREG \
@@ -65,6 +66,19 @@ run
 force -freeze sim:/multicycle/rst 1 0
 run
 force -freeze sim:/multicycle/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run

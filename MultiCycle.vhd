@@ -7,6 +7,7 @@ entity MultiCycle is
 		clk: in bit;
 		rst: in std_logic;
 		PCMUX: out std_logic_vector(31 downto 0);
+		MEMDATA: out std_logic_vector(31 downto 0);
 		ActDir: out std_logic_vector(31 downto 0);
 		AREG: out std_logic_vector(4 downto 0);
 		BREG: out std_logic_vector(4 downto 0);
@@ -48,7 +49,9 @@ architecture behaviour of MultiCycle is
 			);
 	end component;
 	component registerFile
-		port (RR1: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 1
+		port (
+		 clk: in bit;
+		 RR1: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 1
 		 RR2: in std_logic_vector(4 downto 0);		--5-bit Read Reg. 2 
 		 WR: in std_logic_vector(4 downto 0);		--5-bit Write Register
 		 WD: in std_logic_vector(31 downto 0);		--32-bit Write Data
@@ -61,7 +64,6 @@ architecture behaviour of MultiCycle is
 	component mux3
 	port
 	(
-	
 		a,
 		b: in std_logic_vector(4 downto 0);
 		sel1: in std_logic;
@@ -71,6 +73,7 @@ architecture behaviour of MultiCycle is
 
 	component IR
 		port(
+		clk: in bit;
 		instr: in std_logic_vector (31 downto 0);
 		IRw: in std_logic;
 		op: out std_logic_vector (5 downto 0);
@@ -273,6 +276,7 @@ architecture behaviour of MultiCycle is
 		
 		REGFILE: registerFile
 		port map(
+		clk => clk,
 		RR1 => r1_out,
 		RR2 => r2_out,
 		WR => outMux3,
@@ -300,6 +304,7 @@ architecture behaviour of MultiCycle is
 
 		INSTREG: IR
 		port map(
+			clk => clk,
 			instr => outMemory,
 			IRw => IRWr_out,
 			op => op_out,
@@ -439,6 +444,7 @@ architecture behaviour of MultiCycle is
 		
 		-- prints
 		ActDir <= outMemory;
+		MEMDATA <= BtoMUX;
 		ALOUT <= ALUres_out;
 		ALUA <= MuxSrcA;
 		ALUB <= MuxSrcB;

@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity IR is
 	port(
+		clk: in bit;
 		instr: in std_logic_vector (31 downto 0);
 		IRw: in std_logic;
 		op: out std_logic_vector (5 downto 0);
@@ -33,8 +34,8 @@ architecture behavior of IR is
 		jump <= jump_out;
 		func <= func_out;
 		
-		process (IRw, instr) begin
-				if (IRw = '1') then
+		process (IRw, instr, clk) begin
+				if (clk='1' and clk'event and IRw = '1') then
 					op_out <= instr(31 downto 26);
 					r1_out <= instr(25 downto 21);
 					r2_out <= instr(20 downto 16);

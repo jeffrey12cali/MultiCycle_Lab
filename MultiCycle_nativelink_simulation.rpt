@@ -71,6 +71,7 @@ ModelSim-Altera Info: add wave -position insertpoint  \
 ModelSim-Altera Info: sim:/multicycle/clk \
 ModelSim-Altera Info: sim:/multicycle/rst \
 ModelSim-Altera Info: sim:/multicycle/PCMUX \
+ModelSim-Altera Info: sim:/multicycle/MEMDATA \
 ModelSim-Altera Info: sim:/multicycle/ActDir \
 ModelSim-Altera Info: sim:/multicycle/AREG \
 ModelSim-Altera Info: sim:/multicycle/BREG \
@@ -87,6 +88,19 @@ ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
