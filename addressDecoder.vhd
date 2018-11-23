@@ -6,32 +6,29 @@ entity addressDecoder is
 	port(
 		address: in std_logic_vector(31 downto 0);
 		memWrite: in  std_logic;
-		writeMemory,dev1,dev2: out std_logic;
-		addressSel: out std_logic_vector(1 downto 0)
+		writeMemory,dev1: out std_logic
+		-- addressSel: out std_logic_vector(1 downto 0)
 	);
 	end addressDecoder;
 
 architecture compor of addressDecoder is
 	begin
-				process (address)
+			process (address, memWrite)
 			begin
 			
-			if (address = "00000000000000000000000000000000") then
-				writeMemory <= '1';
-				dev1 <= '0';
-				dev2 <= '0';
-				addressSel <= "00";
-			elsif (address="00000000000000000000000000000001") then
-				writeMemory <= '0';
-				dev1 <= '1';
-				dev2 <= '0';
-				addressSel <= "01";
-				
+			if (memWrite = '1') then
+				if (address = "00000000000000000000001000000000") then
+					writeMemory <= '0';
+					dev1 <= '1';
+					-- addressSel <= "00";	
+				else
+					writeMemory <= '1';
+					dev1 <= '0';
+					-- addressSel <= "00";
+				end if;
 			else
 				writeMemory <= '0';
 				dev1 <= '0';
-				dev2 <= '1';
-				addressSel <= "10";
 			end if;
 		end process;
 				

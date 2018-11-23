@@ -6,7 +6,8 @@ entity MultiCycle is
 		--MemDir: in std_logic_vector(31 downto 0);
 		clk: in bit;
 		rst: in std_logic;
-		PCMUX: out std_logic_vector(31 downto 0);
+		DEV1: out std_logic_vector(31 downto 0);
+		-- PCMUX: out std_logic_vector(31 downto 0);
 		MEMDATA: out std_logic_vector(31 downto 0);
 		ActDir: out std_logic_vector(31 downto 0);
 		AREG: out std_logic_vector(4 downto 0);
@@ -182,6 +183,23 @@ architecture behaviour of MultiCycle is
 	);
 	end component;
 	
+	component addressDecoder
+	port(
+		address: in std_logic_vector(31 downto 0);
+		memWrite: in  std_logic;
+		writeMemory,dev1: out std_logic
+	);
+	end component;
+	
+	component reg32bitEN
+	port(
+		clock: in bit;
+		enable: in std_logic;
+		dt_in: in std_logic_vector(31 downto 0);
+		dt_out: out std_logic_vector(31 downto 0)
+	);
+	end component;
+	
 	signal ALUcontOP: std_logic_vector(2 downto 0);
 	
 	signal MuxSrcA: std_logic_vector(31 downto 0); 
@@ -244,6 +262,10 @@ architecture behaviour of MultiCycle is
 	signal zero_out: std_logic;
 	
 	signal PCwrite: std_logic;
+	
+	signal writeMemoryAD: std_logic;
+	signal wrDev1: std_logic;
+	signal seg7_1: std_logic_vector(31 downto 0);
 	
 	begin
 	
@@ -323,7 +345,7 @@ architecture behaviour of MultiCycle is
 			dataOut => outMemory,
 			WrData => BtoMUX,
 			MemRead => MemRd_out,
-			MemWrite => MemWr_out
+			MemWrite => writeMemoryAD
 		);
 		
 		MUXPC: mux2
@@ -434,6 +456,22 @@ architecture behaviour of MultiCycle is
 			salida => newPC
 		);
 		
+		ADDRDEC: addressDecoder
+		port map(
+			address => ALUOut,
+			memWrite => MemWr_out,
+			writeMemory => writeMemoryAD,
+			dev1 => wrDev1
+		);
+		
+		REG7SEG: reg32bitEN
+		port map(
+			clock => clk,
+			enable => wrDev1,
+			dt_in => BtoMUX,
+			dt_out => seg7_1
+		);
+		
 		-- PC WRITE
 		PCwrite <= (PCwr_out or (PCWrCond_out and zero_out));
 		
@@ -445,12 +483,13 @@ architecture behaviour of MultiCycle is
 		-- prints
 		ActDir <= outMemory;
 		MEMDATA <= BtoMUX;
+		DEV1 <= seg7_1;
 		ALOUT <= ALUres_out;
 		ALUA <= MuxSrcA;
 		ALUB <= MuxSrcB;
 		AREG <= r1_out;
 		BREG <= r2_out;
-		PCMUX <= outMuxPc;
+		-- PCMUX <= outMuxPc;
 		sts <= currentS_out;
 		wrReg <= outMux3;
 		wrData <= outMux4;

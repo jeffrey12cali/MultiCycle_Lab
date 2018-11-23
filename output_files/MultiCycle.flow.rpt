@@ -1,5 +1,5 @@
 Flow report for MultiCycle
-Thu Nov 22 20:00:11 2018
+Thu Nov 22 22:41:33 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 22 20:00:11 2018           ;
+; Flow Status                        ; Successful - Thu Nov 22 22:41:33 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,162 / 18,752 ( 6 % )                          ;
-;     Total combinational functions  ; 988 / 18,752 ( 5 % )                            ;
-;     Dedicated logic registers      ; 742 / 18,752 ( 4 % )                            ;
-; Total registers                    ; 742                                             ;
+; Total logic elements               ; 1,180 / 18,752 ( 6 % )                          ;
+;     Total combinational functions  ; 977 / 18,752 ( 5 % )                            ;
+;     Dedicated logic registers      ; 774 / 18,752 ( 4 % )                            ;
+; Total registers                    ; 774                                             ;
 ; Total pins                         ; 277 / 315 ( 88 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2018 19:59:45 ;
+; Start date & time ; 11/22/2018 22:41:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MultiCycle          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 88263147448107.154293478407364        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 88263147448107.154294446410908        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -94,10 +94,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4666 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 4873 MB             ; 00:00:19                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4668 MB             ; 00:00:04                           ;
+; Fitter               ; 00:00:22     ; 1.0                     ; 4866 MB             ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
