@@ -89,6 +89,10 @@ architecture behavior of controlUnit is
 					-- branch
 					when "000100" =>
 						nxt_st <= "1000";
+					-- addi
+					when "001000" =>
+						nxt_st <= "1010";
+					-- otros
 					when others =>
 						nxt_st <= "0000";
 				end case;
@@ -200,7 +204,6 @@ architecture behavior of controlUnit is
 				MemtoReg <= '0';
 				NextSt <= "0000";
 			
-			-- branch todavia no sirve
 			elsif (st = "1000") then
 				IorD <= '0';
 				MemRd <= '0';
@@ -228,6 +231,38 @@ architecture behavior of controlUnit is
 				PCWr <= '1';
 				PCwrCond <= '0';
 				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				NextSt <= "0000";
+				
+			elsif (st = "1010") then
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '1';
+				ALUsrcB <= "10";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '0';
+				RegDst <= '0';
+				MemWr <= '0';
+				MemtoReg <= '0';
+				NextSt <= "1011";
+				
+			elsif (st = "1011") then
+				IorD <= '0';
+				MemRd <= '0';
+				ALUsrcA <= '0';
+				ALUsrcB <= "00";
+				ALUop <= "00";
+				PCsrc <= "00";
+				IRwr <= '0';
+				PCWr <= '0';
+				PCwrCond <= '0';
+				RegWr <= '1';
 				RegDst <= '0';
 				MemWr <= '0';
 				MemtoReg <= '0';
