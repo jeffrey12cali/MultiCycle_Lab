@@ -54,9 +54,9 @@ ModelSim-Altera Info: # Loading ieee.vital_primitives(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_atom_pack(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_components
 ModelSim-Altera Info: # Loading work.multicycle(structure)
-ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_and1(altvital)
+ModelSim-Altera Info: # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 ModelSim-Altera Info: # Loading ieee.std_logic_arith(body)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_io(structure)
 ModelSim-Altera Info: # Loading cycloneii.cycloneii_mux21(altvital)
@@ -70,24 +70,48 @@ ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be ad
 ModelSim-Altera Info: add wave -position insertpoint  \
 ModelSim-Altera Info: sim:/multicycle/clk \
 ModelSim-Altera Info: sim:/multicycle/rst \
-ModelSim-Altera Info: sim:/multicycle/DEV1 \
-ModelSim-Altera Info: sim:/multicycle/MEMDATA \
-ModelSim-Altera Info: sim:/multicycle/ActDir \
-ModelSim-Altera Info: sim:/multicycle/AREG \
-ModelSim-Altera Info: sim:/multicycle/BREG \
-ModelSim-Altera Info: sim:/multicycle/ALOUT \
-ModelSim-Altera Info: sim:/multicycle/ALUA \
-ModelSim-Altera Info: sim:/multicycle/ALUB \
-ModelSim-Altera Info: sim:/multicycle/wrReg \
-ModelSim-Altera Info: sim:/multicycle/wrData \
-ModelSim-Altera Info: sim:/multicycle/nextIns \
-ModelSim-Altera Info: sim:/multicycle/sts
+ModelSim-Altera Info: sim:/multicycle/key \
+ModelSim-Altera Info: sim:/multicycle/seg7exit
 ModelSim-Altera Info: force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 1 0
 ModelSim-Altera Info: run
 ModelSim-Altera Info: force -freeze sim:/multicycle/rst 0 0
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
+ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run
 ModelSim-Altera Info: run

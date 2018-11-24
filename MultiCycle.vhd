@@ -6,19 +6,25 @@ entity MultiCycle is
 		--MemDir: in std_logic_vector(31 downto 0);
 		clk: in bit;
 		rst: in std_logic;
-		DEV1: out std_logic_vector(31 downto 0);
+		key: in std_logic_vector(8 downto 0);
+		seg7exit: out std_logic_vector(6 downto 0)
+		-- DEV1: out std_logic_vector(31 downto 0);
 		-- PCMUX: out std_logic_vector(31 downto 0);
-		MEMDATA: out std_logic_vector(31 downto 0);
-		ActDir: out std_logic_vector(31 downto 0);
-		AREG: out std_logic_vector(4 downto 0);
-		BREG: out std_logic_vector(4 downto 0);
-		ALOUT: out std_logic_vector(31 downto 0);
-		ALUA: out std_logic_vector(31 downto 0);
-		ALUB: out std_logic_vector(31 downto 0);
-		wrReg: out std_logic_vector(4 downto 0);
-		wrData: out std_logic_vector(31 downto 0);
-		nextIns: out std_logic_vector(31 downto 0);
-		sts: out std_logic_vector(3 downto 0)
+		--MEMDATA: out std_logic_vector(31 downto 0);
+		--ActDir: out std_logic_vector(31 downto 0);
+		--AREG: out std_logic_vector(4 downto 0);
+		--BREG: out std_logic_vector(4 downto 0);
+		--ALOUT: out std_logic_vector(31 downto 0);
+		--ALUA: out std_logic_vector(31 downto 0);
+		--ALUB: out std_logic_vector(31 downto 0);
+		--wrReg: out std_logic_vector(4 downto 0);
+		--wrData: out std_logic_vector(31 downto 0);
+		--nextIns: out std_logic_vector(31 downto 0);
+		--sts: out std_logic_vector(3 downto 0); 
+		--exitMux: out std_logic_vector(31 downto 0)
+
+		
+		
 	);
 end MultiCycle;
 
@@ -103,7 +109,6 @@ architecture behaviour of MultiCycle is
 			clk: in bit;
 			PCw: in std_logic;
 			addr: in std_logic_vector (31 downto 0);
-			reset: in std_logic;
 			addr_out: out std_logic_vector (31 downto 0)
 		);
 	end component;
@@ -187,7 +192,8 @@ architecture behaviour of MultiCycle is
 	port(
 		address: in std_logic_vector(31 downto 0);
 		memWrite: in  std_logic;
-		writeMemory,dev1: out std_logic
+		writeMemory,dev1: out std_logic;
+		addressSel: out std_logic_vector(1 downto 0)
 	);
 	end component;
 	
@@ -199,6 +205,22 @@ architecture behaviour of MultiCycle is
 		dt_out: out std_logic_vector(31 downto 0)
 	);
 	end component;
+	
+	component output1
+	port(
+		LED_BCD: in std_logic_vector(31 downto 0);
+		LED_out: out std_logic_vector(6 downto 0)
+	
+	);
+	end component;
+	
+	component input1
+	port(
+		date: in std_logic_vector(8 downto 0);
+		dateOut: out std_logic_vector(31 downto 0)
+	);
+	end component;
+	
 	
 	signal ALUcontOP: std_logic_vector(2 downto 0);
 	
@@ -266,6 +288,12 @@ architecture behaviour of MultiCycle is
 	signal writeMemoryAD: std_logic;
 	signal wrDev1: std_logic;
 	signal seg7_1: std_logic_vector(31 downto 0);
+	
+	--señales de siete segmentos
+	signal writeBcd: std_logic_vector(31 downto 0);
+	signal keyOut: std_logic_vector(31 downto 0);
+	signal addsel: std_logic_vector(1 downto 0);
+	signal readadd: std_logic_vector(31 downto 0);
 	
 	begin
 	
@@ -362,7 +390,6 @@ architecture behaviour of MultiCycle is
 			clk => clk,
 			PCw => PCwrite,
 			addr => newPC,
-			reset => rst,
 			addr_out => PCaddrout
 		);
 		
@@ -404,7 +431,7 @@ architecture behaviour of MultiCycle is
 		MDR: reg32bit
 		port map(
 			clock => clk,
-			dt_in => outMemory,
+			dt_in => readadd,
 			dt_out => MDRtoMUX
 		);
 		
@@ -461,7 +488,8 @@ architecture behaviour of MultiCycle is
 			address => ALUOut,
 			memWrite => MemWr_out,
 			writeMemory => writeMemoryAD,
-			dev1 => wrDev1
+			dev1 => wrDev1,
+			addressSel => addsel
 		);
 		
 		REG7SEG: reg32bitEN
@@ -472,6 +500,27 @@ architecture behaviour of MultiCycle is
 			dt_out => seg7_1
 		);
 		
+		SEG7WR: output1
+		port map(
+			LED_BCD => seg7_1,
+			LED_out => seg7exit
+		);
+		
+		KEYBOARD: input1
+		port map(
+			date => key,
+			dateOut => keyOut
+		);
+		
+		MUXREAD: mux3jump
+		port map(
+			a => outMemory,
+			b => "10001100101000010000001100000000",
+			c => keyOut,
+			sel1 => addsel,
+			salida => readadd
+		
+		);
 		-- PC WRITE
 		PCwrite <= (PCwr_out or (PCWrCond_out and zero_out));
 		
@@ -481,20 +530,20 @@ architecture behaviour of MultiCycle is
 		
 		
 		-- prints
-		ActDir <= outMemory;
-		MEMDATA <= BtoMUX;
-		DEV1 <= seg7_1;
-		ALOUT <= ALUres_out;
-		ALUA <= MuxSrcA;
-		ALUB <= MuxSrcB;
-		AREG <= r1_out;
-		BREG <= r2_out;
+		--ActDir <= outMemory;
+		--MEMDATA <= BtoMUX;
+		--DEV1 <= seg7_1;
+		--ALOUT <= ALUres_out;
+		--ALUA <= MuxSrcA;
+		--ALUB <= MuxSrcB;
+		--AREG <= r1_out;
+		--BREG <= r2_out;
 		-- PCMUX <= outMuxPc;
-		sts <= currentS_out;
-		wrReg <= outMux3;
-		wrData <= outMux4;
-		nextIns <= newPC;
-		
+		--sts <= currentS_out;
+		--wrReg <= outMux3;
+		--wrData <= outMux4;
+		--nextIns <= newPC;
+		--exitMux <= readadd;
 		
 		
 	end;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MultiCycle
-Thu Nov 22 22:41:08 2018
+Fri Nov 23 19:22:24 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,9 +17,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "mux:MUXB"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "mux3jump:MUXREAD"
+ 13. Port Connectivity Checks: "mux:MUXB"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +46,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 22:41:08 2018           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 23 19:22:24 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,518                                           ;
-;     Total combinational functions  ; 977                                             ;
-;     Dedicated logic registers      ; 774                                             ;
-; Total registers                    ; 774                                             ;
-; Total pins                         ; 277                                             ;
+; Total logic elements               ; 1,545                                           ;
+;     Total combinational functions  ; 1,019                                           ;
+;     Dedicated logic registers      ; 772                                             ;
+; Total registers                    ; 772                                             ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -158,31 +159,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; addressDecoder.vhd               ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/addressDecoder.vhd ;         ;
-; controlUnit.vhd                  ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd    ;         ;
-; mux3.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd           ;         ;
-; registerFile.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd   ;         ;
-; mux2.vhd                         ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd           ;         ;
-; mux.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd            ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd            ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd             ;         ;
-; SignExtend.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd     ;         ;
-; ShiftLeft2_1.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd   ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd             ;         ;
-; MultiCycle.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd     ;         ;
-; ALUControl.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd     ;         ;
-; NewState.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd       ;         ;
-; reg32bit.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd       ;         ;
-; ShiftLeft2_2.vhd                 ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd   ;         ;
-; mux3jump.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd       ;         ;
-; memoryV2.vhd                     ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd       ;         ;
-; reg32bitEN.vhd                   ; yes             ; User VHDL File  ; D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bitEN.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; output1.vhd                      ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/output1.vhd        ;         ;
+; input1.vhd                       ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/input1.vhd         ;         ;
+; addressDecoder.vhd               ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/addressDecoder.vhd ;         ;
+; controlUnit.vhd                  ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/controlUnit.vhd    ;         ;
+; mux3.vhd                         ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd           ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd   ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd           ;         ;
+; mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd            ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd            ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd             ;         ;
+; SignExtend.vhd                   ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/SignExtend.vhd     ;         ;
+; ShiftLeft2_1.vhd                 ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_1.vhd   ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/PC.vhd             ;         ;
+; MultiCycle.vhd                   ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd     ;         ;
+; ALUControl.vhd                   ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ALUControl.vhd     ;         ;
+; NewState.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/NewState.vhd       ;         ;
+; reg32bit.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bit.vhd       ;         ;
+; ShiftLeft2_2.vhd                 ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_2.vhd   ;         ;
+; mux3jump.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3jump.vhd       ;         ;
+; memoryV2.vhd                     ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memoryV2.vhd       ;         ;
+; reg32bitEN.vhd                   ; yes             ; User VHDL File  ; C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bitEN.vhd     ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -190,28 +193,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,518 ;
+; Estimated Total logic elements              ; 1,545 ;
 ;                                             ;       ;
-; Total combinational functions               ; 977   ;
+; Total combinational functions               ; 1019  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 693   ;
-;     -- 3 input functions                    ; 209   ;
-;     -- <=2 input functions                  ; 75    ;
+;     -- 4 input functions                    ; 684   ;
+;     -- 3 input functions                    ; 250   ;
+;     -- <=2 input functions                  ; 85    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 914   ;
+;     -- normal mode                          ; 956   ;
 ;     -- arithmetic mode                      ; 63    ;
 ;                                             ;       ;
-; Total registers                             ; 774   ;
-;     -- Dedicated logic registers            ; 774   ;
+; Total registers                             ; 772   ;
+;     -- Dedicated logic registers            ; 772   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 277   ;
+; I/O pins                                    ; 18    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 774   ;
-; Total fan-out                               ; 6010  ;
-; Average fan-out                             ; 2.96  ;
+; Maximum fan-out                             ; 772   ;
+; Total fan-out                               ; 5918  ;
+; Average fan-out                             ; 3.27  ;
 +---------------------------------------------+-------+
 
 
@@ -220,21 +223,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; |MultiCycle                 ; 977 (12)          ; 774 (0)      ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |MultiCycle                        ; work         ;
+; |MultiCycle                 ; 1019 (12)         ; 772 (0)      ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |MultiCycle                        ; work         ;
 ;    |ALUControl:ALUCONTRL|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|ALUControl:ALUCONTRL   ; work         ;
-;    |IR:INSTREG|             ; 0 (0)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG             ; work         ;
+;    |IR:INSTREG|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|IR:INSTREG             ; work         ;
 ;    |NewState:NEWST|         ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|NewState:NEWST         ; work         ;
-;    |PC:PROGCOUNT|           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|PC:PROGCOUNT           ; work         ;
-;    |addressDecoder:ADDRDEC| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|addressDecoder:ADDRDEC ; work         ;
-;    |alu:ALUCOMP|            ; 199 (199)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:ALUCOMP            ; work         ;
-;    |controlUnit:CONTROLU|   ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|controlUnit:CONTROLU   ; work         ;
-;    |memoryV2:MEM|           ; 199 (199)         ; 288 (288)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memoryV2:MEM           ; work         ;
+;    |PC:PROGCOUNT|           ; 45 (45)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|PC:PROGCOUNT           ; work         ;
+;    |addressDecoder:ADDRDEC| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|addressDecoder:ADDRDEC ; work         ;
+;    |alu:ALUCOMP|            ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|alu:ALUCOMP            ; work         ;
+;    |controlUnit:CONTROLU|   ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|controlUnit:CONTROLU   ; work         ;
+;    |input1:KEYBOARD|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|input1:KEYBOARD        ; work         ;
+;    |memoryV2:MEM|           ; 184 (184)         ; 288 (288)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|memoryV2:MEM           ; work         ;
 ;    |mux2:MUXA|              ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux2:MUXA              ; work         ;
 ;    |mux2:MUXMemReg|         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux2:MUXMemReg         ; work         ;
 ;    |mux2:MUXPC|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux2:MUXPC             ; work         ;
-;    |mux3:MUXRegDst|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3:MUXRegDst         ; work         ;
-;    |mux3jump:JUMPMUX|       ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3jump:JUMPMUX       ; work         ;
-;    |mux:MUXB|               ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:MUXB               ; work         ;
+;    |mux3:MUXRegDst|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3:MUXRegDst         ; work         ;
+;    |mux3jump:JUMPMUX|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3jump:JUMPMUX       ; work         ;
+;    |mux3jump:MUXREAD|       ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux3jump:MUXREAD       ; work         ;
+;    |mux:MUXB|               ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|mux:MUXB               ; work         ;
+;    |output1:SEG7WR|         ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|output1:SEG7WR         ; work         ;
 ;    |reg32bit:MDR|           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:MDR           ; work         ;
 ;    |reg32bit:regALU|        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regALU        ; work         ;
 ;    |reg32bit:regA|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MultiCycle|reg32bit:regA          ; work         ;
@@ -286,18 +292,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; IR:INSTREG|imm_out[13]                 ; Merged with IR:INSTREG|jump_out[13] ;
 ; IR:INSTREG|r3_out[2]                   ; Merged with IR:INSTREG|jump_out[13] ;
 ; IR:INSTREG|imm_out[14]                 ; Merged with IR:INSTREG|jump_out[14] ;
-; IR:INSTREG|r3_out[3]                   ; Merged with IR:INSTREG|jump_out[14] ;
 ; IR:INSTREG|imm_out[15]                 ; Merged with IR:INSTREG|jump_out[15] ;
-; IR:INSTREG|r3_out[4]                   ; Merged with IR:INSTREG|jump_out[15] ;
 ; IR:INSTREG|r2_out[0]                   ; Merged with IR:INSTREG|jump_out[16] ;
 ; IR:INSTREG|r2_out[1]                   ; Merged with IR:INSTREG|jump_out[17] ;
 ; IR:INSTREG|r2_out[2]                   ; Merged with IR:INSTREG|jump_out[18] ;
-; IR:INSTREG|r2_out[3]                   ; Merged with IR:INSTREG|jump_out[19] ;
-; IR:INSTREG|r2_out[4]                   ; Merged with IR:INSTREG|jump_out[20] ;
 ; IR:INSTREG|r1_out[0]                   ; Merged with IR:INSTREG|jump_out[21] ;
 ; IR:INSTREG|r1_out[1]                   ; Merged with IR:INSTREG|jump_out[22] ;
 ; IR:INSTREG|r1_out[2]                   ; Merged with IR:INSTREG|jump_out[23] ;
-; Total Number of Removed Registers = 33 ;                                     ;
+; Total Number of Removed Registers = 29 ;                                     ;
 +----------------------------------------+-------------------------------------+
 
 
@@ -306,12 +308,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 774   ;
+; Total registers                              ; 772   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 642   ;
+; Number of registers using Clock Enable       ; 640   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -321,15 +323,37 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |MultiCycle|NewState:NEWST|CS[1]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MultiCycle|PC:PROGCOUNT|addr_out[1]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |MultiCycle|PC:PROGCOUNT|addr_out[31]  ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |MultiCycle|PC:PROGCOUNT|addr_out[26]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |MultiCycle|reg32bit:MDR|dt_out[23]    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |MultiCycle|NewState:NEWST|CS[3]       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MultiCycle|controlUnit:CONTROLU|MemRd ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux31     ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux3jump:JUMPMUX|Mux6      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux14             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux31             ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux29             ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux27          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux15             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux30             ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MultiCycle|mux:MUXB|Mux22             ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |MultiCycle|alu:ALUCOMP|Mux25          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "mux3jump:MUXREAD" ;
++-----------+-------+----------+---------------+
+; Port      ; Type  ; Severity ; Details       ;
++-----------+-------+----------+---------------+
+; b[27..26] ; Input ; Info     ; Stuck at VCC  ;
+; b[9..8]   ; Input ; Info     ; Stuck at VCC  ;
+; b[30..28] ; Input ; Info     ; Stuck at GND  ;
+; b[25..24] ; Input ; Info     ; Stuck at GND  ;
+; b[20..17] ; Input ; Info     ; Stuck at GND  ;
+; b[15..10] ; Input ; Info     ; Stuck at GND  ;
+; b[7..0]   ; Input ; Info     ; Stuck at GND  ;
+; b[31]     ; Input ; Info     ; Stuck at VCC  ;
+; b[23]     ; Input ; Info     ; Stuck at VCC  ;
+; b[22]     ; Input ; Info     ; Stuck at GND  ;
+; b[21]     ; Input ; Info     ; Stuck at VCC  ;
+; b[16]     ; Input ; Info     ; Stuck at VCC  ;
++-----------+-------+----------+---------------+
 
 
 +--------------------------------------------+
@@ -347,7 +371,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -357,7 +381,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 22 22:41:04 2018
+    Info: Processing started: Fri Nov 23 19:22:09 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MultiCycle -c MultiCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file output1.vhd
@@ -433,6 +457,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file memoryv
 Info (12021): Found 2 design units, including 1 entities, in source file reg32biten.vhd
     Info (12022): Found design unit 1: reg32bitEN-behavior
     Info (12023): Found entity 1: reg32bitEN
+Info (12021): Found 2 design units, including 1 entities, in source file outputtest.vhd
+    Info (12022): Found design unit 1: outputTest-compor
+    Info (12023): Found entity 1: outputTest
 Info (12127): Elaborating entity "MultiCycle" for the top level hierarchy
 Info (12128): Elaborating entity "alu" for hierarchy "alu:ALUCOMP"
 Warning (10492): VHDL Process Statement warning at alu.vhd(48): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -443,7 +470,6 @@ Info (12128): Elaborating entity "mux3" for hierarchy "mux3:MUXRegDst"
 Info (12128): Elaborating entity "IR" for hierarchy "IR:INSTREG"
 Info (12128): Elaborating entity "memoryV2" for hierarchy "memoryV2:MEM"
 Info (12128): Elaborating entity "PC" for hierarchy "PC:PROGCOUNT"
-Warning (10492): VHDL Process Statement warning at PC.vhd(18): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:CONTROLU"
 Warning (10492): VHDL Process Statement warning at controlUnit.vhd(99): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlUnit.vhd(125): signal "nxt_st" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -461,7 +487,8 @@ Info (12128): Elaborating entity "ShiftLeft2_2" for hierarchy "ShiftLeft2_2:DOWN
 Info (12128): Elaborating entity "mux3jump" for hierarchy "mux3jump:JUMPMUX"
 Info (12128): Elaborating entity "addressDecoder" for hierarchy "addressDecoder:ADDRDEC"
 Info (12128): Elaborating entity "reg32bitEN" for hierarchy "reg32bitEN:REG7SEG"
-Warning (10492): VHDL Process Statement warning at reg32bitEN.vhd(17): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "output1" for hierarchy "output1:SEG7WR"
+Info (12128): Elaborating entity "input1" for hierarchy "input1:KEYBOARD"
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "registerFile:REGFILE|MEM" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "memoryV2:MEM|MEM" is uninferred due to inappropriate RAM size
@@ -475,14 +502,14 @@ Warning (13012): Latch controlUnit:CONTROLU|nxt_st[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal NewState:NEWST|CS[3]
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1891 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 275 output pins
-    Info (21061): Implemented 1614 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Thu Nov 22 22:41:08 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info (21057): Implemented 1627 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 1609 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4657 megabytes
+    Info: Processing ended: Fri Nov 23 19:22:24 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 

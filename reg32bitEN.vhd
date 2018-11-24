@@ -12,7 +12,7 @@ end entity;
 
 architecture behavior of reg32bitEN is
   begin
-      process (clock)
+      process (clock,enable,dt_in)
         begin 
           if (clock='1' and clock'event and enable = '1') then
 				dt_out <= dt_in;

@@ -2,611 +2,757 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\Miscelanea\Documentos\MultiCycle_Lab\simulation\modelsim
-Ealu
-Z1 w1542047136
-Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
-Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z6 dD:\Miscelanea\Documentos\MultiCycle_Lab\simulation\modelsim
-Z7 8D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd
-Z8 FD:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd
+Z0 dC:\Users\Usuario\Documents\GitHub\MultiCycle_Lab\simulation\modelsim
+Eaddressdecoder
+Z1 w1543027835
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Usuario\Documents\GitHub\MultiCycle_Lab\simulation\modelsim
+Z6 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/addressDecoder.vhd
+Z7 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/addressDecoder.vhd
 l0
-L4
-VQd_S_A6eQ6FeIm?f3:j;d1
-Z9 OV;C;10.1d;51
+L5
+VTj3BmloAML9[1`W7jgGTT1
+Z8 OV;C;10.1d;51
 31
-Z10 !s108 1542218836.929000
-Z11 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
-Z12 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/alu.vhd|
-Z13 o-93 -work work -O0
-Z14 tExplicit 1
-!s100 ?ah:eZ8OM90NOA:ln]N1;2
+Z9 !s108 1543016981.229000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/addressDecoder.vhd|
+Z11 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/addressDecoder.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 lC]ihKDhCV:ieAI`oEYON1
 !i10b 1
-Abehavior
+Acompor
 R2
 R3
 R4
-R5
-DEx4 work 3 alu 0 22 Qd_S_A6eQ6FeIm?f3:j;d1
-l21
-L17
-V]KTSJ[b1FOn;X_aMcXa1Y3
-R9
+DEx4 work 14 addressdecoder 0 22 Tj3BmloAML9[1`W7jgGTT1
+l15
+L14
+VhT=WNlKb=V2LoK]FJ=IjF0
+R8
 31
+R9
 R10
 R11
 R12
 R13
-R14
+!s100 o[`12TIaKccflWI8<:UTi1
+!i10b 1
+Ealu
+Z14 w1543015714
+Z15 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R3
+R4
+R5
+Z17 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd
+Z18 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd
+l0
+L4
+VQd_S_A6eQ6FeIm?f3:j;d1
+R8
+31
+Z19 !s108 1543016983.551000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd|
+Z21 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/alu.vhd|
+R12
+R13
+!s100 ?ah:eZ8OM90NOA:ln]N1;2
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 3 alu 0 22 Qd_S_A6eQ6FeIm?f3:j;d1
+l21
+L17
+V]KTSJ[b1FOn;X_aMcXa1Y3
+R8
+31
+R19
+R20
+R21
+R12
+R13
 !s100 0`hP?l^eb@;K3`0kOaAIe3
 !i10b 1
 Ealucontrol
-Z15 w1540656252
+R14
+R3
 R4
 R5
-R6
-Z16 8D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd
-Z17 FD:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd
+Z22 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ALUControl.vhd
+Z23 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ALUControl.vhd
 l0
 L4
 VOI9?CJB7U3oUS<k?:U``Q3
-R9
+R8
 31
-Z18 !s108 1542218838.399000
-Z19 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd|
-Z20 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ALUControl.vhd|
+Z24 !s108 1543016986.038000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ALUControl.vhd|
+Z26 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ALUControl.vhd|
+R12
 R13
-R14
 !s100 1i83RRhkcGc8=?XVHJNmV3
 !i10b 1
 Abehavior
+R3
 R4
-R5
 DEx4 work 10 alucontrol 0 22 OI9?CJB7U3oUS<k?:U``Q3
 l13
 L12
 V;M3QgD?O:`i[JPDojLKRL0
-R9
-31
-R18
-R19
-R20
-R13
-R14
-!s100 REQRAFK74Ca:z]m11FH3a3
-!i10b 1
-Econtrolunit
-Z21 w1542215602
-R4
-R5
-R6
-Z22 8D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
-Z23 FD:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd
-l0
-L4
-V@[OhC69FUc7l`8<Jn[N<;1
-R9
-31
-Z24 !s108 1542218835.748000
-Z25 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
-Z26 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/controlUnit.vhd|
-R13
-R14
-!s100 Bz]lJcLg7m;jjgSP;]7k31
-!i10b 1
-Abehavior
-R4
-R5
-DEx4 work 11 controlunit 0 22 @[OhC69FUc7l`8<Jn[N<;1
-l30
-L26
-V_d:_kKPWB[[hP6kCGz>CS1
-R9
+R8
 31
 R24
 R25
 R26
+R12
 R13
-R14
-!s100 c>fFoUL]`4M[<Q8YW@khV3
+!s100 REQRAFK74Ca:z]m11FH3a3
 !i10b 1
-Eir
-Z27 w1540101080
+Econtrolunit
+R14
+R3
 R4
 R5
-R6
-Z28 8D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd
-Z29 FD:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd
+Z27 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/controlUnit.vhd
+Z28 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/controlUnit.vhd
 l0
 L4
-Vec:CF?8@VRa[omN3^`<5F0
-R9
+V@[OhC69FUc7l`8<Jn[N<;1
+R8
 31
-Z30 !s108 1542218837.148000
-Z31 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
-Z32 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/IR.vhd|
+Z29 !s108 1543016981.635000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/controlUnit.vhd|
+Z31 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/controlUnit.vhd|
+R12
 R13
-R14
-!s100 mZJ]CSSIL`M:AA>c7PY=l1
+!s100 Bz]lJcLg7m;jjgSP;]7k31
 !i10b 1
 Abehavior
+R3
 R4
-R5
-DEx4 work 2 ir 0 22 ec:CF?8@VRa[omN3^`<5F0
-l27
-L18
-VHGlN_N3bCB6B^LBlP6XmV3
-R9
+DEx4 work 11 controlunit 0 22 @[OhC69FUc7l`8<Jn[N<;1
+l30
+L26
+VcD1?AOB:zbGG3gTYGe^j12
+R8
 31
+R29
 R30
 R31
-R32
+R12
 R13
-R14
-!s100 <^KO[PXHT1YYlA]7fA`Sa3
+!s100 >VPf1<CH4:cIZ4HPTV^nz2
 !i10b 1
-Ememoryv2
-Z33 w1542168834
+Einput1
+Z32 w1543013128
 R2
 R3
 R4
 R5
-R6
-Z34 8D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd
-Z35 FD:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd
+Z33 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/input1.vhd
+Z34 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/input1.vhd
 l0
 L5
-VUMM1U2WdRb]hY>d67]HD13
-!s100 0@IZ[S4YJmM3KbDX1?;>V3
-R9
+VK8cF;0`DcIUncDWHSHnWf2
+R8
 31
-!i10b 1
-Z36 !s108 1542218839.843000
-Z37 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd|
-Z38 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/memoryV2.vhd|
+Z35 !s108 1543016980.807000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/input1.vhd|
+Z37 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/input1.vhd|
+R12
 R13
-R14
-Abehavior
+!s100 zZINT2Z34a:K;C6ilSe5_2
+!i10b 1
+Acompor
 R2
 R3
 R4
-R5
-DEx4 work 8 memoryv2 0 22 UMM1U2WdRb]hY>d67]HD13
-l27
-L15
-VGZeloO_PhITXiVNoU8LoN3
-!s100 O:`k=d=8fcc0SKGNOYO<g2
-R9
+DEx4 work 6 input1 0 22 K8cF;0`DcIUncDWHSHnWf2
+l13
+L12
+VA[TI=]UZ=mX?`6c]LcF1U3
+R8
 31
-!i10b 1
+R35
 R36
 R37
-R38
+R12
 R13
+!s100 :G9862kH160P2XmCgT]Zk1
+!i10b 1
+Eir
 R14
-Emulticycle
-Z39 w1542218230
+R3
 R4
 R5
-R6
-Z40 8D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
-Z41 FD:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd
+Z38 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd
+Z39 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd
 l0
 L4
-VMbC8`[9RE>c1_`Lm^a7TV2
-R9
+VNG<Ogoggd5?l`fij;KD`S3
+R8
 31
-Z42 !s108 1542218838.139000
-Z43 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
-Z44 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/MultiCycle.vhd|
+Z40 !s108 1543016984.083000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd|
+Z42 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/IR.vhd|
+R12
 R13
-R14
-!s100 ;YKIcmk^^;Y_Lk:_[aWnV2
+!s100 KeLnd6mFDoZ=`L_6X@z@a1
+!i10b 1
+Abehavior
+R3
+R4
+DEx4 work 2 ir 0 22 NG<Ogoggd5?l`fij;KD`S3
+l28
+L19
+V>^;4WD005kKaTgfz5bSIZ2
+R8
+31
+R40
+R41
+R42
+R12
+R13
+!s100 cgVBa@?2[_e7_RPnMB?im1
+!i10b 1
+Ememoryv2
+Z43 w1543015367
+R15
+R16
+R3
+R4
+R5
+Z44 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memoryV2.vhd
+Z45 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memoryV2.vhd
+l0
+L5
+V=;Om2Q?0VUME]a6V_lN_N1
+R8
+31
+Z46 !s108 1543016988.210000
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memoryV2.vhd|
+Z48 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/memoryV2.vhd|
+R12
+R13
+!s100 =WJeli>F]K`XT7P:VZ2m73
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 8 memoryv2 0 22 =;Om2Q?0VUME]a6V_lN_N1
+l36
+L16
+V]OJWP7oeV@]m6:PSzM]:A2
+R8
+31
+R46
+R47
+R48
+R12
+R13
+!s100 dS;0[8h@ak3bg?4cfJ;b_2
+!i10b 1
+Emulticycle
+Z49 w1543013176
+R3
+R4
+R5
+Z50 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd
+Z51 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd
+l0
+L4
+VCAmB65iC_<`fAggBMARKY0
+R8
+31
+Z52 !s108 1543016985.585000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd|
+Z54 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/MultiCycle.vhd|
+R12
+R13
+!s100 Y1MflY2HZ=:ce:NY@0PNW0
 !i10b 1
 Abehaviour
+R3
 R4
-R5
-DEx4 work 10 multicycle 0 22 MbC8`[9RE>c1_`Lm^a7TV2
-l240
-L21
-VVzhHQ6a3Bd^ZkGag=WbOH3
-R9
+DEx4 work 10 multicycle 0 22 CAmB65iC_<`fAggBMARKY0
+l299
+L31
+VAeB`NYJJFKYcb61AiBI9?2
+R8
 31
-R42
-R43
-R44
+R52
+R53
+R54
+R12
 R13
-R14
-!s100 4W9?zJ42nP0QmDHm<^j143
+!s100 A@En65FTA83bVhe]=;6[A0
 !i10b 1
 Emux
-Z45 w1542047308
+Z55 w1543015715
+R3
 R4
 R5
-R6
-Z46 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd
-Z47 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd
+Z56 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd
+Z57 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd
 l0
 L3
 VB8;W7[6a?7f=ajFXZ9aST3
-R9
+R8
 31
-Z48 !s108 1542218836.679000
-Z49 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
-Z50 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux.vhd|
+Z58 !s108 1543016983.129000
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd|
+Z60 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux.vhd|
+R12
 R13
-R14
 !s100 3oFZm2Z<K?g;hLIaZICIB1
 !i10b 1
 Acase_arch
+R3
 R4
-R5
 DEx4 work 3 mux 0 22 B8;W7[6a?7f=ajFXZ9aST3
 l14
 L13
 V6a;1m<_TdTK?XPRF4T>0_2
-R9
+R8
 31
-R48
-R49
-R50
+R58
+R59
+R60
+R12
 R13
-R14
 !s100 6SOlLEX]B_dAd61Ek4>1K1
 !i10b 1
 Emux2
-Z51 w1542047289
+R55
+R3
 R4
 R5
-R6
-Z52 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd
-Z53 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd
+Z61 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd
+Z62 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd
 l0
 L3
 V;BC[MH5AiJYm9HL>iYBAe2
-R9
+R8
 31
-Z54 !s108 1542218836.419000
-Z55 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
-Z56 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux2.vhd|
+Z63 !s108 1543016982.739000
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd|
+Z65 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux2.vhd|
+R12
 R13
-R14
 !s100 MllUmHobO`K^?VQFJLaLl3
 !i10b 1
 Acase_arch1
+R3
 R4
-R5
 DEx4 work 4 mux2 0 22 ;BC[MH5AiJYm9HL>iYBAe2
 l15
 L14
 VMefAS1b[hUzOMm0IHU^CA1
-R9
+R8
 31
-R54
-R55
-R56
+R63
+R64
+R65
+R12
 R13
-R14
 !s100 6CJdEL?ckAlODDnPU?ajK2
 !i10b 1
 Emux3
-Z57 w1542047299
+R55
+R3
 R4
 R5
-R6
-Z58 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd
-Z59 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd
+Z66 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd
+Z67 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd
 l0
 L3
 V5CKAS9[]GGFEi_4g2Pz[f0
-R9
+R8
 31
-Z60 !s108 1542218835.979000
-Z61 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
-Z62 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux3.vhd|
+Z68 !s108 1543016981.994000
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd|
+Z70 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3.vhd|
+R12
 R13
-R14
 !s100 gz[SDJPJ71@W]fHlGNaL50
 !i10b 1
 Acase_arch2
+R3
 R4
-R5
 DEx4 work 4 mux3 0 22 5CKAS9[]GGFEi_4g2Pz[f0
 l16
 L15
 VgmUahgQmhf4;Loz_=8I7:0
-R9
+R8
 31
-R60
-R61
-R62
+R68
+R69
+R70
+R12
 R13
-R14
 !s100 ULkAIIVT?`GNVo6:C28`Q0
 !i10b 1
 Emux3jump
-Z63 w1542047419
+R55
+R3
 R4
 R5
-R6
-Z64 8D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd
-Z65 FD:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd
+Z71 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3jump.vhd
+Z72 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3jump.vhd
 l0
 L3
 VkIG;D82bfY<in_b1YKH7a3
-R9
+R8
 31
-Z66 !s108 1542218839.529000
-Z67 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd|
-Z68 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/mux3jump.vhd|
+Z73 !s108 1543016987.726000
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3jump.vhd|
+Z75 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/mux3jump.vhd|
+R12
 R13
-R14
 !s100 TOaY8Nf2>;9V4;7VJJ0Bc1
 !i10b 1
 Acase_arch2
+R3
 R4
-R5
 DEx4 work 8 mux3jump 0 22 kIG;D82bfY<in_b1YKH7a3
 l15
 L14
 V:TcH9]Z=8:eoh3YYLkkAm2
-R9
+R8
 31
-R66
-R67
-R68
+R73
+R74
+R75
+R12
 R13
-R14
 !s100 MRKj=<H2]d9R7OUJT[4b^0
 !i10b 1
 Enewstate
-Z69 w1540670767
+R14
+R3
 R4
 R5
-R6
-Z70 8D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd
-Z71 FD:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd
+Z76 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/NewState.vhd
+Z77 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/NewState.vhd
 l0
 L4
 VLC4a10h>V>M7@g9[k`Q<f2
-R9
+R8
 31
-Z72 !s108 1542218838.679000
-Z73 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd|
-Z74 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/NewState.vhd|
+Z78 !s108 1543016986.429000
+Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/NewState.vhd|
+Z80 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/NewState.vhd|
+R12
 R13
-R14
 !s100 UGl5<_N5M_U[R`;D2zJ522
 !i10b 1
 Abehavioral
+R3
 R4
-R5
 DEx4 work 8 newstate 0 22 LC4a10h>V>M7@g9[k`Q<f2
 l14
 L12
 VVc380H1HUJYZbPaPgND6?1
-R9
-31
-R72
-R73
-R74
-R13
-R14
-!s100 <VF39>l0_CKnmTM74iZz]0
-!i10b 1
-Epc
-Z75 w1542218633
-R4
-R5
-R6
-Z76 8D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
-Z77 FD:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd
-l0
-L4
-VNIBi10?LjiK6bReRSbKYA0
-R9
-31
-Z78 !s108 1542218837.829000
-Z79 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
-Z80 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/PC.vhd|
-R13
-R14
-!s100 hlmB0BL_FCA[F2c7gQIh40
-!i10b 1
-Abehavior
-R4
-R5
-DEx4 work 2 pc 0 22 NIBi10?LjiK6bReRSbKYA0
-l14
-L13
-V8`AHF<DN8KTa`Z3:1g_Z_1
-R9
+R8
 31
 R78
 R79
 R80
+R12
 R13
-R14
-!s100 b:fcQ3NA9>?>cGU@P3L3]1
+!s100 <VF39>l0_CKnmTM74iZz]0
 !i10b 1
-Ereg32bit
-Z81 w1540676046
+Eoutput1
+Z81 w1543014800
+R2
+R3
 R4
 R5
-R6
-Z82 8D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd
-Z83 FD:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd
+Z82 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/output1.vhd
+Z83 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/output1.vhd
 l0
-L4
-V1@g@?]NN>0BCIIJHY1XfU2
-R9
+L6
+VPnj3iZ`BO68hnFj09aSG[1
+R8
 31
-Z84 !s108 1542218838.969000
-Z85 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd|
-Z86 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/reg32bit.vhd|
+Z84 !s108 1543016980.400000
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/output1.vhd|
+Z86 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/output1.vhd|
+R12
 R13
-R14
-!s100 M^=mZmF<5D>XMlbCmKdg<2
+!s100 6zUTOGN@@k=9Wa@^8dR<D2
 !i10b 1
-Abehavior
+Acompor
+R2
+R3
 R4
-R5
-DEx4 work 8 reg32bit 0 22 1@g@?]NN>0BCIIJHY1XfU2
-l13
-L12
-VYaXGcn>i:?@eUmY`5mHNI2
-R9
+DEx4 work 7 output1 0 22 Pnj3iZ`BO68hnFj09aSG[1
+l14
+L13
+VT:7De2]70VJDX1`:9<CTo1
+R8
 31
 R84
 R85
 R86
+R12
 R13
-R14
-!s100 mn8LFWGN1PXEO6Lbi4X7T1
+!s100 V]`ej7EM@jOO26bKRRL8o2
 !i10b 1
-Eregisterfile
-Z87 w1542164117
-R2
+Epc
+R14
 R3
 R4
 R5
-R6
-Z88 8D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd
-Z89 FD:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd
+Z87 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/PC.vhd
+Z88 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/PC.vhd
 l0
-L5
-VVRENEC4bn;V6BmJ9ma7jG2
-R9
+L4
+V;FJBi79B5`BLUi>JC[10_1
+R8
 31
-Z90 !s108 1542218836.219000
-Z91 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
-Z92 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/registerFile.vhd|
+Z89 !s108 1543016985.241000
+Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/PC.vhd|
+Z91 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/PC.vhd|
+R12
 R13
-R14
-!s100 N58E?`5nXdJQUiViTjL``2
+!s100 ^gSeL[FJ7I<C_P>oIDoRm2
 !i10b 1
 Abehavior
-R2
+R3
+R4
+DEx4 work 2 pc 0 22 ;FJBi79B5`BLUi>JC[10_1
+l16
+L15
+V[mM7ca2`i4J_^fN9^h4HW2
+R8
+31
+R89
+R90
+R91
+R12
+R13
+!s100 ?W]ZKJj=nK3gOh4=AL=H<3
+!i10b 1
+Ereg32bit
+R55
 R3
 R4
 R5
-DEx4 work 12 registerfile 0 22 VRENEC4bn;V6BmJ9ma7jG2
-l31
-L17
-VJYPHdQm:kE4A65KNI:bB?1
-R9
+Z92 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bit.vhd
+Z93 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bit.vhd
+l0
+L4
+V1@g@?]NN>0BCIIJHY1XfU2
+R8
 31
-R90
-R91
-R92
+Z94 !s108 1543016986.819000
+Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bit.vhd|
+Z96 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bit.vhd|
+R12
 R13
-R14
-!s100 cb0E@Tb218LVj>5<]2lR<1
+!s100 M^=mZmF<5D>XMlbCmKdg<2
 !i10b 1
-Eshiftleft2_1
-Z93 w1540677751
+Abehavior
+R3
+R4
+DEx4 work 8 reg32bit 0 22 1@g@?]NN>0BCIIJHY1XfU2
+l13
+L12
+VYaXGcn>i:?@eUmY`5mHNI2
+R8
+31
+R94
+R95
+R96
+R12
+R13
+!s100 mn8LFWGN1PXEO6Lbi4X7T1
+!i10b 1
+Ereg32biten
+R55
+R3
 R4
 R5
-R6
-Z94 8D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd
-Z95 FD:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd
+Z97 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bitEN.vhd
+Z98 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bitEN.vhd
+l0
+L4
+VmTFA^Dm5M9kl@e4AgnVi`2
+!s100 [N3YcJ`G56>fB1:Z9=7MY2
+R8
+31
+!i10b 1
+Z99 !s108 1543016988.585000
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bitEN.vhd|
+Z101 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/reg32bitEN.vhd|
+R12
+R13
+Abehavior
+R3
+R4
+DEx4 work 10 reg32biten 0 22 mTFA^Dm5M9kl@e4AgnVi`2
+l14
+L13
+V@4aXFZZ>X8`YzA9AOX2RW2
+!s100 nS_A6I5h4^[EP?7^]l;Jg2
+R8
+31
+!i10b 1
+R99
+R100
+R101
+R12
+R13
+Eregisterfile
+R55
+R15
+R16
+R3
+R4
+R5
+Z102 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd
+Z103 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd
+l0
+L5
+VTmZ>FClYWh3S1cnFPJMQ;3
+R8
+31
+Z104 !s108 1543016982.348000
+Z105 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd|
+Z106 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/registerFile.vhd|
+R12
+R13
+!s100 2AJGRGI__NC6?P`kV:h:W2
+!i10b 1
+Abehavior
+R15
+R16
+R3
+R4
+DEx4 work 12 registerfile 0 22 TmZ>FClYWh3S1cnFPJMQ;3
+l35
+L18
+VWE;=1C2?E_B@C59lm>zCU2
+R8
+31
+R104
+R105
+R106
+R12
+R13
+!s100 InF>MhOVKIa>DD3IkRk=03
+!i10b 1
+Eshiftleft2_1
+R14
+R3
+R4
+R5
+Z107 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_1.vhd
+Z108 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_1.vhd
 l0
 L4
 VRL0nY=I82:fKXX8Ge@g_B0
-R9
+R8
 31
-Z96 !s108 1542218837.548000
-Z97 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd|
-Z98 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_1.vhd|
+Z109 !s108 1543016984.835000
+Z110 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_1.vhd|
+Z111 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_1.vhd|
+R12
 R13
-R14
 !s100 LI`78^4`5X<9@dz`7EYGT3
 !i10b 1
 Abehavior
+R3
 R4
-R5
 DEx4 work 12 shiftleft2_1 0 22 RL0nY=I82:fKXX8Ge@g_B0
 l12
 L11
 V4Hd_Oca?HagK47N=W7W090
-R9
+R8
 31
-R96
-R97
-R98
+R109
+R110
+R111
+R12
 R13
-R14
 !s100 2g``AiK3nd_<KCh=m?^bC3
 !i10b 1
 Eshiftleft2_2
-Z99 w1540677923
+R14
+R3
 R4
 R5
-R6
-Z100 8D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd
-Z101 FD:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd
+Z112 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_2.vhd
+Z113 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_2.vhd
 l0
 L4
 VCM<Lf==Gb`3:7MKb:oO<=0
-R9
+R8
 31
-Z102 !s108 1542218839.239000
-Z103 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd|
-Z104 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/ShiftLeft2_2.vhd|
+Z114 !s108 1543016987.226000
+Z115 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_2.vhd|
+Z116 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/ShiftLeft2_2.vhd|
+R12
 R13
-R14
 !s100 9OnjmPOhE_D2>a>KFzZQQ2
 !i10b 1
 Abehavior
+R3
 R4
-R5
 DEx4 work 12 shiftleft2_2 0 22 CM<Lf==Gb`3:7MKb:oO<=0
 l12
 L11
 VPPLT@b9UQ=W2fzfh24MJU0
-R9
+R8
 31
-R102
-R103
-R104
+R114
+R115
+R116
+R12
 R13
-R14
 !s100 2H@XVGIV?nZP4Kfd@;aX31
 !i10b 1
 Esignextend
-R27
+Z117 w1543015614
+R3
 R4
 R5
-R6
-Z105 8D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd
-Z106 FD:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd
+Z118 8C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/SignExtend.vhd
+Z119 FC:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/SignExtend.vhd
 l0
 L4
 Vg[jFHTQZ_oG=hJfVD?Dbh0
-R9
+R8
 31
-Z107 !s108 1542218837.309000
-Z108 !s90 -reportprogress|300|-93|-work|work|D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd|
-Z109 !s107 D:/Miscelanea/Documentos/MultiCycle_Lab/SignExtend.vhd|
+Z120 !s108 1543016984.505000
+Z121 !s90 -reportprogress|300|-93|-work|work|C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/SignExtend.vhd|
+Z122 !s107 C:/Users/Usuario/Documents/GitHub/MultiCycle_Lab/SignExtend.vhd|
+R12
 R13
-R14
 !s100 KMnU22Fe9<Q<RG]YY=9D12
 !i10b 1
 Abehavior
+R3
 R4
-R5
 DEx4 work 10 signextend 0 22 g[jFHTQZ_oG=hJfVD?Dbh0
 l12
 L11
 VO^8Mkio0YMEobfJG2If1j2
-R9
+R8
 31
-R107
-R108
-R109
+R120
+R121
+R122
+R12
 R13
-R14
 !s100 3J^n2H:oJLPWL0:QHKfBQ2
 !i10b 1

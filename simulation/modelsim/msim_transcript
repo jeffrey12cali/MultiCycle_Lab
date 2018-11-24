@@ -32,9 +32,9 @@ vsim work.multicycle
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.multicycle(structure)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
 # Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -48,24 +48,48 @@ vsim work.multicycle
 add wave -position insertpoint  \
 sim:/multicycle/clk \
 sim:/multicycle/rst \
-sim:/multicycle/DEV1 \
-sim:/multicycle/MEMDATA \
-sim:/multicycle/ActDir \
-sim:/multicycle/AREG \
-sim:/multicycle/BREG \
-sim:/multicycle/ALOUT \
-sim:/multicycle/ALUA \
-sim:/multicycle/ALUB \
-sim:/multicycle/wrReg \
-sim:/multicycle/wrData \
-sim:/multicycle/nextIns \
-sim:/multicycle/sts
+sim:/multicycle/key \
+sim:/multicycle/seg7exit
 force -freeze sim:/multicycle/clk 1 0, 0 {50 ps} -r 100
 force -freeze sim:/multicycle/rst 0 0
 run
 force -freeze sim:/multicycle/rst 1 0
 run
 force -freeze sim:/multicycle/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run
