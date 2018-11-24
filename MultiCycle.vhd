@@ -20,7 +20,7 @@ entity MultiCycle is
 		--wrReg: out std_logic_vector(4 downto 0);
 		--wrData: out std_logic_vector(31 downto 0);
 		--nextIns: out std_logic_vector(31 downto 0);
-		--sts: out std_logic_vector(3 downto 0); 
+		--sts: out std_logic_vector(3 downto 0)
 		--exitMux: out std_logic_vector(31 downto 0)
 
 		
@@ -485,7 +485,7 @@ architecture behaviour of MultiCycle is
 		
 		ADDRDEC: addressDecoder
 		port map(
-			address => ALUOut,
+			address => outMuxPc,
 			memWrite => MemWr_out,
 			writeMemory => writeMemoryAD,
 			dev1 => wrDev1,
@@ -543,7 +543,7 @@ architecture behaviour of MultiCycle is
 		--wrReg <= outMux3;
 		--wrData <= outMux4;
 		--nextIns <= newPC;
-		--exitMux <= readadd;
+		--exitMux <= outMuxPc;
 		
 		
 	end;

@@ -1,5 +1,5 @@
 Flow report for MultiCycle
-Fri Nov 23 19:23:28 2018
+Sat Nov 24 12:06:46 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 23 19:23:28 2018           ;
+; Flow Status                        ; Successful - Sat Nov 24 12:06:46 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MultiCycle                                      ;
 ; Top-level Entity Name              ; MultiCycle                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,302 / 18,752 ( 7 % )                          ;
-;     Total combinational functions  ; 1,019 / 18,752 ( 5 % )                          ;
-;     Dedicated logic registers      ; 772 / 18,752 ( 4 % )                            ;
-; Total registers                    ; 772                                             ;
+; Total logic elements               ; 1,007 / 18,752 ( 5 % )                          ;
+;     Total combinational functions  ; 866 / 18,752 ( 5 % )                            ;
+;     Dedicated logic registers      ; 484 / 18,752 ( 3 % )                            ;
+; Total registers                    ; 484                                             ;
 ; Total pins                         ; 18 / 315 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
+; Total memory bits                  ; 352 / 239,616 ( < 1 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/23/2018 19:22:12 ;
+; Start date & time ; 11/24/2018 12:06:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MultiCycle          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 57606937179884.154301893112464        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 123745751354786.154307917813364       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -94,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4650 MB             ; 00:00:13                           ;
-; Fitter                    ; 00:00:45     ; 1.0                     ; 4775 MB             ; 00:00:44                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4564 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4563 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4526 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:11     ; --                      ; --                  ; 00:01:08                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4653 MB             ; 00:00:05                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 4775 MB             ; 00:00:14                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4556 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4553 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4526 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,11 +108,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-0QCS3UF  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-0QCS3UF  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-0QCS3UF  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-0QCS3UF  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-0QCS3UF  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-2TGQ2GD  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-2TGQ2GD  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-2TGQ2GD  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-2TGQ2GD  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-2TGQ2GD  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

@@ -1,0 +1,17 @@
+main:
+	lw r1 memdir(r0)
+while:
+	beq r1, r0, main
+	sw r1, memdir(r0)
+	addi r3, r0, 1
+	sub r1, r1, r3
+	addi r5, r0, 50000 
+	j retardo -- salta por aquí
+salto:
+	j while
+retardo:
+	beq r4, r5, salto
+	addi r4, r0, 1
+	j retardo
+
+
